@@ -39,5 +39,12 @@ class EstatusAlumno extends Controller
             // return response()->json($usuariodetalle);
         return redirect()->route('home')->with('danger','Usuario dado de baja con exito');
     }
+    public function ModificaUsuario(Request $request){
+        $id = Auth::User()->id;
+        $user = $request['id_user'];
+        $obs = $request['Observaciones'];
+        $estatus = User::where('id', $user)->update(['Observaciones' => $obs]);
+        return redirect()->route('home')->with('warning','Usuario modificado con exito');
+    }
 
 }

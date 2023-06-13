@@ -26,6 +26,7 @@ Route::post('/detalleAlumno', [App\Http\Controllers\EstatusAlumno::class, 'detal
 // Route::resource('estatus', EstatusAlumno::class);
 // Route::get('/detalleAlumno/create', [App\Http\Controllers\EstatusAlumno::class, 'create'])->name('Create');
 Route::post('/BajaUsuario', [App\Http\Controllers\EstatusAlumno::class, 'BajaUsuario'])->name('BajaUsuario');
+Route::post('/ModificaUsuario', [App\Http\Controllers\EstatusAlumno::class, 'ModificaUsuario'])->name('ModificaUsuario');
 // Route::post('/detalleAlumno/edit', [App\Http\Controllers\EstatusAlumno::class, 'edit'])->name('Edit');
 // Route::post('/detalleAlumno/update', [App\Http\Controllers\EstatusAlumno::class, 'update'])->name('update');
 Route::get('/send-email', [MailController::class, 'sendEmail']);

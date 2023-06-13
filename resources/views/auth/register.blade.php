@@ -4,6 +4,17 @@
 ])
 
 @section('content')
+<script>
+function validar(obj){
+    var d = document.formulario;
+    if(obj.checked==true){
+        d.boton.disabled = false;
+    }else{
+        d.boton.disabled= true;
+    }
+}
+</script>
+
     <div class="content">
         <div class="container">
             <div class="row">
@@ -18,7 +29,7 @@
                            
                         </div>
                         <div class="card-body ">
-                            <form class="form" method="POST" action="{{ route('register') }}">
+                            <form name="formulario" class="form" method="POST" action="{{ route('register') }}">
                                 @if($message = Session::get('success'))
                                     <div class="alert alert-success" >
                                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -137,7 +148,7 @@
                                 </div>
                                 <div class="form-check text-left">
                                     <label class="form-check-label">
-                                        <input class="form-check-input" name="agree_terms_and_conditions" type="checkbox">
+                                        <input type="checkbox" class="form-check-input" onclick="javascript:validar(this);">
                                         <span class="form-check-sign"></span>
                                             {{ ('No soy un Robot') }}
                                         
@@ -145,10 +156,11 @@
                                     
                                 </div>
                                 <div class="card-footer ">
-                                    <button type="submit" class="btn btn-info btn-round">{{ __('Registrarse') }}</button>
+                                    <button name="boton" type="submit" class="btn btn-info btn-round" disabled="disabled">{{ __('Registrarse') }}</button>
                                 </div>
                             </form>
                         </div>
+                        
                     </div>
                 </div>
              </div>

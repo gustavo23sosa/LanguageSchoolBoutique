@@ -1,7 +1,57 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="{{asset ('js/customer.js')}}" defer></script>
+    <title>Bienvenida Usuario</title>
+    <link rel="icon" type="image/png" href="{{ asset('img/icono.png')}}">
+    <link href="{{ asset('css/estilo.css') }}" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav me-auto">
 
-@section('content')
-<div class="container">
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+
+    <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -16,8 +66,24 @@
 
                     {{ __('You are logged User') }}
                 </div>
+                <br><br>
+                <h2>Conteo nuevo</h2>
+                <div class="contenedor">
+                    
+                    <div>
+                        <p class="bignumber" id="reloj"></p>
+                        <span>Días</span>
+                    </div>
+                    <!-- <div>
+                        <p class="bignumber" id="reloj1"></p>
+                        <span>Días</span>
+                    </div> -->
+                </div>
+                <br><br>
             </div>
         </div>
     </div>
-</div>
-@endsection
+    </div>
+</body>
+</html>
+

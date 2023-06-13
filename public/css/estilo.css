@@ -1,0 +1,23 @@
+body{
+	background-image: url("img/fondo1.jpg");
+	background-color: teal; 
+	text-align: center;
+	color: #fff
+	margin-top: 20%;
+	font-family: impact, Haettenschweiler, 'Arial Narrow Bold', 'sans-serif'
+}
+.contenedor{
+	display: flex;
+	width: 50%;
+	justify-content: space-around;
+	margin: 0 auto;
+}
+.bignumber{
+	font-size: 40px;
+	font-weight: 400;
+	margin-bottom: 5px
+	margin-top: 5px;
+}
+h1{
+	margin-bottom: 20px;
+}

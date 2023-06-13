@@ -3,10 +3,20 @@
 ])
 
 @section('content')
+<script>
+function validar(obj){
+    var d = document.formulario;
+    if(obj.checked==true){
+        d.boton.disabled = false;
+    }else{
+        d.boton.disabled= true;
+    }
+}
+</script>
     <div class="content">
         <div class="container">
             <div class="col-lg-4 col-md-6 ml-auto mr-auto">
-                <form class="form" method="POST" action="{{ route('login') }}">
+                <form name="formulario" class="form" method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="card card-login">
                         <div class="card-header ">
@@ -49,7 +59,7 @@
                             <div class="form-group">
                                 <div class="form-check">
                                      <label class="form-check-label">
-                                        <input class="form-check-input" name="remember" type="checkbox" value="" {{ old('remember') ? 'checked' : '' }}>
+                                        <input class="form-check-input" name="remember" type="checkbox" onclick="javascript:validar(this);">
                                         <span class="form-check-sign"></span>
                                         {{ ('No soy un Robot') }}
                                     </label>
@@ -59,7 +69,7 @@
 
                         <div class="card-footer">
                             <div class="text-center">
-                                <button type="submit" class="btn btn-warning btn-round mb-3">{{ __('Inicia Sesion') }}</button>
+                                <button name="boton" type="submit" class="btn btn-warning btn-round mb-3" disabled>{{ __('Inicia Sesion') }}</button>
                             </div>
                         </div>
                     </div>

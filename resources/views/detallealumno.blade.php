@@ -7,7 +7,7 @@
 <head>
     <meta charset=UTF-8>
     <meta name=viewport content="initial-scale=1.0">
-
+    <link rel="icon" type="image/png" href="{{ asset('img/icono.png')}}">
     <title>Detalles - Language School Boutique</title>
 
     <link rel="stylesheet" href="administrador/red/css/style.css" type="text/css" media="all">
@@ -41,13 +41,13 @@
 </head>
 
 <body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7">
-<div class="wrapper wrapper-full-page " style="background-image: url('img/bg/fondo.jpg');">
+<div class="wrapper wrapper-full-page " style="background-image: url('img/jan.jpg');">
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
             <div class="dlr-header-inner">
                 <div class="gdlr-header-container container">
                     <div class="gdlr-logo">
-                        <img src="img/Logotipo.png" alt="" width="50%">
+                        <img src="img/logo.png" alt="" width="50%">
 
                         <!-- <div class="gdlr-responsive-navigation dl-menuwrapper" id="gdlr-responsive-navigation">
                             
@@ -185,18 +185,20 @@
                                             </tbody>
 
                                           </table>
-                                          <table><tr><input type="text" style="width : 1px; heigth : 1px" class="form-control" name="Observaciones" ></tr><tr>
-                                                        <td> <form method="post" name="EnviarExamen" action="{{ url('ModificaUsuario') }}">
+                                          <br><br>
+                                            <form method="post" name="EnviarExamen" action="{{ url('ModificaUsuario') }}"> <input type="text" class="form-control" placeholder="Observaciones" name="Observaciones" style="width : 600px; height: 70px;">
+                                          <table>
+                                            <tr><td>
                                                         @csrf
                                                             <input type="hidden" name="id_user" value="{{ $usuario->id }}">
                                                             <input type="submit"  name="EnviarExamen" class="btn btn-warning" value="Modificar usuario">
-                                                        </form></td><td> <form method="post" name="EnviarExamen" action="{{ url('EnviarExamen') }}">
+                                                        </form></td>
+                                                <td> <form method="post" name="EnviarExamen" action="{{ url('EnviarExamen') }}">
                                                         @csrf
                                                             <input type="hidden" name="id_user" value="{{ $usuario->id }}">
                                                             <input type="submit"  name="EnviarExamen" class="btn btn-success" value="Enviar Examen">
-                                                        </form></td></td>
-                                                        <td>
-                                                        <form method="post" name="Baja" action="{{ url('BajaUsuario') }}">
+                                                        </form></td>
+                                                <td><form method="post" name="Baja" action="{{ url('BajaUsuario') }}">
                                                         @csrf
                                                             <input type="hidden" name="id_user" value="{{ $usuario->id }}">
                                                             <input type="submit"  name="Baja" value="Dar de baja" onclick="return confirm('¿Estas seguro de dar de baja a este usuario?')" class="btn btn-danger">

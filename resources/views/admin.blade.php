@@ -9,7 +9,7 @@
     <meta name=viewport content="initial-scale=1.0">
 
     <title>Menú - Language School Boutique</title>
-
+    <link rel="icon" type="image/png" href="{{ asset('img/icono.png')}}">
     <link rel="stylesheet" href="administrador/red/css/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="administrador/red/plugins/superfish/css/superfish.css" type="text/css" media="all">
     <link rel="stylesheet" href="administrador/red/plugins/dl-menu/component.css" type="text/css" media="all">
@@ -49,12 +49,15 @@
             <div class="dlr-header-inner">
                 <div class="gdlr-header-container container">
                     <div class="gdlr-logo">
+                        <img src="img/logo.png" alt="" width="50%">
                         <!-- <a href="index.html"> <img src="administrador/red/images/logo_red_1.png" alt=""> </a> -->
                         <div class="gdlr-responsive-navigation dl-menuwrapper" id="gdlr-responsive-navigation">
+                            
                             <button class="dl-trigger"> Men&uacute;</button>
+
                             <ul id="menu-main-menu" class="dl-menu gdlr-main-mobile-menu">
                                 <li class="menu-item menu-item-home current-menu-item">
-                                    <a href="#inicio" aria-current="page">Inicio</a>
+                                    
                                 </li>
                                 <!--<li class="menu-item">
                                     <a href="#historia">Objetivo</a>
@@ -150,11 +153,16 @@
                                           <br>
                                         @if($message = Session::get('success'))
                                                                     <div style="background-color: #d4edda;" class="alert alert-success" role="alert">
-                                                                    <font color="#155724">Se ha enviado el examen con exito</font>
+                                                                    <font color="#155724">{{ $message }}</font>
+                                                                    </div>
+                                                                    @endif
+                                        @if($message = Session::get('warning'))
+                                                                    <div style="background-color: #d4edda;" class="alert alert-warning" >
+                                                                    <font color="#721c24">{{ $message }}</font>
                                                                     </div>
                                                                     @endif
 
-                                                                    @if($message = Session::get('danger'))
+                                        @if($message = Session::get('danger'))
                                                                     <div style="background-color: #d4edda;" class="alert alert-danger" >
                                                                     <font color="#721c24">{{ $message }}</font>
                                                                     </div>
