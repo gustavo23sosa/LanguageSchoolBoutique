@@ -14,14 +14,15 @@
         <div class="row">
             <div class="form-holder">
                 <div class="form-content">
+
+                    <img src="img/Logotipo.png" alt="" width="50%">
                     <div class="form-items">
-                         <div class="website-logo">
-            			 <a href="https://conatrib.org.mx/congreso_redes/">
-               				 <div>
-                    			<img class="logo-size"src="images/Logo.jpg" alt="">
-             				 </div>
-                         </a>
-        				</div>
+
+                             
+                        
+
+
+                         
                         <h3>¡Estimado/a {!! nl2br($info['name']) !!}!</h3>
                         <p style="text-align: justify">Nos da un gusto que te hayas registrado a nuestro sistema.</p>
 						<p style="text-align: justify">Inicia sesion con tu email, deberas elegir tu nivel de ingles que crees tener y realizar el test disponible y preparado para ti. Estamos en contacto y cualquier duda contactanos al correo tal y que tengas una agradable experiencia con nosotros.</p>
@@ -31,9 +32,9 @@
 					
                     <div class="form-sent">
                         <div class="website-logo">
-                            <a href="https://conatrib.org.mx/congreso_redes/">
+                            <a href="https://languageschoolboutique.com">
                                 <div class="logo">
-                                    <img class="logo-size" src="images/Logo.jpg" alt="">
+                                    <img class="logo-size" src="{{asset('im/logo.png')}}" alt="">
                                 </div>
                             </a>
                         </div>

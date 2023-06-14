@@ -2,7 +2,7 @@
 <html>
 <head>
     <script src="{{asset ('js/customer.js')}}" defer></script>
-    <title>Bienvenida Usuario</title>
+    <title>Inicio - Language School Boutique</title>
     <link rel="icon" type="image/png" href="{{ asset('img/icono.png')}}">
     <link href="{{ asset('css/estilo.css') }}" rel="stylesheet">
     

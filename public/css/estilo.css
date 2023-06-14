@@ -1,6 +1,6 @@
 body{
-	background-image: url("img/fondo1.jpg");
-	background-color: teal; 
+	background-image: url("{{ asset('img/jan.jpg')}}");
+	/*background-color: teal; */
 	text-align: center;
 	color: #fff
 	margin-top: 20%;
