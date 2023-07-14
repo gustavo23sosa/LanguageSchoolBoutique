@@ -21,9 +21,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('telefono');
-            $table->string('password');
+            $table->string('archivo')->nullable();
+            $table->string('password'); 
             $table->rememberToken();
             $table->string('nivel')->default('Sin eleccion');
+            $table->string('clases')->default('Sin eleccion');
             $table->string('Observaciones')->default('Sin Observaciones');
             $table->tinyinteger('fk_estado');
             $table->foreign('fk_estado')->references('id')->on('EntidadFederativa');

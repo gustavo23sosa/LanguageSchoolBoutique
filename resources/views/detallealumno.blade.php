@@ -114,7 +114,7 @@
             <div class="clear"></div>
         </header>
         <div id="gdlr-header-substitute"></div>
-        <div class="content-wrapper">
+        <div class="content-wrapper" >
             <div class="gdlr-content">
                 <div class="with-sidebar-wrapper gdlr-type-no-sidebar">
                     <!-- <section id="inicio">
@@ -141,8 +141,8 @@
                 <div class="with-sidebar-wrapper gdlr-type-no-sidebar">
 
                                     <section >
-                                        <div class="col-md-6 ml-auto  mr-auto">
-                                            <div class="card card-signup text-center">
+                                        <div class="col-md-6 col-md-4 ml-auto  mr-auto" >
+                                            <div class="card card-signup text-center"style="width: 110%;">
                                         <div class="container">
                                           <br>
 
@@ -178,22 +178,36 @@
                                                     <td>Nivel del usuario elegido</td><td>{{ $usuario->nivel }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 </tr>
                                                 <tr>
+                                                    <td>Forma de tomar clases</td><td>{{ $usuario->clases }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                                </tr>
+                                                <tr>
                                                     <td>Observaciones</td><td>{{ $usuario->Observaciones }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 </tr>
+                                                <tr><td>Video</td>
+                                                    @if(is_null($usuario->archivo) )
+                                                    <td>No hay video</td>
+                                                    @endif
+                                                    @if(!is_null($usuario->archivo) )
+                                                    <td>
+                                                        <video src="{{asset('storage').'/'.$usuario->archivo}}" autoplay="" controls="" style="width: 70%;"></video>
+                                                    </td>
+                                                    @endif
+                                                </tr>
+
                                             @endforeach 
 
                                             </tbody>
 
                                           </table>
                                           <br><br>
-                                            <form method="post" name="EnviarExamen" action="{{ url('ModificaUsuario') }}"> <input type="text" class="form-control" placeholder="Observaciones" name="Observaciones" style="width : 600px; height: 70px;">
+                                            <form method="post" name="EnviarExamen" action="{{ url('ModificaUsuario') }}"> <textarea class="form-control" placeholder="Observaciones" name="Observaciones" rows="5" style="width : 600px; height: 70px;"></textarea>
                                           <table>
                                             <tr><td>
                                                         @csrf
                                                             <input type="hidden" name="id_user" value="{{ $usuario->id }}">
                                                             <input type="submit"  name="EnviarExamen" class="btn btn-warning" value="Modificar usuario">
                                                         </form></td>
-                                                <td> <form method="post" name="EnviarExamen" action="{{ url('EnviarExamen') }}">
+                                                <td> <form method="post" name="EnviarExamen" action="{{ url('AceptarUsuario') }}">
                                                         @csrf
                                                             <input type="hidden" name="id_user" value="{{ $usuario->id }}">
                                                             <input type="submit"  name="EnviarExamen" class="btn btn-success" value="Enviar Examen">

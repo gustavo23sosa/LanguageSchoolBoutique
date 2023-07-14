@@ -66,7 +66,7 @@
                                     <a href="#programa">Programa</a>
                                 </li>-->
                              <!--   <li class="menu-item menu-item-has-children">
-                                    <a href="#ponentescdmx">Ponentes</a>
+                                    <a href="#">Ponentes</a>
                                 </li>-->
                             </ul>
                         </div>

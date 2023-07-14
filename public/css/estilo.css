@@ -1,5 +1,4 @@
 body{
-	background-image: url("{{ asset('img/jan.jpg')}}");
 	/*background-color: teal; */
 	text-align: center;
 	color: #fff

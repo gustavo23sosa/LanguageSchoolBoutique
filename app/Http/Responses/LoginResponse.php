@@ -36,7 +36,18 @@ class LoginResponse extends FortifyLoginResponse
             ->where('users.activo','=','0')->get();
             return view('admin')->with('registradosUs', $registradosUs);
         }elseif ($rol[0]->fk_roles == '2') {
-            return view('home');
+            $id = Auth::user()->id;
+            $registradosUs = User::where('id','=',$id)->select('archivo')->get();
+            if(is_null($registradosUs[0]->archivo) ) {
+                return view('home');
+            }else{
+                $activo = User::where('id','=',$id)->select('activo')->get();
+                if($activo[0]->activo == 0){
+                    return view('home1');
+                }else{
+                    return view('home2');
+                }
+            }
         }
     }
 }

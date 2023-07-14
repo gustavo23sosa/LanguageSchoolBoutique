@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\EstatusAlumno;
 /*
@@ -21,11 +22,18 @@ Route::get('/', function () {
 // Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/crear', function(){
+	return view('auth.empleado.create');
+});
+// Route::resource('LSB', UsuariosController::class);
+Route::post('/subir', [App\Http\Controllers\MasterController::class, 'subirArchivo'])->name('subir');
+
 Route::get('/detalleAlumno', [App\Http\Controllers\EstatusAlumno::class, 'detalleAlumno'])->name('detalleAlumno');
 Route::post('/detalleAlumno', [App\Http\Controllers\EstatusAlumno::class, 'detalleAlumno'])->name('detalleAlumno');
 // Route::resource('estatus', EstatusAlumno::class);
 // Route::get('/detalleAlumno/create', [App\Http\Controllers\EstatusAlumno::class, 'create'])->name('Create');
 Route::post('/BajaUsuario', [App\Http\Controllers\EstatusAlumno::class, 'BajaUsuario'])->name('BajaUsuario');
+Route::post('/AceptarUsuario', [App\Http\Controllers\EstatusAlumno::class, 'AceptarUsuario'])->name('AceptarUsuario');
 Route::post('/ModificaUsuario', [App\Http\Controllers\EstatusAlumno::class, 'ModificaUsuario'])->name('ModificaUsuario');
 // Route::post('/detalleAlumno/edit', [App\Http\Controllers\EstatusAlumno::class, 'edit'])->name('Edit');
 // Route::post('/detalleAlumno/update', [App\Http\Controllers\EstatusAlumno::class, 'update'])->name('update');

@@ -13,7 +13,7 @@ class EstatusAlumno extends Controller
 	public function detalleAlumno(Request $request){
 		$id = Auth::User()->id;
 		$user = $request['id_user'];
-        $usuariodetalle = User::select('name','aPaterno','aMaterno','email','telefono','Observaciones','nivel','EU.estatus','EF.entidad', 'users.id')
+        $usuariodetalle = User::select('name','aPaterno','aMaterno','email','telefono','archivo','Observaciones','nivel','clases','EU.estatus','EF.entidad', 'users.id')
             ->join('UsersRoles AS UR','UR.fk_users','=','users.id')
             ->join('roles AS R','R.ID','=','UR.fk_roles')
             ->join('estatusUser AS EU','EU.ID','=','users.fk_estatus')
@@ -38,6 +38,22 @@ class EstatusAlumno extends Controller
             ->get();
             // return response()->json($usuariodetalle);
         return redirect()->route('home')->with('danger','Usuario dado de baja con exito');
+    }
+    public function AceptarUsuario(Request $request)
+    {
+        //
+        $id = Auth::User()->id;
+        $user = $request['id_user'];
+        $estatus = User::where('id', $user)->update(['activo' => '1','fk_estatus'=>'2']);
+        $usuariodetalle = User::select('name','aPaterno','aMaterno','email','telefono','EU.estatus','EF.entidad', 'users.id')
+            ->join('UsersRoles AS UR','UR.fk_users','=','users.id')
+            ->join('roles AS R','R.ID','=','UR.fk_roles')
+            ->join('estatusUser AS EU','EU.ID','=','users.fk_estatus')
+            ->join('EntidadFederativa AS EF','EF.id','=','users.fk_estado')
+            ->where('users.id', '=' ,$user)
+            ->get();
+            // return response()->json($usuariodetalle);
+        return redirect()->route('home')->with('success','Aceptado con exito, se ha activado su ficha de examen al alumno');
     }
     public function ModificaUsuario(Request $request){
         $id = Auth::User()->id;
