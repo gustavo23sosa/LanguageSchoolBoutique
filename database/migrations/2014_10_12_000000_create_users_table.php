@@ -24,9 +24,15 @@ class CreateUsersTable extends Migration
             $table->string('archivo')->nullable();
             $table->string('password'); 
             $table->rememberToken();
-            $table->string('nivel')->default('Sin eleccion');
-            $table->string('clases')->default('Sin eleccion');
             $table->string('Observaciones')->default('Sin Observaciones');
+
+            $table->tinyinteger('fk_nivel')->default('1');
+            $table->foreign('fk_nivel')->references('id')->on('nivel');
+
+            $table->tinyinteger('fk_clases')->default('1');
+            $table->foreign('fk_clases')->references('ID')->on('Clases');
+
+
             $table->tinyinteger('fk_estado');
             $table->foreign('fk_estado')->references('id')->on('EntidadFederativa');
 

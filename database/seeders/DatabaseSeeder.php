@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call(Roles::class);
         $this->call(EntidadFederativa::class);
         $this->call(EstatusUser::class);
+        $this->call(nivel::class);
+        $this->call(Clases::class);
         $this->call(users::class);
         $this->call(UsersRoles::class);
     }

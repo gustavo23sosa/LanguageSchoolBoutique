@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Roles;
 use App\Models\UsersRoles;
 use App\Models\User;
+use App\Models\Nivel;
+use App\Models\Clases;
 
 class HomeController extends Controller
 {
@@ -47,16 +49,15 @@ class HomeController extends Controller
             $id = Auth::user()->id;
             $registradosUs = User::where('id','=',$id)->select('archivo')->get();
             if(is_null($registradosUs[0]->archivo) ) {
-                return view('home');
+                $nivel = Nivel::where('activo','=','1')->get();
+                $clase = Clases::where('activo','=','1')->get();
+                return view('home')->with('niveles',$nivel)->with('clases',$clase);
             }else{
-                $activo = User::where('id','=',$id)->select('activo')->get();
-                if($activo[0]->activo == 1){
-                    return view('home2');
-                }else{
-                    return view('home1');
-                }
-                
-
+                // $id = Auth::user()->id;
+                // $registrados = User::select('users.fk_nivel')->where('id','=',$id)->get();
+                $nivel = Auth::user()->fk_nivel;
+                return view('home2')->with('niveles', $nivel);
+                //->with('registrados',$registrados);
             }
         }
     }

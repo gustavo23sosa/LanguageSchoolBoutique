@@ -178,7 +178,7 @@
                                                     <td>Nivel del usuario elegido</td><td>{{ $usuario->nivel }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Forma de tomar clases</td><td>{{ $usuario->clases }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                                    <td>Forma de tomar clases</td><td>{{ $usuario->tipo }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Observaciones</td><td>{{ $usuario->Observaciones }}&nbsp;&nbsp;&nbsp;&nbsp;</td>

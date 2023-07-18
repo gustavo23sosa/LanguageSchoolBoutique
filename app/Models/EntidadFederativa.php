@@ -12,7 +12,7 @@ class EntidadFederativa extends Model
     protected $table = 'EntidadFederativa';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'fk_estado',
+        'entidad',
         'activo',
     ]; 
 }

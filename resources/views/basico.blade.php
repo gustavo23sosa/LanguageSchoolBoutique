@@ -5,7 +5,7 @@
 <html lang=en-US>
 
 <head>
-    <meta charset=UTF-8>
+    <meta charset=UTF-8 >
     <meta name=viewport content="initial-scale=1.0">
 
     <title>Inicio - Language School Boutique</title>
@@ -114,29 +114,43 @@
                                             <div class="card card-signup text-center">
                                                 <div class="container">
                                                     <hr>
-                                                    <h2>¡Bienvenido!</h2>
+                                                    <h2>¡Ex&aacute;men de colocaci&oacute;n!</h2>
                                                     <hr>
-                                                    @if($message = Session::get('success'))
-                                                                    <div style="background-color: #d4edda;" class="alert alert-success" role="alert">
-                                                                    <font color="#155724">{{ $message }}</font>
-                                                                    </div>
-                                                    @endif
-                                                    @if($niveles == 2 || $niveles == 3)
-                                                    <a href="{{url('examenb')}}" style="color: white;"><button class="btn btn-success" type="submit" value="Enviar"><b> Comenzar </b></button></a>
-                                                    @endif
-                                                    @if($niveles == 4 || $niveles == 5)
-                                                    <a href="{{url('exameni')}}" style="color: white;"><button class="btn btn-warning" type="submit" value="Enviar"><b> Comenzar </b></button></a>
-                                                    @endif
-                                                    @if($niveles == 6 || $niveles == 7)
-                                                    <a href="{{url('examena')}}" style="color: white;"><button class="btn btn-danger" type="submit" value="Enviar"><b> Comenzar </b></button></a>
-                                                    @endif
-                                                    <br><br><br>
-                                                    <!-- <p>Para subir archivos, <a href="{{ url('crear')}}" >¡Haz click aqui!</a></p> -->
+                                                    <form name="basico" method="POST" action="{{route('evaluarb')}}">
+                                                        @csrf
+                                                        <div>
+                                                        <label for="primera">3 Where's the cat? _____ is in the garden.</label><br>
+                                                        <input type="radio" id="It" name="pregunta1" value="It" required>
+                                                        <label><span>It</span></label><br>
+                                                        <input type="radio" id="Its" name="pregunta1" value="Its" required>
+                                                        <label><span>Its</span></label><br>
+                                                        <input type="radio" id="He" name="pregunta1" value="He" required>
+                                                        <label><span>He</span></label><br>
+                                                        </div>
+
+                                                        <div>
+                                                        <label for="primera">2 Who is Kate? Kate is my friend. ____ is a teacher.</label><br>
+                                                        <input type="radio" id="Her" 
+                                                        name="pregunta2" value="Her" required>
+                                                        <label><span>Her</span></label><br>
+                                                        <input type="radio" id="He" name="pregunta2" value="He" required>
+                                                        <label><span>He</span></label><br>
+                                                        <input type="radio" id="She" name="pregunta2" value="She" required>
+                                                        <label><span>She</span></label><br>
+                                                        </div>
+                                                        <button type="submit">Calificar Examen</button>
+                                                    </form>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
 
                                     </section>
+
+                                    
                                 <div>
                             </div>
                         </div>

@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\EstatusUser;
 
-class EstatusUser extends Model
+class Nivel extends Model
 {
-    protected $table = 'EstatusUser';
+    use HasFactory;
+    protected $table = 'Nivel';
     protected $primaryKey = 'ID';
     protected $fillable = [
-        'estatus',
+        'nivel',
         'activo',
-    ];
+    ]; 
 }

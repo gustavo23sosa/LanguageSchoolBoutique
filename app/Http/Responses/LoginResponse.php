@@ -9,6 +9,8 @@ use App\Models\cat_redesconatrib;
 use App\Models\Roles;
 use App\Models\usersRoles;
 use App\Models\User;
+use App\Models\Nivel;
+use App\Models\Clases;
 use Auth;
 use Mail;
 
@@ -39,14 +41,12 @@ class LoginResponse extends FortifyLoginResponse
             $id = Auth::user()->id;
             $registradosUs = User::where('id','=',$id)->select('archivo')->get();
             if(is_null($registradosUs[0]->archivo) ) {
-                return view('home');
+                $nivel = Nivel::where('activo','=','1')->get();
+                $clase = Clases::where('activo','=','1')->get();
+                return view('home')->with('niveles',$nivel)->with('clases',$clase);
             }else{
-                $activo = User::where('id','=',$id)->select('activo')->get();
-                if($activo[0]->activo == 0){
-                    return view('home1');
-                }else{
-                    return view('home2');
-                }
+                $nivel = Auth::user()->fk_nivel;
+                return view('home2')->with('niveles', $nivel);
             }
         }
     }

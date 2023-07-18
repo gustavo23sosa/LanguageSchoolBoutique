@@ -6,16 +6,31 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\UsersRoles;
 use App\Models\User;
+use App\Models\Nivel;
+use App\Models\Clases;
 
 class EstatusAlumno extends Controller
 {
     //
+    public function alumnosAceptados(){
+        $id = Auth::user()->id;
+        $registradosUs = User::select('name','aPaterno','aMaterno','email','telefono','EU.estatus','EF.entidad', 'users.id')
+            ->join('UsersRoles AS UR','UR.fk_users','=','users.id')
+            ->join('roles AS R','R.ID','=','UR.fk_roles')
+            ->join('estatusUser AS EU','EU.ID','=','users.fk_estatus')
+            ->join('EntidadFederativa AS EF','EF.id','=','users.fk_estado')
+            ->where('users.id', '=' ,$user)
+            ->get();
+            return view('admin')->with('registradosUs', $registradosUs);
+    }
 	public function detalleAlumno(Request $request){
 		$id = Auth::User()->id;
 		$user = $request['id_user'];
-        $usuariodetalle = User::select('name','aPaterno','aMaterno','email','telefono','archivo','Observaciones','nivel','clases','EU.estatus','EF.entidad', 'users.id')
+        $usuariodetalle = User::select('name','aPaterno','aMaterno','email','telefono','archivo','Observaciones','clas.tipo', 'Ni.nivel','EU.estatus','EF.entidad', 'users.id')
             ->join('UsersRoles AS UR','UR.fk_users','=','users.id')
             ->join('roles AS R','R.ID','=','UR.fk_roles')
+            ->join('Nivel AS Ni','Ni.ID','=','users.fk_nivel')
+            ->join('Clases AS clas','clas.ID','=','users.fk_clases')
             ->join('estatusUser AS EU','EU.ID','=','users.fk_estatus')
             ->join('EntidadFederativa AS EF','EF.id','=','users.fk_estado')
             ->where('users.id', '=' ,$user)

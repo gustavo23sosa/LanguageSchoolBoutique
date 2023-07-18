@@ -114,29 +114,20 @@
                                             <div class="card card-signup text-center">
                                                 <div class="container">
                                                     <hr>
-                                                    <h2>¡Bienvenido!</h2>
+                                                    <h2>¡Ex&aacute;men de colocaci&oacute;n!</h2>
                                                     <hr>
-                                                    @if($message = Session::get('success'))
-                                                                    <div style="background-color: #d4edda;" class="alert alert-success" role="alert">
-                                                                    <font color="#155724">{{ $message }}</font>
-                                                                    </div>
-                                                    @endif
-                                                    @if($niveles == 2 || $niveles == 3)
-                                                    <a href="{{url('examenb')}}" style="color: white;"><button class="btn btn-success" type="submit" value="Enviar"><b> Comenzar </b></button></a>
-                                                    @endif
-                                                    @if($niveles == 4 || $niveles == 5)
-                                                    <a href="{{url('exameni')}}" style="color: white;"><button class="btn btn-warning" type="submit" value="Enviar"><b> Comenzar </b></button></a>
-                                                    @endif
-                                                    @if($niveles == 6 || $niveles == 7)
-                                                    <a href="{{url('examena')}}" style="color: white;"><button class="btn btn-danger" type="submit" value="Enviar"><b> Comenzar </b></button></a>
-                                                    @endif
-                                                    <br><br><br>
-                                                    <!-- <p>Para subir archivos, <a href="{{ url('crear')}}" >¡Haz click aqui!</a></p> -->
+                                                    
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
 
                                     </section>
+
+                                    
                                 <div>
                             </div>
                         </div>

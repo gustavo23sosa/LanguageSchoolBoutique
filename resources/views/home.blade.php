@@ -123,19 +123,17 @@
                                                         <b><label style="color: black; font-size: 20px">Escoge como ser&aacute; las clases</label></b><br>
                                                         <select type="text" class="custom-select" required name="clases" style="width: 30%; text-transform: uppercase;">
                                                         <option value="">Seleccione una opci&oacute;n:</option>
-                                                        <option>Grupal</option>
-                                                        <option>Individual</option>
+                                                        @foreach($clases as $clase)
+                                                         <option value="{{$clase->ID}}">{{$clase->tipo}} </option>
+                                                        @endforeach
                                                         </select>
                                                         <br>
                                                         <br><b><label style="color: black; font-size: 20px">Escoge tu nivel de ingles que creas tener</label></b><br>
                                                         <select type="text" class="custom-select" required name="nivel" style="width: 30%; text-transform: uppercase;">
                                                         <option value="">Seleccione una opci&oacute;n:</option>
-                                                        <option>Nivel A1</option>
-                                                        <option>Nivel A2</option>
-                                                        <option>Nivel B1</option>
-                                                        <option>Nivel B2</option>
-                                                        <option>Nivel C1</option>
-                                                        <option>Nivel C2</option>
+                                                        @foreach($niveles as $nivel)
+                                                         <option value="{{$nivel->ID}}">{{$nivel->nivel}} </option>
+                                                        @endforeach
                                                         </select>
 
                                                         <br>

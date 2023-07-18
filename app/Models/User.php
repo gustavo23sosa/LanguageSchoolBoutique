@@ -24,8 +24,11 @@ class User extends Authenticatable
         'email',
         'telefono',
         'password',
+        'fk_nivel',
+        'fk_clases',
         'fk_estado',
         'fk_estatus',
+        'Observaciones',
     ];
 
     /**
@@ -48,6 +51,12 @@ class User extends Authenticatable
     ];
     public function entidades(){
         return $this->belongsTo(EntidadFederativa::class, 'id', 'fk_estado');
+    }
+    public function nivel(){
+        return $this->belongsTo(EntidadFederativa::class, 'ID', 'fk_nivel');
+    }
+    public function clases(){
+        return $this->belongsTo(EntidadFederativa::class, 'ID', 'fk_clases');
     }
     public function estatuses(){
         return $this->belongsTo(EstatusUser::class, 'id', 'fk_estatus');
