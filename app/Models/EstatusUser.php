@@ -8,6 +8,7 @@ use App\Models\EstatusUser;
 
 class EstatusUser extends Model
 {
+	use HasFactory;
     protected $table = 'EstatusUser';
     protected $primaryKey = 'ID';
     protected $fillable = [
