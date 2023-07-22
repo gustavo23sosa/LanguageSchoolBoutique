@@ -7,7 +7,7 @@
 <head>
     <meta charset=UTF-8>
     <meta name=viewport content="initial-scale=1.0">
-    <link rel="icon" type="image/png" href="{{ asset('img/icono.png')}}">
+    <link rel="icon" type="image/png" href="img/icono.png">
     <title>Detalles - Language School Boutique</title>
 
     <link rel="stylesheet" href="administrador/red/css/style.css" type="text/css" media="all">
@@ -26,15 +26,15 @@
     <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" type="text/css" href="css/iofrm-style.css">
     <link rel="stylesheet" type="text/css" href="css/iofrm-theme2.css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <link href="css/app.css" rel="stylesheet">
+    <script src="js/app.js" defer></script>
 
   
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900&amp;subset=latin&amp;ver=5e348039466ee2df77d142cdeeca1221' type=text/css media=all>
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Montserrat%3Aregular%2C700&amp;subset=latin&amp;ver=5e348039466ee2df77d142cdeeca1221' type=text/css media=all>
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Droid+Serif%3Aregular%2Citalic%2C700%2C700italic&amp;subset=latin&amp;ver=5e348039466ee2df77d142cdeeca1221' type=text/css media=all>
-    <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet" />
-    <link href="{{ asset('css/paper-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 

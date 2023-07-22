@@ -32,9 +32,9 @@
 					
                     <div class="form-sent">
                         <div class="website-logo">
-                            <a href="https://languageschoolboutique.com">
+                            <a href="languageschoolboutique.up.railway.app">
                                 <div class="logo">
-                                    <img class="logo-size" src="{{asset('im/logo.png')}}" alt="">
+                                    <img class="logo-size" src="im/logo.png" alt="">
                                 </div>
                             </a>
                         </div>
