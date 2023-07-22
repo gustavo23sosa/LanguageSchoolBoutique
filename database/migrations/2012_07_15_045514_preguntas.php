@@ -16,7 +16,7 @@ class Preguntas extends Migration
         //
         Schema::create('Preguntas', function (Blueprint $table) {
             $table->tinyInteger('ID')->primary();
-            $table->string('preguntas', 40);
+            $table->string('preguntas');
             $table->boolean('activo')->default(1);
         });
     }

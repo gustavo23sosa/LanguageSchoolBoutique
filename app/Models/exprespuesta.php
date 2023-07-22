@@ -14,7 +14,6 @@ class exprespuesta extends Model
         'fk_examen',
         'fk_preguntas',
         'fk_respuesta',
-        'correcta',
         'activo',
     ];
     public function examenes(){

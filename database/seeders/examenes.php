@@ -15,5 +15,21 @@ class examenes extends Seeder
     public function run()
     {
         //
+        DB::table('Examenes')->insert([
+            'ID'=>1,
+            'examen'=> "Basico",
+            'activo' => 1,
+        ]);
+        DB::table('Examenes')->insert([
+            'ID'=>2,
+            'examen'=> "Intermedio",
+            'activo' => 1,
+        ]);
+        DB::table('Examenes')->insert([
+            'ID'=>3,
+            'examen'=> "Avanzado",
+            'activo' => 1,
+        ]);
+
     }
 }

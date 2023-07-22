@@ -13,10 +13,7 @@ class respuestas extends Model
     protected $primaryKey = 'ID';
     protected $fillable = [
         'respuestas',
-        // 'fk_preguntas',
         'activo',
     ];
-    // public function preguntas(){
-    //     return $this->HasOne(Preguntas::class, 'ID', 'fk_preguntas');
-    // }
+
 }

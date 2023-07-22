@@ -122,13 +122,16 @@
                                                                     </div>
                                                     @endif
                                                     @if($niveles == 2 || $niveles == 3)
-                                                    <a href="{{url('examenb')}}" style="color: white;"><button class="btn btn-success" type="submit" value="Enviar"><b> Comenzar </b></button></a>
+                                                    <form method="POST" name="basico" action="{{route('Examen')}}">
+                                                    <a href="" style="color: white;"><button class="btn btn-success" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
                                                     @endif
                                                     @if($niveles == 4 || $niveles == 5)
-                                                    <a href="{{url('exameni')}}" style="color: white;"><button class="btn btn-warning" type="submit" value="Enviar"><b> Comenzar </b></button></a>
+                                                    <form method="POST" name="basico" action="{{route('Examen')}}">
+                                                    <a href="" style="color: white;"><button class="btn btn-warning" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
                                                     @endif
                                                     @if($niveles == 6 || $niveles == 7)
-                                                    <a href="{{url('examena')}}" style="color: white;"><button class="btn btn-danger" type="submit" value="Enviar"><b> Comenzar </b></button></a>
+                                                    <form method="POST" name="basico" action="{{route('Examen')}}">
+                                                    <a href="" style="color: white;"><button class="btn btn-danger" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
                                                     @endif
                                                     <br><br><br>
                                                     <!-- <p>Para subir archivos, <a href="{{ url('crear')}}" >¡Haz click aqui!</a></p> -->

@@ -27,15 +27,7 @@ Route::get('/crear', function(){
 });
 // Route::resource('LSB', UsuariosController::class);
 Route::post('/subir', [App\Http\Controllers\MasterController::class, 'subirArchivo'])->name('subir');
-Route::get('/examenb', function(){
-	return view('basico');
-})->name('Examen');
-Route::get('/exameni', function(){
-	return view('intermedio');
-})->name('Examen');
-Route::get('/examena', function(){
-	return view('avanzado');
-})->name('Examen');
+Route::post('/Examen', [App\Http\Controllers\MasterController::class, 'examenes'])->name('Examen');
 Route::post('/evaluarb', [App\Http\Controllers\MasterController::class, 'evaluarb'])->name('evaluarb');
 Route::get('/detalleAlumno', [App\Http\Controllers\EstatusAlumno::class, 'detalleAlumno'])->name('detalleAlumno');
 Route::post('/detalleAlumno', [App\Http\Controllers\EstatusAlumno::class, 'detalleAlumno'])->name('detalleAlumno');

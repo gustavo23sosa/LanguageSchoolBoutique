@@ -10,6 +10,27 @@ use App\Models\User;
 class MasterController extends Controller
 {
     //
+    public function examenes(){
+    	$id = Auth::User()->id;
+    	$tipo = User::where('id', '=', $id)->select('fk_nivel')->get();
+    	switch ($tipo) {
+    		case 1:
+    			return view('home');
+    			break;
+    		case 2:
+    			return view('basico');
+    			break;
+			case 3:
+				return view('intermedio');
+				break;
+			case 3:
+    			return view('avanzado');
+    			break;
+    		default:
+    			return view('home');
+    			break;
+    	}
+    }
     public function evaluarB(Request $request){
     	// $id = Auth::user()->id;
     	// $respuestas = request()->all();

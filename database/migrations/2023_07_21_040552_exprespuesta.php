@@ -16,15 +16,14 @@ class Exprespuesta extends Migration
         //
         Schema::create('Exprespuesta', function (Blueprint $table) {
             $table->tinyInteger('ID')->primary();
-            $table->tinyInteger('fk_examen', 40);
-            $table->tinyInteger('fk_pregunta', 40);
-            $table->tinyInteger('fk_respuesta', 40);
-            $table->tinyInteger('correcta', 40);
 
-            // $table->foreign('fk_examen')->references('ID')->on('Examenes');
-            $table->foreign('fk_pregunta')->references('ID')->on('Preguntas');
-            $table->foreign('fk_respuesta')->references('ID')->on('Respuestas');
-            
+            $table->tinyinteger('fk_examenes');
+            $table->foreign('fk_examenes')->references('ID')->on('Examenes');
+            $table->tinyinteger('fk_preguntas');
+            $table->foreign('fk_preguntas')->references('ID')->on('Preguntas');
+
+            $table->tinyinteger('fk_respuestas');
+            $table->foreign('fk_respuestas')->references('ID')->on('Respuestas');
 
             $table->boolean('activo')->default(1);
         });
@@ -38,6 +37,5 @@ class Exprespuesta extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('Exprespuesta');
     }
 }
