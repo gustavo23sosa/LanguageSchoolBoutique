@@ -7,7 +7,7 @@ use Laravel\Fortify\Http\Responses\LoginResponse as FortifyLoginResponse;
 use Illuminate\Support\Facades\DB;
 use App\Models\cat_redesconatrib;
 use App\Models\Roles;
-use App\Models\usersRoles;
+use App\Models\UsersRoles;
 use App\Models\User;
 use App\Models\Nivel;
 use App\Models\Clases;
