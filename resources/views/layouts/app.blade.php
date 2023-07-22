@@ -27,8 +27,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet" />
-    <link href="{{ asset('css/paper-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/paper-dashboard.css?v=2.0.0" />
 
 </head>
 
