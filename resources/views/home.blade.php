@@ -116,8 +116,8 @@
                                                     <h2>¡Bienvenido!</h2>
                                                     <hr>
                                                     
-                                                    <form method="POST" action="{{route('subir')}}" accept-charset="UTF-8" enctype="multipart/form-data">
-                                                        {{ csrf_field() }}
+                                                    <form method="POST" action="{{route('subir')}}">
+                                                        @csrf
 
                                                         <b><label style="color: black; font-size: 20px">Escoge como ser&aacute; las clases</label></b><br>
                                                         <select type="text" class="custom-select" required name="clases" style="width: 30%; text-transform: uppercase;">
@@ -136,10 +136,7 @@
                                                         </select>
 
                                                         <br>
-                                                        <h4>Sube tu video:</h4>
-                                                        <input type="file" name="archivo" required>
-                                                        <br><label>No debe durar m&aacute;s de 30 segundos.</label><br><label>Debe pesar m&aacute;ximo 10 MB</label><br><br>
-
+                                                        
                                                         <input class="btn btn-success" type="submit" value="Enviar" >
                                                     </form>
                                                     <br>

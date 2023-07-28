@@ -45,7 +45,7 @@ class MasterController extends Controller
 
 
 		    $estatus = User::where('id', $id)->update([
-		    	'archivo' => $request->file('archivo')->store('uploads', 'public'), 
+		    	// 'archivo' => $request->file('archivo')->store('uploads', 'public'), 
 		    	'fk_nivel' => $request->input('nivel'), 
 		    	'fk_clases' => $request->input('clases')
 		    ]);
