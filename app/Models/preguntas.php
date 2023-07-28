@@ -23,5 +23,5 @@ class preguntas extends Model
     // public function respuestas(){
     //     return $this->HasOne(Respuestas::class, 'ID', 'fk_respuesta');
     // }
-}
+
 }
