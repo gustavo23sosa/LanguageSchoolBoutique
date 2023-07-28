@@ -15,7 +15,7 @@ class MasterController extends Controller
     	$id = Auth::User()->id;
         $nivel = User::where('id','=',$id)->select('fk_nivel')->get();
         if($nivel[0]->fk_nivel == 2 || $nivel[0]->fk_nivel == 3){
-            $pregunta1 = Preguntas::where('id','=','1')->get()
+            $pregunta1 = Preguntas::where('id','=','1')->get();
             return view('basico');
         }else if($nivel[0]->fk_nivel == 4 || $nivel[0]->fk_nivel == 5){
             return view('intermedio');
