@@ -46,8 +46,9 @@ class HomeController extends Controller
             return view('admin')->with('registradosUs', $registradosUs);
         }elseif ($rol[0]->fk_roles == '2') {
             $id = Auth::user()->id;
-            $registradosUs = User::where('id','=',$id)->select('archivo')->get();
-            if(is_null($registradosUs[0]->archivo) ) {
+            $clases = User::where('id','=',$id)->select('fk_clases')->get();
+            $nivel = User::where('id','=',$id)->select('fk_nivel')->get();
+            if($clases[0]->fk_clases == 1 && $nivel[0]->fk_nivel == 1) {
                 $nivel = Nivel::where('activo','=','1')->get();
                 $clase = Clases::where('activo','=','1')->get();
                 return view('home')->with('niveles',$nivel)->with('clases',$clase);

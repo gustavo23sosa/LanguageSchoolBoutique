@@ -123,14 +123,17 @@
                                                     @endif
                                                     @if($niveles == 2 || $niveles == 3)
                                                     <form method="POST" name="basico" action="{{route('Examen')}}">
+                                                        @csrf
                                                     <a href="" style="color: white;"><button class="btn btn-success" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
                                                     @endif
                                                     @if($niveles == 4 || $niveles == 5)
-                                                    <form method="POST" name="basico" action="{{route('Examen')}}">
+                                                    <form method="POST" name="intermedio" action="{{route('Examen')}}">
+                                                        @csrf
                                                     <a href="" style="color: white;"><button class="btn btn-warning" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
                                                     @endif
                                                     @if($niveles == 6 || $niveles == 7)
-                                                    <form method="POST" name="basico" action="{{route('Examen')}}">
+                                                    <form method="POST" name="avanzado" action="{{route('Examen')}}">
+                                                        @csrf
                                                     <a href="" style="color: white;"><button class="btn btn-danger" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
                                                     @endif
                                                     <br><br><br>

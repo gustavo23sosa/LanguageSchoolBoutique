@@ -29,6 +29,7 @@ Route::get('/crear', function(){
 Route::post('/subir', [App\Http\Controllers\MasterController::class, 'subirArchivo'])->name('subir');
 Route::post('/Examen', [App\Http\Controllers\MasterController::class, 'examenes'])->name('Examen');
 Route::post('/evaluarb', [App\Http\Controllers\MasterController::class, 'evaluarb'])->name('evaluarb');
+
 // Route::get('/detalleAlumno', [App\Http\Controllers\EstatusAlumno::class, 'detalleAlumno'])->name('detalleAlumno');
 Route::post('/detalleAlumno', [App\Http\Controllers\EstatusAlumno::class, 'detalleAlumno'])->name('detalleAlumno');
 // Route::resource('estatus', EstatusAlumno::class);
