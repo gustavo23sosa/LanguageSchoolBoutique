@@ -14,7 +14,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-icono.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href=" img/apple-icono.png">
     <link rel="icon" type="image/png" href="{{ asset('img/icono.png')}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     
@@ -27,12 +27,12 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet" />
-    <link href="{{ asset('css/paper-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
 
 </head>
 
-<body class="{{$class}}" background="{{ asset('img/bg/prueba.jpg')}}">
+<body class="{{$class}}" background="img/bg/prueba.jpg">
     
     @auth()
         @include('layouts.page_templates.auth')
@@ -44,18 +44,18 @@
     @endguest
 
     <!--   Core JS Files   -->
-    <script src="{{ asset('js/core/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/core/popper.min.js') }}"></script>
-    <script src="{{ asset('js/core/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
+    <script src="js/core/jquery.min.js"></script>
+    <script src="js/core/popper.min.js"></script>
+    <script src="js/core/bootstrap.min.js"></script>
+    <script src="js/plugins/perfect-scrollbar.jquery.min.js"></script>
     <!--  Google Maps Plugin    -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <!-- Chart JS -->
-    <script src="{{ asset('js/plugins/chartjs.min.js') }}"></script>
+    <script src="js/plugins/chartjs.min.js"></script>
     <!--  Notifications Plugin    -->
-    <script src="{{ asset('js/plugins/bootstrap-notify.js') }}"></script>
+    <script src="js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{ asset('js/paper-dashboard.min.js') }}" type="text/javascript"></script>
+    <script src="js/paper-dashboard.min.js" type="text/javascript"></script>
     
     @stack('scripts')
 
