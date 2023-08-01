@@ -35,6 +35,45 @@ class MasterController extends Controller
     public function evaluarB(Request $request){
     	// $id = Auth::user()->id;
     	// $respuestas = request()->all();
+        /*3
+
+3
+
+1
+
+2
+
+2
+
+2
+
+2
+
+3
+
+1
+
+3
+
+1
+
+1
+
+1
+
+2
+
+1
+
+4
+
+2
+
+3
+
+1
+
+2*/
     	$respuestas = request()->except('_token');
     	return response()->json($respuestas);
     }

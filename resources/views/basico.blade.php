@@ -119,31 +119,36 @@
                 <form name="basico" method="POST" action="{{route('evaluarb')}}">
                     @csrf
                     <!-- {{$n=0}} -->
-                    @for ($i=0;$i<=20;$i++)
+                    @for ($i=1;$i<=20;$i++)
                     @if($n<=61)
                     
                         <!--{{$o=1}}-->
                         @if ($n>=45)
                             @if($n==45)
-                            {{('mensaje de prueba para la lectura')}}
+                            
+                            <h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6>
+                            <div style="width: 250px; align-content: center; float: left;"></div><div style="font-size: 75%; text-align: justify; width: 95%"><h2>The House</h2>
+                            <h4>Mr. and Mrs. Smith have one son and one daughter. The son's name is John. The daughter's name is Sarah.
+The Smiths live in a house. They have a living room. They watch TV in the living room. The father cooks food in the kitchen. They eat in the dining room. The house has two bedrooms. They sleep in the bedrooms. They keep their clothes in the closet. There is one bathroom. They brush their teeth in the bathroom.
+The house has a garden. John and Sarah play in the garden. They have a dog. John and Sarah like to play with the dog.</h4></div><br><br>
                             @endif
-                            <label for="primera" style="color: black;"><span> {{ $exprepuestas1[$n]->preguntas }} </span></label><br><br>
+                            <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $exprepuestas1[$n]->preguntas }} </span></label><br><br>
 
                             @while($o<=4)
                             
-                            <input type="radio" name="pregunta1" value="{{ $exprepuestas1[$n]->ID }}" required>
-                            <label><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
+                            <input type="radio" name="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
+                            <label style=" font-size: 100%;"><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
                             <!-- {{$n++}}
                             {{$o++}} -->
 
                             @endwhile
                             <br>
                         @else
-                            <label for="primera" style="color: black;"><span> {{ $exprepuestas1[$n]->preguntas }} </span></label><br><br>
+                            <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $exprepuestas1[$n]->preguntas }} </span></label><br><br>
                             @while($o<=3)
                             
-                                <input type="radio" name="pregunta1" value="{{ $exprepuestas1[$n]->ID }}" required>
-                                <label><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
+                                <input type="radio" name="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
+                                <label style="font-size: 100%;"><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
                                 <!-- {{$n++}}
                                 {{$o++}} -->
                             @endwhile
