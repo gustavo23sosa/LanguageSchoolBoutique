@@ -43,7 +43,7 @@
 </head>
 
 <body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/user.png');">
-<div class="wrapper wrapper-full-page ">
+<div class="wrapper wrapper-full-page " >
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
             <div class="dlr-header-inner">
@@ -113,36 +113,56 @@
                                         <div class="col-md-6 ml-auto table " style="width: 70%; align-content: center; float: left;">
                                             <div class="card card-signup text-center">
                                                 <div class="container">
-                                                    <hr>
-                                                    <h2>¡Ex&aacute;men de colocaci&oacute;n!</h2>
-                                                    <hr>
-                                                    <form name="basico" method="POST" action="{{route('evaluarb')}}">
-                                                        @csrf
-                                                        <div>
-                                                        <label for="primera">3 Where's the cat? _____ is in the garden.</label><br>
-                                                        <input type="radio" id="It" name="pregunta1" value="It" required>
-                                                        <label><span>It</span></label><br>
-                                                        <input type="radio" id="Its" name="pregunta1" value="Its" required>
-                                                        <label><span>Its</span></label><br>
-                                                        <input type="radio" id="He" name="pregunta1" value="He" required>
-                                                        <label><span>He</span></label><br>
-                                                        </div>
+                <hr>
+                <h2>¡Ex&aacute;men de colocaci&oacute;n!</h2>
+                <hr>
+                <form name="basico" method="POST" action="{{route('evaluarb')}}">
+                    @csrf
+                    <!-- {{$n=0}} -->
+                    @for ($i=0;$i<=20;$i++)
+                    @if($n<=61)
+                    
+                        <!--{{$o=1}}-->
+                        @if ($n>=45)
+                            @if($n==45)
+                            {{('mensaje de prueba para la lectura')}}
+                            @endif
+                            <label for="primera" style="color: black;"><span> {{ $exprepuestas1[$n]->preguntas }} </span></label><br><br>
 
-                                                        <div>
-                                                        <label for="primera">2 Who is Kate? Kate is my friend. ____ is a teacher.</label><br>
-                                                        <input type="radio" id="Her" 
-                                                        name="pregunta2" value="Her" required>
-                                                        <label><span>Her</span></label><br>
-                                                        <input type="radio" id="He" name="pregunta2" value="He" required>
-                                                        <label><span>He</span></label><br>
-                                                        <input type="radio" id="She" name="pregunta2" value="She" required>
-                                                        <label><span>She</span></label><br>
-                                                        </div>
-                                                        <button type="submit">Calificar Examen</button>
-                                                    </form>
-                                                    <br>
-                                                    <br>
-                                                    <br>
+                            @while($o<=4)
+                            
+                            <input type="radio" name="pregunta1" value="{{ $exprepuestas1[$n]->ID }}" required>
+                            <label><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
+                            <!-- {{$n++}}
+                            {{$o++}} -->
+
+                            @endwhile
+                            <br>
+                        @else
+                            <label for="primera" style="color: black;"><span> {{ $exprepuestas1[$n]->preguntas }} </span></label><br><br>
+                            @while($o<=3)
+                            
+                                <input type="radio" name="pregunta1" value="{{ $exprepuestas1[$n]->ID }}" required>
+                                <label><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
+                                <!-- {{$n++}}
+                                {{$o++}} -->
+                            @endwhile
+                        <br>
+                        @endif
+
+                    @else
+                        <br>
+                    @endif
+
+                    @endfor
+
+                    
+                    
+                    <button type="submit" class="btn btn-warning">Calificar Examen</button>
+                </form>
+                <br>
+                <br>
+                <br>
                                                     
                                                 </div>
                                             </div>
@@ -151,8 +171,7 @@
                                     </section>
 
                                     
-                                <div>
-                            </div>
+                                <div class="clear"></div>
                         </div>
                     </div>
                 </div>
@@ -161,7 +180,14 @@
     </div>
     </div>
 </div>
-    <footer class=footer-wrapper>
+    
+    
+    <script>
+$(document).ready(function () {
+    $('#example').DataTable();
+});
+</script>
+<footer class=footer-wrapper>
         <div class=copyright-wrapper>
             <div class="copyright-container container">
                 <div class=copyright-left> <font color="#FFFFFF">© Copyright LANGUAGE SCHOOL BOUTIQUE </font></div>
@@ -170,12 +196,5 @@
             </div>
         </div>
     </footer>
-    
-    <script>
-$(document).ready(function () {
-    $('#example').DataTable();
-});
-</script>
-
 </body>
 </html>
