@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\UsersRoles;
 use App\Models\User;
-use App\Models\Exprespuesta;
+use App\Models\PreguntasRespuestas;
 use App\Models\Preguntas;
 use App\Models\Respuestas;
 
@@ -17,11 +17,11 @@ class MasterController extends Controller
     	$id = Auth::User()->id;
         $nivel = User::where('id','=',$id)->select('fk_nivel')->get();
         if($nivel[0]->fk_nivel == 2 || $nivel[0]->fk_nivel == 3){
-            $exprepuestas1 = Exprespuesta::select('Exprespuesta.ID','P.preguntas','R.respuestas')
-            ->join('Preguntas AS P','Exprespuesta.fk_preguntas','=','P.ID')
-            ->join('Respuestas AS R','Exprespuesta.fk_respuestas','=','R.ID')
+            $exprepuestas1 = PreguntasRespuestas::select('PreguntasRespuestas.ID','P.preguntas','R.respuestas')
+            ->join('Preguntas AS P','PreguntasRespuestas.fk_preguntas','=','P.ID')
+            ->join('Respuestas AS R','PreguntasRespuestas.fk_respuestas','=','R.ID')
             ->get();
-            $preguntas = Preguntas::whereBetween('ID',['1','20'])->get();
+            
             
             return view('basico')->with('exprepuestas1',$exprepuestas1);
             // ->with('preguntas',$preguntas);

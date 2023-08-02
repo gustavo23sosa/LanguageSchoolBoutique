@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Exprespuesta extends Migration
+class PreguntasRespuestas extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class Exprespuesta extends Migration
     public function up()
     {
         //
-        Schema::create('Exprespuesta', function (Blueprint $table) {
+        Schema::create('PreguntasRespuestas', function (Blueprint $table) {
+
             $table->tinyInteger('ID')->primary();
 
             $table->tinyinteger('fk_examenes');
@@ -37,5 +38,6 @@ class Exprespuesta extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('PreguntasRespuestas');
     }
 }

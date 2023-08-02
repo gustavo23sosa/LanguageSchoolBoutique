@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(examenes::class);
         $this->call(preguntas::class);
         $this->call(respuestas::class);
-        $this->call(exprespuesta::class);
+        $this->call(PreguntasRespuestas::class);
         $this->call(Roles::class);
         $this->call(EntidadFederativa::class);
         $this->call(EstatusUser::class);

@@ -4,12 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Exprespuesta;
+use App\Models\PreguntasRespuestas;
 
-class exprespuesta extends Model
+class PreguntasRespuestas extends Model
 {
     use HasFactory;
-    protected $table = 'Exprespuesta';
+    protected $table = 'PreguntasRespuestas';
     protected $primaryKey = 'ID';
     protected $fillable = [
         'fk_examen',

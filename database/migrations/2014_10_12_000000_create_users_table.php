@@ -39,8 +39,9 @@ class CreateUsersTable extends Migration
             $table->tinyinteger('fk_estatus')->default(1);
             $table->foreign('fk_estatus')->references('ID')->on('EstatusUser');
 
-            $table->dateTime('created_at', $precision = 0)->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
-            $table->dateTime('updated_at', $precision = 0)->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamps();
+            // $table->dateTime('created_at', $precision = 0)->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            // $table->dateTime('updated_at', $precision = 0)->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->boolean('activo')->default(0);
         });
     }
