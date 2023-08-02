@@ -20,6 +20,7 @@ class MasterController extends Controller
             $exprepuestas1 = PreguntasRespuestas::select('PreguntasRespuestas.ID','P.preguntas','R.respuestas')
             ->join('Preguntas AS P','PreguntasRespuestas.fk_preguntas','=','P.ID')
             ->join('Respuestas AS R','PreguntasRespuestas.fk_respuestas','=','R.ID')
+            
             ->get();
             
             
@@ -33,49 +34,101 @@ class MasterController extends Controller
         }
     }
     public function evaluarB(Request $request){
-    	// $id = Auth::user()->id;
+    	$id = Auth::user()->id;
     	// $respuestas = request()->all();
         /*3
 
-3
 
-1
-
-2
-
-2
-
-2
-
-2
-
-3
-
-1
-
-3
-
-1
-
-1
-
-1
-
-2
-
-1
-
-4
-
-2
-
-3
-
-1
-
-2*/
+"pregunta1":"3",
+"pregunta2":"6",
+"pregunta3":"7",
+"pregunta4":"11",
+"pregunta5":"14",
+"pregunta6":"17",
+"pregunta7":"20",
+"pregunta8":"24",
+"pregunta9":"25",
+"pregunta10":"30",
+"pregunta11":"31",
+"pregunta12":"34",
+"pregunta13":"37",
+"pregunta14":"41",
+"pregunta15":"43",
+"pregunta16":"49",
+"pregunta17":"51",
+"pregunta18":"56",
+"pregunta19":"58",
+"pregunta20":"63"       
+*/     
     	$respuestas = request()->except('_token');
-    	return response()->json($respuestas);
+
+
+        $contador = 0;
+        if ($respuestas['pregunta1'] == 3) {
+            $contador++;
+        }
+        if ($respuestas['pregunta2'] == 6) {
+            $contador++;
+        }
+        if ($respuestas['pregunta3'] == 7) {
+            $contador++;
+        }
+        if ($respuestas['pregunta4'] == 11) {
+            $contador++;
+        }
+        if ($respuestas['pregunta5'] == 14) {
+            $contador++;
+        }
+        if ($respuestas['pregunta6'] == 17) {
+            $contador++;
+        }
+        if ($respuestas['pregunta7'] == 20) {
+            $contador++;
+        }
+        if ($respuestas['pregunta8'] == 24) {
+            $contador++;
+        }
+        if ($respuestas['pregunta9'] == 25) {
+            $contador++;
+        }
+        if ($respuestas['pregunta10'] == 30) {
+            $contador++;
+        }
+        if ($respuestas['pregunta11'] == 31) {
+            $contador++;
+        }
+        if ($respuestas['pregunta12'] == 34) {
+            $contador++;
+        }
+        if ($respuestas['pregunta13'] == 37) {
+            $contador++;
+        }
+        if ($respuestas['pregunta14'] == 41) {
+            $contador++;
+        }
+        if ($respuestas['pregunta15'] == 43) {
+            $contador++;
+        }
+        if ($respuestas['pregunta16'] == 49) {
+            $contador++;
+        }
+        if ($respuestas['pregunta17'] == 51) {
+            $contador++;
+        }
+        if ($respuestas['pregunta18'] == 56) {
+            $contador++;
+        }
+        if ($respuestas['pregunta19'] == 58) {
+            $contador++;
+        }
+        if ($respuestas['pregunta20'] == 63) {
+            $contador++;
+        }
+
+
+
+    	// return response()->json($contador);
+        return redirect()->route('home');
     }
     public function subirArchivo(Request $request)
 	{

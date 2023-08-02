@@ -56,7 +56,8 @@ class HomeController extends Controller
                 // $id = Auth::user()->id;
                 // $registrados = User::select('users.fk_nivel')->where('id','=',$id)->get();
                 $nivel = Auth::user()->fk_nivel;
-                return view('home2')->with('niveles', $nivel);
+                $estatus = Auth::user()->activo;             
+                return view('home2')->with('niveles', $nivel)->with('activo',$estatus);
                 //->with('registrados',$registrados);
             }
         }

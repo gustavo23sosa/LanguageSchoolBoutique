@@ -107,42 +107,74 @@
         <div class=content-wrapper>
             <div class=gdlr-content>
                 <div class="with-sidebar-wrapper gdlr-type-no-sidebar">
+                            @if($activo == 1)
 
-                                    <section>
+                                <section>
                                         <div class="col-md-6 ml-auto table " style="width: 150px; align-content: center; float: left;"></div>
                                         <div class="col-md-6 ml-auto table " style="width: 70%; align-content: center; float: left;">
                                             <div class="card card-signup text-center">
                                                 <div class="container">
                                                     <hr>
-                                                    <h2>¡Bienvenido!</h2>
+
+                            
+
+                                                    <h2>¡Resultados!</h2>
                                                     <hr>
-                                                    @if($message = Session::get('success'))
-                                                                    <div style="background-color: #d4edda;" class="alert alert-success" role="alert">
-                                                                    <font color="#155724">{{ $message }}</font>
-                                                                    </div>
-                                                    @endif
-                                                    @if($niveles == 2 || $niveles == 3)
-                                                    <form method="POST" name="basico" action="{{route('Examen')}}">
-                                                        @csrf
-                                                    <a href="" style="color: white;"><button class="btn btn-success" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
-                                                    @endif
-                                                    @if($niveles == 4 || $niveles == 5)
-                                                    <form method="POST" name="intermedio" action="{{route('Examen')}}">
-                                                        @csrf
-                                                    <a href="" style="color: white;"><button class="btn btn-warning" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
-                                                    @endif
-                                                    @if($niveles == 6 || $niveles == 7)
-                                                    <form method="POST" name="avanzado" action="{{route('Examen')}}">
-                                                        @csrf
-                                                    <a href="" style="color: white;"><button class="btn btn-danger" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
-                                                    @endif
+                                                    
+                                                    <p>{{('Pruebas de mensajeria')}}</p>
                                                     <br><br><br>
-                                                    <!-- <p>Para subir archivos, <a href="{{ url('crear')}}" >¡Haz click aqui!</a></p> -->
+                                                    
+
                                                 </div>
                                             </div>
                                         </div>
 
                                     </section>
+                                    
+                            @else
+
+                                <section>
+                                    <div class="col-md-6 ml-auto table " style="width: 150px; align-content: center; float: left;"></div>
+                                    <div class="col-md-6 ml-auto table " style="width: 70%; align-content: center; float: left;">
+                                        <div class="card card-signup text-center">
+                                            <div class="container">
+                                                <hr>
+
+                        
+
+                                                <h2>¡Bienvenido!</h2>
+                                                <hr>
+                                                @if($message = Session::get('success'))
+                                                                <div style="background-color: #d4edda;" class="alert alert-success" role="alert">
+                                                                <font color="#155724">{{ $message }}</font>
+                                                                </div>
+                                                @endif
+                                                @if($niveles == 2 || $niveles == 3)
+                                                <form method="POST" name="basico" action="{{route('Examen')}}">
+                                                    @csrf
+                                                <a href="" style="color: white;"><button class="btn btn-success" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
+                                                @endif
+                                                @if($niveles == 4 || $niveles == 5)
+                                                <form method="POST" name="intermedio" action="{{route('Examen')}}">
+                                                    @csrf
+                                                <a href="" style="color: white;"><button class="btn btn-warning" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
+                                                @endif
+                                                @if($niveles == 6 || $niveles == 7)
+                                                <form method="POST" name="avanzado" action="{{route('Examen')}}">
+                                                    @csrf
+                                                <a href="" style="color: white;"><button class="btn btn-danger" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
+                                                @endif
+                                                <br><br><br>
+                                                
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </section>
+
+                                
+                            @endif
                                 <div>
                             </div>
                         </div>
