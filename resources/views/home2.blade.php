@@ -120,8 +120,13 @@
 
                                                     <h2>¡Resultados!</h2>
                                                     <hr>
-                                                    
-                                                    <p>{{('Pruebas de mensajeria')}}</p>
+                                                    @if($message = Session::get('success'))
+                                                                
+                                                                <div style="background-color: #d4edda;" class="alert alert-success" role="alert">
+                                                                <font color="#155724">{{ $message }}</font>
+                                                                </div>
+                                                    @endif
+                                                    <p>{{('Ya no se permiten mas intentos')}}</p>
                                                     <br><br><br>
                                                     
 

@@ -201,7 +201,7 @@
                                                 <td> <form method="post" name="EnviarExamen" action="{{ url('AceptarUsuario') }}">
                                                         @csrf
                                                             <input type="hidden" name="id_user" value="{{ $usuario->id }}">
-                                                            <input type="submit"  name="EnviarExamen" class="btn btn-success" value="Enviar Examen">
+                                                            <input type="submit"  name="EnviarExamen" class="btn btn-success" value="Aceptar Examen">
                                                         </form></td>
                                                 <td><form method="post" name="Baja" action="{{ url('BajaUsuario') }}">
                                                         @csrf

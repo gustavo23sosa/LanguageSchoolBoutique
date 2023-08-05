@@ -7,6 +7,7 @@
 <head>
     <meta charset=UTF-8>
     <meta name=viewport content="initial-scale=1.0">
+    <meta name="google" content="notranslate" />
 
     <title>Examen de colocacion</title>
     <link rel="icon" type="image/png" href="img/icono.png">
@@ -30,6 +31,7 @@
     <script src="js/app.js" defer></script>
     <script src="js/prueba.js" defer></script>
     <script src="js/prueba2.js" defer></script>
+    <script src="js/customer.js" defer></script>
 
   
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900&amp;subset=latin&amp;ver=5e348039466ee2df77d142cdeeca1221' type=text/css media=all>
@@ -42,7 +44,7 @@
 
 </head>
 
-<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/user.png');">
+<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/user.png');" translate="no">
 <div class="wrapper wrapper-full-page " >
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
@@ -116,10 +118,13 @@
                 <hr>
                 <h2>¡Ex&aacute;men de colocaci&oacute;n!</h2>
                 <hr>
+                <div style="float: left;"><span id="reloj"></span></div><br>
                 <form name="basico" method="POST" action="{{route('evaluarb')}}">
-                    @csrf
+                    @csrf   
                     <!-- {{$n=0}} -->
-                    @for ($i=1;$i<=20;$i++)
+                    <!-- {{$i=1}} -->
+                    @foreach($preguntas as $pregunta)
+                    
                     @if($n<=61)
                     
                         <!--{{$o=1}}-->
@@ -132,7 +137,7 @@
 The Smiths live in a house. They have a living room. They watch TV in the living room. The father cooks food in the kitchen. They eat in the dining room. The house has two bedrooms. They sleep in the bedrooms. They keep their clothes in the closet. There is one bathroom. They brush their teeth in the bathroom.
 The house has a garden. John and Sarah play in the garden. They have a dog. John and Sarah like to play with the dog.</h4></div><br><br>
                             @endif
-                            <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $exprepuestas1[$n]->preguntas }} </span></label><br><br>
+                            <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $pregunta->preguntas }} </span></label><br><br>
 
                             @while($o<=4)
                             
@@ -144,7 +149,7 @@ The house has a garden. John and Sarah play in the garden. They have a dog. John
                             @endwhile
                             <br>
                         @else
-                            <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $exprepuestas1[$n]->preguntas }} </span></label><br><br>
+                            <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $pregunta->preguntas }} </span></label><br><br>
                             @while($o<=3)
                             
                                 <input type="radio" name="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
@@ -159,12 +164,14 @@ The house has a garden. John and Sarah play in the garden. They have a dog. John
                         <br>
                     @endif
 
-                    @endfor
-
+                    <!-- {{$i++}} -->
+                    @endforeach
                     
                     
                     <button type="submit" class="btn btn-warning">Calificar Examen</button>
                 </form>
+
+                
                 <br>
                 <br>
                 <br>

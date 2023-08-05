@@ -119,7 +119,7 @@
                                                     <form method="POST" action="{{route('subir')}}">
                                                         @csrf
 
-                                                        <b><label style="color: black; font-size: 20px">Escoge como ser&aacute; las clases</label></b><br>
+                                                        <b><label style="color: black; font-size: 20px">Escoge como te gustar&iacute;a tomar las clases</label></b><br>
                                                         <select type="text" class="custom-select" required name="clases" style="width: 30%; text-transform: uppercase;">
                                                         <option value="">Seleccione una opci&oacute;n:</option>
                                                         @foreach($clases as $clase)

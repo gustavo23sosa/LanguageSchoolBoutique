@@ -17,15 +17,16 @@ class MasterController extends Controller
     	$id = Auth::User()->id;
         $nivel = User::where('id','=',$id)->select('fk_nivel')->get();
         if($nivel[0]->fk_nivel == 2 || $nivel[0]->fk_nivel == 3){
+            $preguntas = Preguntas::where('activo','=','1')->get();
             $exprepuestas1 = PreguntasRespuestas::select('PreguntasRespuestas.ID','P.preguntas','R.respuestas')
             ->join('Preguntas AS P','PreguntasRespuestas.fk_preguntas','=','P.ID')
             ->join('Respuestas AS R','PreguntasRespuestas.fk_respuestas','=','R.ID')
             
             ->get();
             
-            
-            return view('basico')->with('exprepuestas1',$exprepuestas1);
-            // ->with('preguntas',$preguntas);
+            // return response()->json($preguntas);
+            return view('basico')->with('exprepuestas1',$exprepuestas1)
+            ->with('preguntas',$preguntas);
 
         }else if($nivel[0]->fk_nivel == 4 || $nivel[0]->fk_nivel == 5){
             return view('intermedio');
@@ -125,10 +126,26 @@ class MasterController extends Controller
             $contador++;
         }
 
+        $resultado = ($contador * 100)/20;
+        $estatus = User::where('id', $id)->update(['activo' => '1','fk_estatus'=>'2']);
 
+        if ($resultado >=0 && $resultado <= 50) {
+            
+            return redirect()->route('home')->with('resultado',$resultado)->with('success','Es capaz de comprender y utilizar expresiones cotidianas de uso muy frecuente así como frases sencillas destinadas a satisfacer necesidades de tipo inmediato. Puede presentarse a sí mismo y a otros, pedir y dar información personal básica sobre su domicilio, sus pertenencias y las personas que conoce. Puede relacionarse de forma elemental siempre que su interlocutor hable despacio y con claridad y esté dispuesto a cooperar.');
 
-    	// return response()->json($contador);
-        return redirect()->route('home');
+            
+        }
+        if ($resultado >50 && $resultado <= 100) {
+            
+            return redirect()->route('home')->with('resultado',$resultado)->with('success','Es capaz de comprender frases y expresiones de uso frecuente relacionadas con áreas de experiencia que le son especialmente relevantes (información básica sobre sí mismo y su familia, compras, lugares de interés, ocupaciones, etc). Sabe comunicarse a la hora de llevar a cabo tareas simples y cotidianas que no requieran más que intercambios sencillos y directos de información sobre cuestiones que le son conocidas o habituales. Sabe describir en términos sencillos aspectos de su pasado y su entorno así como cuestiones relacionadas con sus necesidades inmediatas.');
+
+            
+        }
+
+        // $estatus = User::where('id', $user)->update(['activo' => '1','fk_estatus'=>'2']);
+
+    	// return response()->json($respuestas);
+        
     }
     public function subirArchivo(Request $request)
 	{
