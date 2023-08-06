@@ -174,6 +174,11 @@
                                                     <td>Telefono</td><td>{{ $usuario->telefono }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 </tr><tr><td>Estatus</td><td>{{ $usuario->estatus }}&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
                                                 <tr><td>Entidad Federativa</td><td>{{ $usuario->entidad }}&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+                                                @if($usuario->Resultado == 1)
+                                                <tr><td>Resultados del examen</td><td>{{ ('Sin resultados') }}&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+                                                @else
+                                                <tr><td>Resultados del examen</td><td>{{ $usuario->Resultado('%') }}&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+                                                @endif
                                                 <tr>
                                                     <td>Nivel del usuario elegido</td><td>{{ $usuario->nivel }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 </tr>

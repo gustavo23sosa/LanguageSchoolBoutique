@@ -120,7 +120,7 @@
 
                                                     <h2>¡Resultados!</h2>
                                                     <hr>
-                                                    
+                                                    <div style="font-size: 200%;">{{$resultado[0]->Resultado.('%')}}</div>
                                                     @if($message = Session::get('success'))
 
                                                                 <div style="background-color: #d4edda;" class="alert alert-success" role="alert">

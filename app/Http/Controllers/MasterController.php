@@ -127,11 +127,11 @@ class MasterController extends Controller
         }
 
         $resultado = ($contador * 100)/20;
-        $estatus = User::where('id', $id)->update(['activo' => '1','fk_estatus'=>'2']);
+        $estatus = User::where('id', $id)->update(['activo' => '1','fk_estatus'=>'2' , 'Resultado' => $resultado]);
 
         if ($resultado >=0 && $resultado <= 50) {
             
-            return redirect()->route('home')->with('resultado',$resultado)->with('success','Es capaz de comprender y utilizar expresiones cotidianas de uso muy frecuente así como frases sencillas destinadas a satisfacer necesidades de tipo inmediato. Puede presentarse a sí mismo y a otros, pedir y dar información personal básica sobre su domicilio, sus pertenencias y las personas que conoce. Puede relacionarse de forma elemental siempre que su interlocutor hable despacio y con claridad y esté dispuesto a cooperar.');
+            return redirect()->route('home')->with('success','Es capaz de comprender y utilizar expresiones cotidianas de uso muy frecuente así como frases sencillas destinadas a satisfacer necesidades de tipo inmediato. Puede presentarse a sí mismo y a otros, pedir y dar información personal básica sobre su domicilio, sus pertenencias y las personas que conoce. Puede relacionarse de forma elemental siempre que su interlocutor hable despacio y con claridad y esté dispuesto a cooperar.');
 
             
         }

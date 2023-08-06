@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             // $table->string('archivo')->nullable();
             $table->string('password'); 
             $table->rememberToken();
+            $table->tinyinteger('Resultado')->default(1);
             $table->string('Observaciones')->default('Sin Observaciones');
 
             $table->tinyinteger('fk_nivel')->default('1');
@@ -38,6 +39,7 @@ class CreateUsersTable extends Migration
 
             $table->tinyinteger('fk_estatus')->default(1);
             $table->foreign('fk_estatus')->references('ID')->on('EstatusUser');
+
 
             $table->timestamps();
             // $table->dateTime('created_at', $precision = 0)->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
