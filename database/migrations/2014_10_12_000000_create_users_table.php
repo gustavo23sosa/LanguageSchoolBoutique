@@ -27,6 +27,9 @@ class CreateUsersTable extends Migration
             $table->tinyinteger('Resultado')->default(1);
             $table->string('Observaciones')->default('Sin Observaciones');
 
+            $table->tinyinteger('fk_rango');
+            $table->foreign('fk_rango')->references('ID')->on('MCER');
+
             $table->tinyinteger('fk_nivel')->default('1');
             $table->foreign('fk_nivel')->references('ID')->on('Nivel');
 
