@@ -168,7 +168,7 @@ The house has a garden. John and Sarah play in the garden. They have a dog. John
                     @endforeach
                     
                     
-                    <button type="submit" class="btn btn-warning">Calificar Examen</button>
+                    <button type="submit" onclick="return confirm('Todas las preguntas seran calificadas y no habra mas intentos, ¿Estas seguro?)" class="btn btn-warning">Calificar Examen</button>
                 </form>
 
                 

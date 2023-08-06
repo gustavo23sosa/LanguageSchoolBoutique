@@ -55,28 +55,40 @@ class HomeController extends Controller
                 $clase = Clases::where('activo','=','1')->get();
                 return view('home')->with('niveles',$nivel)->with('clases',$clase);
             }else{
-                $id = Auth::user()->id;
-                // $registrados = User::select('users.fk_nivel')->where('id','=',$id)->get();
-                $nivel = Auth::user()->fk_nivel;
                 $activo = Auth::user()->activo;
-                $resultado = User::where('id','=',$id)->select('Resultado')->get();
-                // return response()->json($resultado);  
-                if ($resultado[0]->Resultado >=1 && $resultado[0]->Resultado <= 50) {
-                    
-                    $Observaciones = User::where('id','=',$id)->select('Observaciones')->get();
-                    return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado)->with('Observaciones',$Observaciones);
+                if($activo == 0){
+                    $id = Auth::user()->id;
+                    // $registrados = User::select('users.fk_nivel')->where('id','=',$id)->get();
+                    $nivel = Auth::user()->fk_nivel;
+                    return view('home2')->with('niveles', $nivel)->with('activo',$activo);    
+                }else{
 
+                    $id = Auth::user()->id;
+                    // $registrados = User::select('users.fk_nivel')->where('id','=',$id)->get();
+                    $nivel = Auth::user()->fk_nivel;
                     
+                    $resultado = User::where('id','=',$id)->select('Resultado')->get();
+                    // return response()->json($resultado);  
+                    if ($resultado[0]->Resultado >=1 && $resultado[0]->Resultado <= 50) {
+                        
+                        $Observaciones = User::where('id','=',$id)->select('Observaciones')->get();
+                        return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado);
+
+                        
+                    }
+                    if ($resultado[0]->Resultado >50 && $resultado[0]->Resultado <= 100) {
+                        
+                       
+                       
+                       $Observaciones = User::where('id','=',$id)->select('Observaciones')->get();
+                       return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado);     
+                        
+                    } 
+                    if(is_null($resultado)){
+                        
+                    }
                 }
-                if ($resultado[0]->Resultado >50 && $resultado[0]->Resultado <= 100) {
-                    
-                   
-                   
-                   $Observaciones = User::where('id','=',$id)->select('Observaciones')->get();
-                   return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('Observaciones',$Observaciones);
-                    
-                }         
-                return view('home2')->with('niveles', $nivel)->with('activo',$activo);
+                
                 // ->with('resultado',$resultado);
                 //->with('registrados',$registrados);
             }

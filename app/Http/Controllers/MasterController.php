@@ -105,7 +105,7 @@ class MasterController extends Controller
         $resultado = ($contador * 100)/20;
         $estatus = User::where('id', $id)->update(['activo' => '1','fk_estatus'=>'2' , 'Resultado' => $resultado]);
 
-        
+        return redirect()->route('home')->with('success','Se ha calificado con exito');
 
         // $estatus = User::where('id', $user)->update(['activo' => '1','fk_estatus'=>'2']);
 

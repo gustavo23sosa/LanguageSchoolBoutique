@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(EstatusUser::class);
         $this->call(nivel::class);
         $this->call(Clases::class);
+        $this->call(MCER::class);
         $this->call(users::class);
         $this->call(UsersRoles::class);
     }

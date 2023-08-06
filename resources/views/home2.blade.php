@@ -124,7 +124,7 @@
                                                     
 
                                                                 <div style="background-color: #d4edda;" class="alert alert-success" role="alert">
-                                                                <font color="#155724">{{ $Observaciones[0]->Observaciones }}</font>
+                                                                <font color="#155724">{{('mensaje') }}</font>
                                                                 </div>
                                                     
                                                     <p>{{('Ya no se permiten mas intentos')}}</p>

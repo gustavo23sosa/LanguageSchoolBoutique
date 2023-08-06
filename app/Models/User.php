@@ -25,6 +25,7 @@ class User extends Authenticatable
         'telefono',
         'password',
         'Resultado',
+        'fk_rango',
         'fk_nivel',
         'fk_clases',
         'fk_estado',
@@ -54,10 +55,13 @@ class User extends Authenticatable
         return $this->belongsTo(EntidadFederativa::class, 'id', 'fk_estado');
     }
     public function nivel(){
-        return $this->belongsTo(EntidadFederativa::class, 'ID', 'fk_nivel');
+        return $this->belongsTo(Nivel::class, 'ID', 'fk_nivel');
+    }
+    public function mcer(){
+        return $this->HasMany(MCER::class, 'ID', 'fk_rango');
     }
     public function clases(){
-        return $this->belongsTo(EntidadFederativa::class, 'ID', 'fk_clases');
+        return $this->belongsTo(Clases::class, 'ID', 'fk_clases');
     }
     public function estatuses(){
         return $this->belongsTo(EstatusUser::class, 'id', 'fk_estatus');

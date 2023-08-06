@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             // $table->string('archivo')->nullable();
             $table->string('password'); 
             $table->rememberToken();
-            $table->tinyinteger('Resultado')->default(1);
+            $table->tinyinteger('Resultado')->nullable();
             $table->string('Observaciones')->default('Sin Observaciones');
 
             $table->tinyinteger('fk_rango');
