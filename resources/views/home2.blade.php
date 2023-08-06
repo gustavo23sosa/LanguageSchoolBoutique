@@ -120,8 +120,9 @@
 
                                                     <h2>¡Resultados!</h2>
                                                     <hr>
+                                                    
                                                     @if($message = Session::get('success'))
-                                                                
+
                                                                 <div style="background-color: #d4edda;" class="alert alert-success" role="alert">
                                                                 <font color="#155724">{{ $message }}</font>
                                                                 </div>

@@ -7,7 +7,7 @@ use Auth;
 use App\Models\UsersRoles;
 use App\Models\User;
 use App\Models\PreguntasRespuestas;
-use App\Models\Preguntas;
+use App\Models\preguntas;
 use App\Models\Respuestas;
 
 class MasterController extends Controller
@@ -137,7 +137,7 @@ class MasterController extends Controller
         }
         if ($resultado >50 && $resultado <= 100) {
             
-            return redirect()->route('home')->with('resultado',$resultado)->with('success','Es capaz de comprender frases y expresiones de uso frecuente relacionadas con áreas de experiencia que le son especialmente relevantes (información básica sobre sí mismo y su familia, compras, lugares de interés, ocupaciones, etc). Sabe comunicarse a la hora de llevar a cabo tareas simples y cotidianas que no requieran más que intercambios sencillos y directos de información sobre cuestiones que le son conocidas o habituales. Sabe describir en términos sencillos aspectos de su pasado y su entorno así como cuestiones relacionadas con sus necesidades inmediatas.');
+            return view('home2')->with('resultado',$resultado)->with('success','Es capaz de comprender frases y expresiones de uso frecuente relacionadas con áreas de experiencia que le son especialmente relevantes (información básica sobre sí mismo y su familia, compras, lugares de interés, ocupaciones, etc). Sabe comunicarse a la hora de llevar a cabo tareas simples y cotidianas que no requieran más que intercambios sencillos y directos de información sobre cuestiones que le son conocidas o habituales. Sabe describir en términos sencillos aspectos de su pasado y su entorno así como cuestiones relacionadas con sus necesidades inmediatas.');
 
             
         }

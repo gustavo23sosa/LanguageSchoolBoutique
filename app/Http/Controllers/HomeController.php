@@ -32,10 +32,12 @@ class HomeController extends Controller
     //     Auth::logout();
     //     return redirect()->route('register')->with('success','Registro exitoso');
     // }
-    public function index()
+    public function index(Request $request)
     {
+        // $respuestas = request()->all();
         $id = Auth::user()->id;
         $rol = UsersRoles::where('fk_users','=', $id)->get();
+        
         if ($rol[0]->fk_roles == '1') {
              $registradosUs = User::select('users.name','users.aPaterno','users.aMaterno','users.email','users.telefono', 'users.id')
             ->join('UsersRoles AS UR','UR.fk_users','=','users.id')
@@ -56,8 +58,10 @@ class HomeController extends Controller
                 // $id = Auth::user()->id;
                 // $registrados = User::select('users.fk_nivel')->where('id','=',$id)->get();
                 $nivel = Auth::user()->fk_nivel;
-                $activo = Auth::user()->activo;             
+                $activo = Auth::user()->activo;  
+                // return response()->json($respuestas);           
                 return view('home2')->with('niveles', $nivel)->with('activo',$activo);
+                // ->with('resultado',$resultado);
                 //->with('registrados',$registrados);
             }
         }
