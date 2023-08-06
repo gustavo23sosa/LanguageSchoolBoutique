@@ -37,30 +37,6 @@ class MasterController extends Controller
     public function evaluarB(Request $request){
     	$id = Auth::user()->id;
     	// $respuestas = request()->all();
-        /*3
-
-
-"pregunta1":"3",
-"pregunta2":"6",
-"pregunta3":"7",
-"pregunta4":"11",
-"pregunta5":"14",
-"pregunta6":"17",
-"pregunta7":"20",
-"pregunta8":"24",
-"pregunta9":"25",
-"pregunta10":"30",
-"pregunta11":"31",
-"pregunta12":"34",
-"pregunta13":"37",
-"pregunta14":"41",
-"pregunta15":"43",
-"pregunta16":"49",
-"pregunta17":"51",
-"pregunta18":"56",
-"pregunta19":"58",
-"pregunta20":"63"       
-*/     
     	$respuestas = request()->except('_token');
 
 
@@ -129,18 +105,7 @@ class MasterController extends Controller
         $resultado = ($contador * 100)/20;
         $estatus = User::where('id', $id)->update(['activo' => '1','fk_estatus'=>'2' , 'Resultado' => $resultado]);
 
-        if ($resultado >=0 && $resultado <= 50) {
-            
-            return redirect()->route('home')->with('success','Es capaz de comprender y utilizar expresiones cotidianas de uso muy frecuente así como frases sencillas destinadas a satisfacer necesidades de tipo inmediato. Puede presentarse a sí mismo y a otros, pedir y dar información personal básica sobre su domicilio, sus pertenencias y las personas que conoce. Puede relacionarse de forma elemental siempre que su interlocutor hable despacio y con claridad y esté dispuesto a cooperar.');
-
-            
-        }
-        if ($resultado >50 && $resultado <= 100) {
-            
-            return redirect()->route('home')->with('resultado',$resultado)->with('success','Es capaz de comprender frases y expresiones de uso frecuente relacionadas con áreas de experiencia que le son especialmente relevantes (información básica sobre sí mismo y su familia, compras, lugares de interés, ocupaciones, etc). Sabe comunicarse a la hora de llevar a cabo tareas simples y cotidianas que no requieran más que intercambios sencillos y directos de información sobre cuestiones que le son conocidas o habituales. Sabe describir en términos sencillos aspectos de su pasado y su entorno así como cuestiones relacionadas con sus necesidades inmediatas.');
-
-            
-        }
+        
 
         // $estatus = User::where('id', $user)->update(['activo' => '1','fk_estatus'=>'2']);
 

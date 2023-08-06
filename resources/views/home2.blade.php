@@ -121,12 +121,12 @@
                                                     <h2>¡Resultados!</h2>
                                                     <hr>
                                                     <div style="font-size: 200%;">{{$resultado[0]->Resultado.('%')}}</div>
-                                                    @if($message = Session::get('success'))
+                                                    
 
                                                                 <div style="background-color: #d4edda;" class="alert alert-success" role="alert">
-                                                                <font color="#155724">{{ $message }}</font>
+                                                                <font color="#155724">{{ $Observaciones[0]->Observaciones }}</font>
                                                                 </div>
-                                                    @endif
+                                                    
                                                     <p>{{('Ya no se permiten mas intentos')}}</p>
                                                     <br><br><br>
                                                     
