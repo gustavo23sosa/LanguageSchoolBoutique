@@ -1,10 +1,9 @@
-// setInterval(muestraReloj, 1000);
-
 number=60;
 minutos=29;
-const timer = setInterval(()=>{
+let radioButtons = document.querySelectorAll('input[type="radio"]');
 
-  
+
+const timer = setInterval(()=>{
   
   
   
@@ -22,12 +21,24 @@ const timer = setInterval(()=>{
 
 
   if(number==0 && minutos == 0){
-    clearInterval(timer);
-  }
-  
 
-  
-  
+
+    // radioButtons.forEach(radioButton => radioButton.disabled = true);
+    // radioButtons.forEach(radioButton => radioButton.check = true);
+    // for (var i = 1; i <= 60; i++) {
+    //   var radios = document.getElementsByName('pregunta'+i);
+    // }
+    
+    // for (var radio of radios)
+    // {
+    //     if (radio.checked) {
+    //         respuestas = radio.value;
+    //     }
+    // }
+    // window.location.href = "/evaluarb";
+    clearInterval(timer);
+    
+  }
 },1000);
 
 

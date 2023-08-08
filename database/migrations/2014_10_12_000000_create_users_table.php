@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->tinyinteger('Resultado')->nullable();
             $table->string('Observaciones')->default('Sin Observaciones');
 
-            $table->tinyinteger('fk_rango');
+            $table->tinyinteger('fk_rango')->default('7');
             $table->foreign('fk_rango')->references('ID')->on('MCER');
 
             $table->tinyinteger('fk_nivel')->default('1');
@@ -44,9 +44,9 @@ class CreateUsersTable extends Migration
             $table->foreign('fk_estatus')->references('ID')->on('EstatusUser');
 
 
-            $table->timestamps();
-            // $table->dateTime('created_at', $precision = 0)->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
-            // $table->dateTime('updated_at', $precision = 0)->default(DB::raw('CURRENT_TIMESTAMP'));
+            // $table->timestamps();
+            $table->dateTime('created_at', $precision = 0)->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->dateTime('updated_at', $precision = 0)->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->boolean('activo')->default(0);
         });
     }

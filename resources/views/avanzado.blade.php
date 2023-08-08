@@ -7,6 +7,7 @@
 <head>
     <meta charset=UTF-8>
     <meta name=viewport content="initial-scale=1.0">
+    <meta name="google" content="notranslate" />
 
     <title>Examen de colocacion</title>
     <link rel="icon" type="image/png" href="img/icono.png">
@@ -42,7 +43,7 @@
 
 </head>
 
-<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/user.png');">
+<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/user.png');" translate="no">
 <div class="wrapper wrapper-full-page ">
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
@@ -114,12 +115,68 @@
                                             <div class="card card-signup text-center">
                                                 <div class="container">
                                                     <hr>
-                                                    <h2>¡Ex&aacute;men de colocaci&oacute;n!</h2>
-                                                    <hr>
-                                                    
-                                                    <br>
-                                                    <br>
-                                                    <br>
+                <h2>¡Ex&aacute;men de colocaci&oacute;n!</h2>
+                <hr>
+                <div style="float: left;"><span id="reloj"></span></div><br>
+                <form name="intermedio" method="POST" action="{{route('evaluarb')}}">
+                    @csrf   
+                    <!-- {{$n=0}} -->
+                    <!-- {{$i=1}} -->
+                    <div id="formulario">
+                    @foreach($preguntas as $pregunta)
+                    
+                    @if($n<=61)
+                    
+                        <!--{{$o=1}}-->
+                        @if ($n>=45)
+                            @if($n==45)
+                            
+                            <h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6>
+                            <div style="width: 250px; align-content: center; float: left;"></div><br><div style="font-size: 75%; text-align: justify; width: 95%"><h2>Yellowstone National Park</h2>
+                            <h4>Yellowstone National Park, located in Idaho, Montana, and Wyoming, was established as the first national park in the United States. The park is a popular destination for visitors who enjoy ecological tourism as it offers forests, mountains, and abundant ecosystems to explore. Some of Yellowstone’s most well-known landmarks are its geothermal hot springs and geysers, the most famous of which is named Old Faithful.
+Last fall, Lisa and her friends decided to take a camping trip to Yellowstone National Park. They arranged to stay at one of the park’s many convenient campsites. For their camping trip, they brought their backpacks, sleeping bags, and a cooler of food and drinks. They pitched their tents immediately upon arriving to their campsite.
+During their trip, Lisa and her friends hiked the many trails of the park, exploring its natural surroundings. In the forest, they saw a lot of local wildlife. Lisa was surprised to see a family of grizzly bears, some gray wolves, and even bald eagles flying overhead. Outside of the woods, they admired the beauty of some of Yellowstone’s natural cascades.
+Since Yellowstone contains many hot springs and the world’s largest area of active geysers, Lisa and her friends visited many different geyser sites. They even spent an afternoon swimming in Yellowstone’s Boiling River. Of all of the sites, Lisa and her friends agreed that Old Faithful was the most impressive. Lisa and her friends waited patiently for the geyser to erupt. After about 40 minutes, a stream of boiling water over 100 feet tall sprayed from the ground and up into the air. Fortunately, no one got wet!
+</h4></div><br><br>
+                            @endif
+                            <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $pregunta->preguntas }} </span></label><br><br>
+
+                            @while($o<=3)
+                            
+                            <input type="radio" name="pregunta{{$i}}" id="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
+                            <label style=" font-size: 100%;"><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
+                            <!-- {{$n++}}
+                            {{$o++}} -->
+
+                            @endwhile
+                            <br>
+                        @else
+                            <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $pregunta->preguntas }} </span></label><br><br>
+                            @while($o<=3)
+                            
+                                <input type="radio" name="pregunta{{$i}}" id="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
+                                <label style="font-size: 100%;"><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
+                                <!-- {{$n++}}
+                                {{$o++}} -->
+                            @endwhile
+                        <br>
+                        @endif
+
+                    @else
+                        <br>
+                    @endif
+
+                    <!-- {{$i++}} -->
+                    @endforeach
+                    </div>
+                    
+                    <button type="submit" class="btn btn-warning" onclick="return confirm('Todas las preguntas seran calificadas y no habra mas intentos, ¿Estas seguro?')">Calificar Examen</button>
+                </form>
+
+                
+                <br>
+                <br>
+                <br>
                                                     
                                                 </div>
                                             </div>
@@ -153,6 +210,19 @@ $(document).ready(function () {
     $('#example').DataTable();
 });
 </script>
+    <script src='administrador/red/js/jquery/jquery.js'></script>
+    <script src='administrador/red/js/jquery/jquery-migrate.min.js'></script>
+    <script src='administrador/red/plugins/superfish/js/superfish.js'></script>
+    <script src='administrador/red/js/hoverIntent.min.js'></script>
+    <script src='administrador/red/plugins/dl-menu/modernizr.custom.js'></script>
+    <script src='administrador/red/plugins/dl-menu/jquery.dlmenu.js'></script>
+    <script src='administrador/red/plugins/jquery.easing.js'></script>
+    <script src='administrador/red/plugins/fancybox/jquery.fancybox.pack.js'></script>
+    <script src='administrador/red/plugins/fancybox/helpers/jquery.fancybox-media.js'></script>
+    <script src='administrador/red/plugins/fancybox/helpers/jquery.fancybox-thumbs.js'></script>
+    <script src='administrador/red/plugins/flexslider/jquery.flexslider.js'></script>
+    <script src='administrador/red/plugins/jquery.isotope.min.js'></script>
+    <script src='administrador/red/js/plugins.min.js'></script>
 
 </body>
 </html>

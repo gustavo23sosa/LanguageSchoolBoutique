@@ -168,7 +168,7 @@ The house has a garden. John and Sarah play in the garden. They have a dog. John
                     @endforeach
                     
                     
-                    <button type="submit" onclick="return confirm('Todas las preguntas seran calificadas y no habra mas intentos, ¿Estas seguro?)" class="btn btn-warning">Calificar Examen</button>
+                    <button type="submit" onclick="return confirm('Todas las preguntas seran calificadas y no habra mas intentos, ¿Estas seguro?')" class="btn btn-warning">Calificar Examen</button>
                 </form>
 
                 
@@ -199,6 +199,19 @@ $(document).ready(function () {
     $('#example').DataTable();
 });
 </script>
+    <script src='administrador/red/js/jquery/jquery.js'></script>
+    <script src='administrador/red/js/jquery/jquery-migrate.min.js'></script>
+    <script src='administrador/red/plugins/superfish/js/superfish.js'></script>
+    <script src='administrador/red/js/hoverIntent.min.js'></script>
+    <script src='administrador/red/plugins/dl-menu/modernizr.custom.js'></script>
+    <script src='administrador/red/plugins/dl-menu/jquery.dlmenu.js'></script>
+    <script src='administrador/red/plugins/jquery.easing.js'></script>
+    <script src='administrador/red/plugins/fancybox/jquery.fancybox.pack.js'></script>
+    <script src='administrador/red/plugins/fancybox/helpers/jquery.fancybox-media.js'></script>
+    <script src='administrador/red/plugins/fancybox/helpers/jquery.fancybox-thumbs.js'></script>
+    <script src='administrador/red/plugins/flexslider/jquery.flexslider.js'></script>
+    <script src='administrador/red/plugins/jquery.isotope.min.js'></script>
+    <script src='administrador/red/js/plugins.min.js'></script>
 <footer class=footer-wrapper>
         <div class=copyright-wrapper>
             <div class="copyright-container container">

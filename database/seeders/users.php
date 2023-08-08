@@ -24,7 +24,6 @@ class users extends Seeder
             'telefono' => '5623649359',
             'password'=> Hash::make('123456789'),
             'fk_estado' => '10',
-            'fk_rango' => '7',
             'fk_estatus' => '2',
             'activo'=>1
         ]);
@@ -36,7 +35,6 @@ class users extends Seeder
             'telefono' => '5614073554',
             'password'=> Hash::make('123456789'),
             'fk_estado' => '10',
-            'fk_rango' => '7',
             'fk_estatus' => '2',
             'activo'=>1
         ]);
@@ -48,7 +46,6 @@ class users extends Seeder
             'telefono' => '5663837556',
             'password'=> Hash::make('123456789'),
             'fk_estado' => '4',
-            'fk_rango' => '7',
             'fk_estatus' => '1',
             'activo'=>0
         ]);
@@ -60,7 +57,6 @@ class users extends Seeder
             'telefono' => '5524825432',
             'password'=> Hash::make('123456789'),
             'fk_estado' => '4',
-            'fk_rango' => '7',
             'fk_estatus' => '1',
             'activo'=>0
         ]);
@@ -72,7 +68,6 @@ class users extends Seeder
             'telefono' => '5546342783',
             'password'=> Hash::make('123456789'),
             'fk_estado' => '15',
-            'fk_rango' => '7',
             'fk_estatus' => '1',
             'activo'=>0
         ]);
@@ -84,7 +79,6 @@ class users extends Seeder
             'telefono' => '5513634943',
             'password'=> Hash::make('123456789'),
             'fk_estado' => '15',
-            'fk_rango' => '7',
             'fk_estatus' => '1',
             'activo'=>0
         ]);

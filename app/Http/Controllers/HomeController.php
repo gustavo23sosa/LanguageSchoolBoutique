@@ -65,27 +65,100 @@ class HomeController extends Controller
 
                     $id = Auth::user()->id;
                     // $registrados = User::select('users.fk_nivel')->where('id','=',$id)->get();
-                    $nivel = Auth::user()->fk_nivel;
+                    $nivel = User::where('id','=',$id)->select('fk_nivel')->get();
                     
                     $resultado = User::where('id','=',$id)->select('Resultado')->get();
                     // return response()->json($resultado);  
-                    if ($resultado[0]->Resultado >=1 && $resultado[0]->Resultado <= 50) {
-                        
-                        $Observaciones = User::where('id','=',$id)->select('Observaciones')->get();
-                        return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado);
+                    if($nivel[0]->fk_nivel == 2 || $nivel[0]->fk_nivel == 3){
+
+                        if ($resultado[0]->Resultado >=1 && $resultado[0]->Resultado <= 50) {
+
+                        $estatus = User::where('id','=',$id)->update(['fk_rango' => 1]);
+                        $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                        ->get();
+                        // return response()->json($Mensaje);
+                        return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado)->with('Mensaje',$Mensaje);
 
                         
+                        }
+                        if ($resultado[0]->Resultado >50 && $resultado[0]->Resultado <= 100) {
+                            
+                           $estatus = User::where('id','=',$id)->update(['fk_rango' => 2]);
+                           $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                            ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                            ->get();
+                           // return response()->json($Mensaje[0]->rango);
+                           return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado)->with('Mensaje',$Mensaje);     
+                            
+                        }
+
                     }
-                    if ($resultado[0]->Resultado >50 && $resultado[0]->Resultado <= 100) {
+                    else if($nivel[0]->fk_nivel == 4 || $nivel[0]->fk_nivel == 5){
+
+                        if ($resultado[0]->Resultado >=1 && $resultado[0]->Resultado <= 25) {
+
+                        $estatus = User::where('id','=',$id)->update(['fk_rango' => 2]);
+                        $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                        ->get();
+                        // return response()->json($Mensaje);
+                        return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado)->with('Mensaje',$Mensaje);
+
                         
-                       
-                       
-                       $Observaciones = User::where('id','=',$id)->select('Observaciones')->get();
-                       return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado);     
+                        }
+                        if ($resultado[0]->Resultado >=26 && $resultado[0]->Resultado <= 60) {
+
+                        $estatus = User::where('id','=',$id)->update(['fk_rango' => 3]);
+                        $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                        ->get();
+                        // return response()->json($Mensaje);
+                        return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado)->with('Mensaje',$Mensaje);
+
                         
-                    } 
+                        }
+                        if ($resultado[0]->Resultado >60 && $resultado[0]->Resultado <= 100) {
+                            
+                           $estatus = User::where('id','=',$id)->update(['fk_rango' => 4]);
+                           $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                            ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                            ->get();
+                           // return response()->json($Mensaje[0]->rango);
+                           return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado)->with('Mensaje',$Mensaje);     
+                            
+                        } 
+
+                    }
+                    else if ($nivel[0]->fk_nivel == 6 || $nivel[0]->fk_nivel == 7){
+
+                        if ($resultado[0]->Resultado >=1 && $resultado[0]->Resultado <= 50) {
+
+                        $estatus = User::where('id','=',$id)->update(['fk_rango' => 5]);
+                        $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                        ->get();
+                        // return response()->json($Mensaje);
+                        return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado)->with('Mensaje',$Mensaje);
+
+                        
+                        }
+                        if ($resultado[0]->Resultado >50 && $resultado[0]->Resultado <= 100) {
+                            
+                           $estatus = User::where('id','=',$id)->update(['fk_rango' => 6]);
+                           $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                            ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                            ->get();
+                           // return response()->json($Mensaje[0]->rango);
+                           return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado)->with('Mensaje',$Mensaje);     
+                            
+                        } 
+
+                    }
+
+
                     if(is_null($resultado)){
-                        
+                        return view('home2')->with('niveles', $nivel)->with('activo',$activo);
                     }
                 }
                 

@@ -115,6 +115,105 @@ class preguntas extends Seeder
             'preguntas'=> "20 What do John and Sarah do in the garden?",
             'activo' => 1,
         ]);
-
+        DB::table('Preguntas')->insert([
+            'ID'=>21,
+            'preguntas'=> "1 Which sentence is grammatically correct?",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>22,
+            'preguntas'=> "2 Choose the correct verb tense:",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>23,
+            'preguntas'=> "3 Choose the correct form of the adjective:",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>24,
+            'preguntas'=> "4 Which sentence uses the correct comparative form?",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>25,
+            'preguntas'=> "5 Choose the correct sentence:",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>26,
+            'preguntas'=> "6 Which of the following is the correct superlative form of the adjective 'delicious'?",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>27,
+            'preguntas'=> "7 Choose the correct superlative form of 'funny':",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>28,
+            'preguntas'=> "8 Which sentence is correct?",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>29,
+            'preguntas'=> "9 Choose the correct preposition to complete the sentence: I'm looking forward ________ the concert tomorrow.",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>30,
+            'preguntas'=> "10 Choose the correct preposition to complete the sentence: He's really good ________ playing the piano.",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>31,
+            'preguntas'=> "11 Choose the correct form: 'I hope _____ (find) a good job soon.'",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>32,
+            'preguntas'=> "12 Choose the correct form: 'He decided _____ (study) medicine at university.'",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>33,
+            'preguntas'=> "13 She _____ her phone on the bus yesterday.",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>34,
+            'preguntas'=> "14 _____ you study for the test last night?",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>35,
+            'preguntas'=> "15 Which of the following is the correct comparative form of the adjective 'beautiful'?",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>36,
+            'preguntas'=> "16 Yellowstone is an important national park in the United States because:",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>37,
+            'preguntas'=> "17 When did Lisa and her friends visit Yellowstone National Park?",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>38,
+            'preguntas'=> "18 Where did Lisa and her friends stay during their visit to the park?",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>39,
+            'preguntas'=> "19 All of the following are animals that Lisa saw during her trip except:",
+            'activo' => 1,
+        ]);
+        DB::table('Preguntas')->insert([
+            'ID'=>40,
+            'preguntas'=> "20 Why did Lisa and her friends wait patiently when visiting Old Faithful?",
+            'activo' => 1,
+        ]);
     }
 }

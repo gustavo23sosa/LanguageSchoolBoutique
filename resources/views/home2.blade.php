@@ -120,14 +120,15 @@
 
                                                     <h2>¡Resultados!</h2>
                                                     <hr>
-                                                    <div style="font-size: 200%;">{{$resultado[0]->Resultado.('%')}}</div>
+                                                    <!-- <div style="font-size: 200%;">¡Has obtenido!</div> -->
+                                                    <div class="alert alert-success" style="font-size: 150%;">¡Has obtenido: {{$resultado[0]->Resultado.('%')}}!</div><br>
                                                     
 
-                                                                <div style="background-color: #d4edda;" class="alert alert-success" role="alert">
-                                                                <font color="#155724">{{('mensaje') }}</font>
-                                                                </div>
+                                                                <div style="background-color: #9033FF;" class="alert alert-success" >
+                                                                <font size="20px">{{ $Mensaje[0]->rango }}</font>
+                                                                </div><br>
                                                     
-                                                    <p>{{('Ya no se permiten mas intentos')}}</p>
+                                                    <div ><p class="alert alert-success" style="background-color: red; ">{{('Ya no se permiten mas intentos')}}</p></div>
                                                     <br><br><br>
                                                     
 
@@ -155,20 +156,22 @@
                                                                 <font color="#155724">{{ $message }}</font>
                                                                 </div>
                                                 @endif
+                                                <h5>20 preguntas con las que evaluaremos tu nivel de agilidad gramatical, tu vocabulario y tu comprensión lectora. ¿Te animas?</h5>
+                                                <br><label>Tienes 1 intento disponible para hacer el examen.</label><br><br>
                                                 @if($niveles == 2 || $niveles == 3)
                                                 <form method="POST" name="basico" action="{{route('Examen')}}">
                                                     @csrf
-                                                <a href="" style="color: white;"><button class="btn btn-success" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
+                                                <a href="" style="color: white;"><button class="btn btn-success" type="submit" value="Enviar" onclick="return confirm('Tendrás 30 minutos para realizar tu examen, una vez iniciado el examen no se podrá detener el tiempo hasta que termines, ¿Estas listo?')"><b> Comenzar </b></button></a></form>
                                                 @endif
                                                 @if($niveles == 4 || $niveles == 5)
                                                 <form method="POST" name="intermedio" action="{{route('Examen')}}">
                                                     @csrf
-                                                <a href="" style="color: white;"><button class="btn btn-warning" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
+                                                <a href="" style="color: white;"><button class="btn btn-warning" type="submit" value="Enviar" onclick="return confirm('Tendrás 30 minutos para realizar tu examen, una vez iniciado el examen no se podrá detener el tiempo hasta que termines, ¿Estas listo?')"><b> Comenzar </b></button></a></form>
                                                 @endif
                                                 @if($niveles == 6 || $niveles == 7)
                                                 <form method="POST" name="avanzado" action="{{route('Examen')}}">
                                                     @csrf
-                                                <a href="" style="color: white;"><button class="btn btn-danger" type="submit" value="Enviar"><b> Comenzar </b></button></a></form>
+                                                <a href="" style="color: white;"><button class="btn btn-danger" type="submit" value="Enviar" onclick="return confirm('Tendrás 30 minutos para realizar tu examen, una vez iniciado el examen no se podrá detener el tiempo hasta que termines, ¿Estas listo?')" class="btn btn-danger"><b> Comenzar </b></button></a></form>
                                                 @endif
                                                 <br><br><br>
                                                 
@@ -206,6 +209,19 @@ $(document).ready(function () {
     $('#example').DataTable();
 });
 </script>
+    <script src='administrador/red/js/jquery/jquery.js'></script>
+    <script src='administrador/red/js/jquery/jquery-migrate.min.js'></script>
+    <script src='administrador/red/plugins/superfish/js/superfish.js'></script>
+    <script src='administrador/red/js/hoverIntent.min.js'></script>
+    <script src='administrador/red/plugins/dl-menu/modernizr.custom.js'></script>
+    <script src='administrador/red/plugins/dl-menu/jquery.dlmenu.js'></script>
+    <script src='administrador/red/plugins/jquery.easing.js'></script>
+    <script src='administrador/red/plugins/fancybox/jquery.fancybox.pack.js'></script>
+    <script src='administrador/red/plugins/fancybox/helpers/jquery.fancybox-media.js'></script>
+    <script src='administrador/red/plugins/fancybox/helpers/jquery.fancybox-thumbs.js'></script>
+    <script src='administrador/red/plugins/flexslider/jquery.flexslider.js'></script>
+    <script src='administrador/red/plugins/jquery.isotope.min.js'></script>
+    <script src='administrador/red/js/plugins.min.js'></script>
 
 </body>
 </html>

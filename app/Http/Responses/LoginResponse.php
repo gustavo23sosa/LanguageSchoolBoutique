@@ -46,12 +46,43 @@ class LoginResponse extends FortifyLoginResponse
                 $clase = Clases::where('activo','=','1')->get();
                 return view('home')->with('niveles',$nivel)->with('clases',$clase);
             }else{
-                // $id = Auth::user()->id;
-                // $registrados = User::select('users.fk_nivel')->where('id','=',$id)->get();
-                $nivel = Auth::user()->fk_nivel;
-                $activo = Auth::user()->activo;             
-                return view('home2')->with('niveles', $nivel)->with('activo',$activo);
-                //->with('registrados',$registrados);
+                $activo = Auth::user()->activo;
+                if($activo == 0){
+                    $id = Auth::user()->id;
+                    // $registrados = User::select('users.fk_nivel')->where('id','=',$id)->get();
+                    $nivel = Auth::user()->fk_nivel;
+                    return view('home2')->with('niveles', $nivel)->with('activo',$activo);    
+                }else{
+
+                    $id = Auth::user()->id;
+                    // $registrados = User::select('users.fk_nivel')->where('id','=',$id)->get();
+                    $nivel = Auth::user()->fk_nivel;
+                    
+                    $resultado = User::where('id','=',$id)->select('Resultado')->get();
+                    // return response()->json($resultado);  
+                    if ($resultado[0]->Resultado >=1 && $resultado[0]->Resultado <= 50) {
+                        $estatus = User::where('id','=',$id)->update(['fk_rango' => 1]);
+                        $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                        ->join('MCER AS Ran','users.id','=','Ran.ID')
+                        ->get();
+                        return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado)->with('Mensaje',$Mensaje);
+
+                        
+                    }
+                    if ($resultado[0]->Resultado >50 && $resultado[0]->Resultado <= 100) {
+                        
+                       $estatus = User::where('id','=',$id)->update(['fk_rango' => 2]);
+                       $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                        ->join('MCER AS Ran','users.id','=','Ran.ID')
+                        ->get();
+                       // return response()->json($Mensaje[0]->rango);
+                       return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('resultado',$resultado)->with('Mensaje',$Mensaje);     
+                        
+                    } 
+                    if(is_null($resultado)){
+                        return view('home2')->with('niveles', $nivel)->with('activo',$activo);
+                    }
+                }
             }
         }
     }
