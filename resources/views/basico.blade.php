@@ -44,7 +44,7 @@
 
 </head>
 
-<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/examen.jpg');" translate="no">
+<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/examenes.jpg');" translate="no">
 <div class="wrapper wrapper-full-page " >
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
