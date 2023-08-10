@@ -44,7 +44,7 @@
 
 </head>
 
-<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/user.png');" translate="no">
+<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/examen.jpg');" translate="no">
 <div class="wrapper wrapper-full-page " >
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
@@ -131,7 +131,7 @@
                         @if ($n>=45)
                             @if($n==45)
                             
-                            <center><h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6>
+                            <center><h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6><br>
                             <h2>The House</h2>
                             <div style="font-size: 75%; text-align: justify; width: 95%">
                             <h4>Mr. and Mrs. Smith have one son and one daughter. The son's name is John. The daughter's name is Sarah.

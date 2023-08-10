@@ -45,7 +45,7 @@
 
 </head>
 
-<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/user.png');" translate="no">
+<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/examen.jpg');" translate="no">
 <div class="wrapper wrapper-full-page ">
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
@@ -133,7 +133,7 @@
                         @if ($n>=45)
                             @if($n==45)
                             
-                            <center><h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6>
+                            <center><h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6><br>
                             <br><h2>Yellowstone National Park</h2><div style="font-size: 75%; text-align: justify; width: 95%">
                                 <h4>Yellowstone National Park, located in Idaho, Montana, and Wyoming, was established as the first national park in the United States. The park is a popular destination for visitors who enjoy ecological tourism as it offers forests, mountains, and abundant ecosystems to explore. Some of Yellowstone’s most well-known landmarks are its geothermal hot springs and geysers, the most famous of which is named Old Faithful.
                                 Last fall, Lisa and her friends decided to take a camping trip to Yellowstone National Park. They arranged to stay at one of the park’s many convenient campsites. For their camping trip, they brought their backpacks, sleeping bags, and a cooler of food and drinks. They pitched their tents immediately upon arriving to their campsite.

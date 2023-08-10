@@ -43,7 +43,7 @@
 
 </head>
 
-<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/user.png');" translate="no">
+<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/examen.jpg');" translate="no">
 <div class="wrapper wrapper-full-page ">
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
@@ -148,7 +148,7 @@
                             <br>
                         @else
                             @if($i==16)
-                                <center><h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6>
+                                <center><h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6><br>
                             <br><h2>The Environment</h2><div style="font-size: 75%; text-align: justify; width: 95%">
                             <h4>In our modern world, there are many factors that place the wellbeing of the planet in jeopardy. While some people have the opinion that environmental problems are just a natural occurrence, others believe that human beings have a huge impact on the environment. Regardless of your viewpoint, take into consideration the following factors that place our environment as well as the planet Earth in danger.
                             Global warming or climate change is a major contributing factor to environmental damage. Because of global warming, we have seen an increase in melting ice caps, a rise in sea levels, and the formation of new weather patterns. These weather patterns have caused stronger storms, droughts, and flooding in places that they formerly did not occur.
