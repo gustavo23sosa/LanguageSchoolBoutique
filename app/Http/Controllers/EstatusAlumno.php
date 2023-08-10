@@ -14,27 +14,31 @@ class EstatusAlumno extends Controller
     //
     public function alumnosAceptados(){
         $id = Auth::user()->id;
-        $registradosUs = User::select('users.name','users.aPaterno','users.aMaterno','users.email','users.telefono','EU.estatus','EF.entidad', 'users.id')
+        $registradosUs = User::select('users.id','users.name','users.aPaterno','users.aMaterno','users.email','users.telefono','EU.estatus','EF.entidad', 'users.id')
             ->join('UsersRoles AS UR','UR.fk_users','=','users.id')
             ->join('Roles AS R','R.ID','=','UR.fk_roles')
-            ->join('RstatusUser AS EU','EU.ID','=','users.fk_estatus')
+            ->join('EstatusUser AS EU','EU.ID','=','users.fk_estatus')
             ->join('EntidadFederativa AS EF','EF.id','=','users.fk_estado')
-            ->where('users.id', '=' ,$user)
+            ->where('users.activo','=','1')
+            ->where('users.fk_estatus','=','2')
+            ->where('fk_roles','=','2')
             ->get();
-            return view('admin')->with('registradosUs', $registradosUs);
+            return view('admin1')->with('registradosUs', $registradosUs);
     }
 	public function detalleAlumno(Request $request){
 		$id = Auth::User()->id;
 		$user = $request['id_user'];
-        $usuariodetalle = User::select('users.name','users.aPaterno','users.aMaterno','users.email','users.telefono','users.Resultado','users.Observaciones','clas.tipo', 'Ni.nivel','EU.estatus','EF.entidad', 'users.id')
+        $usuariodetalle = User::select('users.name','users.aPaterno','users.aMaterno','users.email','users.telefono','users.Observaciones','users.porcentaje AS Por','clas.tipo', 'Ni.nivel','EU.estatus','EF.entidad', 'users.id','Ran.nivel AS rank')
             ->join('UsersRoles AS UR','UR.fk_users','=','users.id')
             ->join('Roles AS R','R.ID','=','UR.fk_roles')
             ->join('Nivel AS Ni','Ni.ID','=','users.fk_nivel')
+            ->join('MCER AS Ran','Ran.ID','=','users.fk_rango')
             ->join('Clases AS clas','clas.ID','=','users.fk_clases')
             ->join('EstatusUser AS EU','EU.ID','=','users.fk_estatus')
             ->join('EntidadFederativa AS EF','EF.id','=','users.fk_estado')
             ->where('users.id', '=' ,$user)
             ->get();
+            // var_dump($usuariodetalle);
             // return response()->json($usuariodetalle);
         return view('detallealumno')->with('usuariodetalle',$usuariodetalle);
 	}
@@ -77,5 +81,5 @@ class EstatusAlumno extends Controller
         $estatus = User::where('id', $user)->update(['Observaciones' => $obs]);
         return redirect()->route('home')->with('warning','Usuario modificado con exito');
     }
-
+    
 }

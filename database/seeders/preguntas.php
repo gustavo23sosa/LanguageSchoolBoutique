@@ -122,12 +122,12 @@ class preguntas extends Seeder
         ]);
         DB::table('Preguntas')->insert([
             'ID'=>22,
-            'preguntas'=> "2 Choose the correct verb tense:",
+            'preguntas'=> "2 Choose the correct verb tense: I ___________ my homework every night.",
             'activo' => 1,
         ]);
         DB::table('Preguntas')->insert([
             'ID'=>23,
-            'preguntas'=> "3 Choose the correct form of the adjective:",
+            'preguntas'=> "3 Choose the correct form of the adjective: She is a _________ student.",
             'activo' => 1,
         ]);
         DB::table('Preguntas')->insert([
@@ -215,5 +215,81 @@ class preguntas extends Seeder
             'preguntas'=> "20 Why did Lisa and her friends wait patiently when visiting Old Faithful?",
             'activo' => 1,
         ]);
+        DB::table('Preguntas')->insert([ 
+            'ID'=>41, 
+            'preguntas'=> "1 Which sentence is correct?", 
+            'activo' => 1, 
+        ]);
+        DB::table('Preguntas')->insert([ 
+            'ID'=>42, 
+            'preguntas'=> "2 Which of the following sentences contains a gerund phrase?", 
+            'activo' => 1, 
+        ]);
+        DB::table('Preguntas')->insert([ 
+            'ID'=>43, 
+            'preguntas'=> "3 Choose the correct preposition to complete the sentence: I'm really looking forward ________ seeing you again.", 
+            'activo' => 1, 
+        ]);
+        DB::table('Preguntas')->insert([ 
+            'ID'=>44, 
+            'preguntas'=> "4 Which of the following words is an antonym of 'quiescent'?", 
+            'activo' => 1, 
+        ]);
+        DB::table('Preguntas')->insert([ 
+            'ID'=>45, 
+            'preguntas'=> "5 Which of the following phrasal verbs means 'to search for something by moving things around carelessly'?", 
+            'activo' => 1, 
+        ]);
+
+        DB::table('Preguntas')->insert([ 
+            'ID'=>46, 
+            'preguntas'=> "6 Which of the following phrasal verbs means 'to stop doing something, especially something enjoyable'?", 
+            'activo' => 1, 
+        ]);
+
+        DB::table('Preguntas')->insert([ 
+            'ID'=>47, 
+            'preguntas'=> "7 What is the opposite of the word 'disdain'?", 
+            'activo' => 1, 
+        ]);
+
+        DB::table('Preguntas')->insert([ 
+            'ID'=>48, 
+            'preguntas'=> "8 Which word means to regard with great pleasure or approval?", 
+            'activo' => 1, 
+        ]);
+
+        DB::table('Preguntas')->insert([ 
+            'ID'=>49, 
+            'preguntas'=> "9 Which of the following is a reflexive pronoun?", 
+            'activo' => 1, 
+        ]);
+
+        DB::table('Preguntas')->insert([ 
+            'ID'=>50, 
+            'preguntas'=> "10 Which of the following is an interrogative pronoun?", 
+            'activo' => 1, 
+        ]);
+
+        DB::table('Preguntas')->insert([ 'ID'=>51, 'preguntas'=> "11 Which of the following is a common mistake in English writing?", 'activo' => 1, ]);
+
+        DB::table('Preguntas')->insert([ 'ID'=>52, 'preguntas'=> "12 Which of the following is a common mistake in English vocabulary usage?", 'activo' => 1, ]);
+
+        DB::table('Preguntas')->insert([ 'ID'=>53, 'preguntas'=> "13 Rewrite the sentence in the passive voice: Someone has stolen my bike!", 'activo' => 1, ]);
+
+        DB::table('Preguntas')->insert([ 'ID'=>54, 'preguntas'=> "14 Rewrite the sentence in the passive voice: We receive the newspaper everyday.", 'activo' => 1, ]);
+
+        DB::table('Preguntas')->insert([ 'ID'=>55, 'preguntas'=> "15 Rewrite the sentence in the passive voice: The children have eaten the cookies.", 'activo' => 1, ]);
+
+        DB::table('Preguntas')->insert([ 'ID'=>56, 'preguntas'=> "16 The text’s introduction presents:", 'activo' => 1, ]);
+
+        DB::table('Preguntas')->insert([ 'ID'=>57, 'preguntas'=> "17 Which term means the same thing as “global warming?”", 'activo' => 1, ]);
+
+        DB::table('Preguntas')->insert([ 'ID'=>58, 'preguntas'=> "18 is the primary cause of air pollution?", 'activo' => 1, ]);
+
+        DB::table('Preguntas')->insert([ 'ID'=>59, 'preguntas'=> "19 Which is a logical effect of overusing the natural water supply?", 'activo' => 1, ]);
+
+        DB::table('Preguntas')->insert([ 'ID'=>60, 'preguntas'=> "20 Which is the best title for the article?", 'activo' => 1, ]);
+
     }
 }

@@ -117,8 +117,8 @@
                                                 <div class="container">
                 <hr>
                 <h2>¡Ex&aacute;men de colocaci&oacute;n!</h2>
+                <br><div style="font-size: 125%"><span id="reloj"></span></div><br>
                 <hr>
-                <div style="float: left;"><span id="reloj"></span></div><br>
                 <form name="basico" method="POST" action="{{route('evaluarb')}}">
                     @csrf   
                     <!-- {{$n=0}} -->
@@ -131,11 +131,14 @@
                         @if ($n>=45)
                             @if($n==45)
                             
-                            <h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6>
-                            <div style="width: 250px; align-content: center; float: left;"></div><div style="font-size: 75%; text-align: justify; width: 95%"><h2>The House</h2>
+                            <center><h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6>
+                            <h2>The House</h2>
+                            <div style="font-size: 75%; text-align: justify; width: 95%">
                             <h4>Mr. and Mrs. Smith have one son and one daughter. The son's name is John. The daughter's name is Sarah.
-The Smiths live in a house. They have a living room. They watch TV in the living room. The father cooks food in the kitchen. They eat in the dining room. The house has two bedrooms. They sleep in the bedrooms. They keep their clothes in the closet. There is one bathroom. They brush their teeth in the bathroom.
-The house has a garden. John and Sarah play in the garden. They have a dog. John and Sarah like to play with the dog.</h4></div><br><br>
+                            The Smiths live in a house. They have a living room. They watch TV in the living room. The father cooks food in the kitchen. They eat in the dining room. The house has two bedrooms. They sleep in the bedrooms. They keep their clothes in the closet. There is one bathroom. They brush their teeth in the bathroom.
+                            The house has a garden. John and Sarah play in the garden. They have a dog. John and Sarah like to play with the dog.</h4>
+                            </div>
+                            </center><br><br>
                             @endif
                             <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $pregunta->preguntas }} </span></label><br><br>
 

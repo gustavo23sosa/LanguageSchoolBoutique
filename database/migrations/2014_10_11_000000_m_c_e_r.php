@@ -17,6 +17,7 @@ class MCER extends Migration
         Schema::create('MCER', function (Blueprint $table) {
             $table->tinyInteger('ID')->primary();
             $table->string('rango', 1000);
+            $table->string('nivel');
             $table->boolean('activo')->default(1);
         });
     }

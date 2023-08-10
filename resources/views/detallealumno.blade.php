@@ -174,16 +174,19 @@
                                                     <td>Telefono</td><td>{{ $usuario->telefono }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 </tr><tr><td>Estatus</td><td>{{ $usuario->estatus }}&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
                                                 <tr><td>Entidad Federativa</td><td>{{ $usuario->entidad }}&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
-                                                @if($usuario->Resultado == 1)
+                                                @if($usuario->Por == 0)
                                                 <tr><td>Resultados del examen</td><td>{{ ('Sin resultados') }}&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
                                                 @else
-                                                <tr><td>Resultados del examen</td><td>{{ $usuario->Resultado('%') }}&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+                                                <tr><td>Resultados del examen</td><td>{{ $usuario->Por.('%') }}&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
                                                 @endif
                                                 <tr>
                                                     <td>Nivel del usuario elegido</td><td>{{ $usuario->nivel }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Forma de tomar clases</td><td>{{ $usuario->tipo }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rango de ingles obtenido en el examen</td><td>{{ $usuario->rank }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Observaciones</td><td>{{ $usuario->Observaciones }}&nbsp;&nbsp;&nbsp;&nbsp;</td>

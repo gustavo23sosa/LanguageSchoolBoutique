@@ -31,7 +31,7 @@
     <script src="js/app.js" defer></script>
     <script src="js/prueba.js" defer></script>
     <script src="js/prueba2.js" defer></script>
-
+    <script src="js/customer.js" defer></script>
   
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900&amp;subset=latin&amp;ver=5e348039466ee2df77d142cdeeca1221' type=text/css media=all>
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Montserrat%3Aregular%2C700&amp;subset=latin&amp;ver=5e348039466ee2df77d142cdeeca1221' type=text/css media=all>
@@ -116,8 +116,9 @@
                                                 <div class="container">
                                                     <hr>
                 <h2>¡Ex&aacute;men de colocaci&oacute;n!</h2>
+                <br><div style="font-size: 125%"><span id="reloj"></span></div><br>
                 <hr>
-                <div style="float: left;"><span id="reloj"></span></div><br>
+                
                 <form name="intermedio" method="POST" action="{{route('evaluarb')}}">
                     @csrf   
                     <!-- {{$n=0}} -->
@@ -125,46 +126,54 @@
                     <div id="formulario">
                     @foreach($preguntas as $pregunta)
                     
-                    @if($n<=61)
-                    
                         <!--{{$o=1}}-->
-                        @if ($n>=45)
-                            @if($n==45)
-                            
-                            <h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6>
-                            <div style="width: 250px; align-content: center; float: left;"></div><br><div style="font-size: 75%; text-align: justify; width: 95%"><h2>Yellowstone National Park</h2>
-                            <h4>Yellowstone National Park, located in Idaho, Montana, and Wyoming, was established as the first national park in the United States. The park is a popular destination for visitors who enjoy ecological tourism as it offers forests, mountains, and abundant ecosystems to explore. Some of Yellowstone’s most well-known landmarks are its geothermal hot springs and geysers, the most famous of which is named Old Faithful.
-Last fall, Lisa and her friends decided to take a camping trip to Yellowstone National Park. They arranged to stay at one of the park’s many convenient campsites. For their camping trip, they brought their backpacks, sleeping bags, and a cooler of food and drinks. They pitched their tents immediately upon arriving to their campsite.
-During their trip, Lisa and her friends hiked the many trails of the park, exploring its natural surroundings. In the forest, they saw a lot of local wildlife. Lisa was surprised to see a family of grizzly bears, some gray wolves, and even bald eagles flying overhead. Outside of the woods, they admired the beauty of some of Yellowstone’s natural cascades.
-Since Yellowstone contains many hot springs and the world’s largest area of active geysers, Lisa and her friends visited many different geyser sites. They even spent an afternoon swimming in Yellowstone’s Boiling River. Of all of the sites, Lisa and her friends agreed that Old Faithful was the most impressive. Lisa and her friends waited patiently for the geyser to erupt. After about 40 minutes, a stream of boiling water over 100 feet tall sprayed from the ground and up into the air. Fortunately, no one got wet!
-</h4></div><br><br>
-                            @endif
-                            <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $pregunta->preguntas }} </span></label><br><br>
 
-                            @while($o<=3)
+                        @if($i==1)
                             
-                            <input type="radio" name="pregunta{{$i}}" id="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
-                            <label style=" font-size: 100%;"><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
-                            <!-- {{$n++}}
-                            {{$o++}} -->
-
-                            @endwhile
-                            <br>
-                        @else
                             <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $pregunta->preguntas }} </span></label><br><br>
-                            @while($o<=3)
-                            
-                                <input type="radio" name="pregunta{{$i}}" id="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
-                                <label style="font-size: 100%;"><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
+                            @while($o<=4)
+                                
+                                <input type="radio" name="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
+                                <label style=" font-size: 100%;"><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
                                 <!-- {{$n++}}
                                 {{$o++}} -->
+
                             @endwhile
-                        <br>
+
+                        @elseif($i>=13 && $i<=15)
+
+                            <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $pregunta->preguntas }} </span></label><br><br>
+                            <input type="text" name="pregunta{{$i}}" width="30px" height="25px" style="color: black;" required>
+                            <!-- {{$n++}} -->
+                            <br>
+                        @else
+                            @if($i==16)
+                                <center><h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6>
+                            <br><h2>The Environment</h2><div style="font-size: 75%; text-align: justify; width: 95%">
+                            <h4>In our modern world, there are many factors that place the wellbeing of the planet in jeopardy. While some people have the opinion that environmental problems are just a natural occurrence, others believe that human beings have a huge impact on the environment. Regardless of your viewpoint, take into consideration the following factors that place our environment as well as the planet Earth in danger.
+                            Global warming or climate change is a major contributing factor to environmental damage. Because of global warming, we have seen an increase in melting ice caps, a rise in sea levels, and the formation of new weather patterns. These weather patterns have caused stronger storms, droughts, and flooding in places that they formerly did not occur.
+                            Air pollution is primarily caused as a result of excessive and unregulated emissions of carbon dioxide into the air. Pollutants mostly emerge from the burning of fossil fuels in addition to chemicals, toxic substances, and improper waste disposal. Air pollutants are absorbed into the atmosphere, and they can cause smog, a combination of smoke and fog, in valleys as well as produce acidic precipitation in areas far away from the pollution source.
+                            In many areas, people and local governments do not sustainably use their natural resources. Mining for natural gases, deforestation, and even improper use of water resources can have tremendous effects on the environment. While these strategies often attempt to boost local economies, their effects can lead to oil spills, interrupted animal habitats, and droughts.
+                            Ultimately, the effects of the modern world on the environment can lead to many problems. Human beings need to consider the repercussions of their actions, trying to reduce, reuse, and recycle materials while establishing environmentally sustainable habits. If measures are not taken to protect the environment, we can potentially witness the extinction of more endangered species, worldwide pollution, and a completely uninhabitable planet.
+
+                            </h4></div></center><br><br>
+                            @endif
+                            <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $pregunta->preguntas }} </span></label><br><br>
+                            @while($o<=3)
+                                
+                                    <input type="radio" name="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
+                                    <label style="font-size: 100%;"><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
+                                    <!-- {{$n++}}
+                                    {{$o++}} -->
+                            @endwhile
+
                         @endif
 
-                    @else
-                        <br>
-                    @endif
+
+
+                    
+                    <br>
+                    
 
                     <!-- {{$i++}} -->
                     @endforeach
@@ -185,8 +194,7 @@ Since Yellowstone contains many hot springs and the world’s largest area of ac
                                     </section>
 
                                     
-                                <div>
-                            </div>
+                                <div class="clear"></div>
                         </div>
                     </div>
                 </div>
@@ -194,6 +202,8 @@ Since Yellowstone contains many hot springs and the world’s largest area of ac
         </div>
     </div>
     </div>
+</div>
+
 </div>
     <footer class=footer-wrapper>
         <div class=copyright-wrapper>

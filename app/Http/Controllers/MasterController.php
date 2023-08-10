@@ -41,12 +41,15 @@ class MasterController extends Controller
         }else if ($nivel[0]->fk_nivel == 6 || $nivel[0]->fk_nivel == 7) {
 
             $preguntas = Preguntas::whereBetween('ID',[41,60])->get();
-            $exprepuestas1 = PreguntasRespuestas::whereBetween('PreguntasRespuestas.ID',[126,179])->select('PreguntasRespuestas.ID','P.preguntas','R.respuestas')
+            $exprepuestas1 = PreguntasRespuestas::whereBetween('PreguntasRespuestas.ID',[126,180])->select('PreguntasRespuestas.ID','P.preguntas','R.respuestas')
             ->join('Preguntas AS P','PreguntasRespuestas.fk_preguntas','=','P.ID')
             ->join('Respuestas AS R','PreguntasRespuestas.fk_respuestas','=','R.ID')
-            
             ->get();
-            return view('avanzado');
+
+            // return response()->json($exprepuestas1);
+
+            return view('avanzado')->with('exprepuestas1',$exprepuestas1)
+            ->with('preguntas',$preguntas);
         }
     }
     public function evaluarB(Request $request){
@@ -183,11 +186,81 @@ class MasterController extends Controller
             if ($respuestas['pregunta20'] == 123) {
                 $contador++;
             }
+        }else if($nivel[0]->fk_nivel == 6 || $nivel[0]->fk_nivel == 7){
+            
+
+            $contador = 0;
+
+            if ($respuestas['pregunta1'] == 126) {
+                $contador++;
+            }
+            if ($respuestas['pregunta2'] == 131) {
+                $contador++;
+            }
+            if ($respuestas['pregunta3'] == 134) {
+                $contador++;
+            }
+            if ($respuestas['pregunta4'] == 136) {
+                $contador++;
+            }
+            if ($respuestas['pregunta5'] == 141) {
+                $contador++;
+            }
+            if ($respuestas['pregunta6'] == 142) {
+                $contador++;
+            }
+            if ($respuestas['pregunta7'] == 145) {
+                $contador++;
+            }
+            if ($respuestas['pregunta8'] == 150) {
+                $contador++;
+            }
+            if ($respuestas['pregunta9'] == 153) {
+                $contador++;
+            }
+            if ($respuestas['pregunta10'] == 154) {
+                $contador++;
+            }
+            if ($respuestas['pregunta11'] == 158) {
+                $contador++;
+            }
+            if ($respuestas['pregunta12'] == 162) {
+                $contador++;
+            }
+            if ($respuestas['pregunta13'] == "My bike has been stolen!" || $respuestas['pregunta13'] == "my bike has been stolen" || $respuestas['pregunta13'] == "My bike has been stolen") {
+                $contador++;
+                
+            }
+            if ($respuestas['pregunta14'] == "The newspaper is received everyday." || $respuestas['pregunta14'] == "The newspaper is received everyday" || $respuestas['pregunta14'] == "the newspaper is received everyday") {
+                $contador++;
+                
+            }
+            if ($respuestas['pregunta15'] == "The cookies have been eaten by the children." || $respuestas['pregunta15'] == "The cookies have been eaten by the children" || $respuestas['pregunta15'] == "the cookies have been eaten by the children") {
+                $contador++;
+                
+            }
+            if ($respuestas['pregunta16'] == 167) {
+                $contador++;
+            }
+            if ($respuestas['pregunta17'] == 170) {
+                $contador++;
+            }
+            if ($respuestas['pregunta18'] == 172) {
+                $contador++;
+            }
+            if ($respuestas['pregunta19'] == 176) {
+                $contador++;
+            }
+            if ($respuestas['pregunta20'] == 178) {
+                $contador++;
+            }
         }
 
-        $resultado = ($contador * 100)/20;
         
-        $estatus = User::where('id', $id)->update(['activo' => '1','fk_estatus'=>'2' , 'Resultado' => $resultado]);
+
+        $resultado = ($contador * 100)/20;
+        // return response()->json($resultado);
+        $estatus = User::where('id', $id)->update(['activo' => '1','fk_estatus'=>'2' , 'porcentaje' => $resultado]);
         
         return redirect()->route('home')->with('success','Se ha calificado con exito');
 

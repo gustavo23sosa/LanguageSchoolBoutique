@@ -121,7 +121,7 @@
                                                     <h2>¡Resultados!</h2>
                                                     <hr>
                                                     <!-- <div style="font-size: 200%;">¡Has obtenido!</div> -->
-                                                    <div class="alert alert-success" style="font-size: 150%;">¡Has obtenido: {{$resultado[0]->Resultado.('%')}}!</div><br>
+                                                    <div class="alert alert-success" style="font-size: 150%;">¡Has obtenido: {{$nivel[0]->nivel}}!</div><br>
                                                     
 
                                                                 <div style="background-color: #9033FF;" class="alert alert-success" >
@@ -156,7 +156,7 @@
                                                                 <font color="#155724">{{ $message }}</font>
                                                                 </div>
                                                 @endif
-                                                <h5>20 preguntas con las que evaluaremos tu nivel de agilidad gramatical, tu vocabulario y tu comprensión lectora. ¿Te animas?</h5>
+                                                <h5>Contesta 20 preguntas con las que evaluaremos tu nivel de agilidad gramatical, tu vocabulario y tu comprensión lectora. ¿Estas listo?</h5>
                                                 <br><label>Tienes 1 intento disponible para hacer el examen.</label><br><br>
                                                 @if($niveles == 2 || $niveles == 3)
                                                 <form method="POST" name="basico" action="{{route('Examen')}}">

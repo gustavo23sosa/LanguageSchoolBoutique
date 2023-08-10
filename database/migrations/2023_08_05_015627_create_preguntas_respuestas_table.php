@@ -16,14 +16,14 @@ class CreatePreguntasRespuestasTable extends Migration
         //
         Schema::create('PreguntasRespuestas', function (Blueprint $table) {
 
-            $table->tinyInteger('ID')->primary();
+            $table->smallInteger('ID')->primary();
 
             $table->tinyinteger('fk_examenes');
             $table->foreign('fk_examenes')->references('ID')->on('Examenes');
             $table->tinyinteger('fk_preguntas');
             $table->foreign('fk_preguntas')->references('ID')->on('Preguntas');
 
-            $table->tinyinteger('fk_respuestas');
+            $table->smallInteger('fk_respuestas');
             $table->foreign('fk_respuestas')->references('ID')->on('Respuestas');
 
             $table->boolean('activo')->default(1);

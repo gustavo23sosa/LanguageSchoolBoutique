@@ -116,10 +116,10 @@
                                         <div class="col-md-6 ml-auto table " style="width: 70%; align-content: center; float: left;">
                                             <div class="card card-signup text-center">
                                                 <div class="container">
-                                                    <<hr>
+                                                    <hr>
                 <h2>¡Ex&aacute;men de colocaci&oacute;n!</h2>
+                <br><div style="font-size: 125%"><span id="reloj"></span></div><br>
                 <hr>
-                <div style="float: left;"><span id="reloj"></span></div><br>
                 <form name="intermedio" method="POST" action="{{route('evaluarb')}}">
                     @csrf   
                     <!-- {{$n=0}} -->
@@ -133,13 +133,15 @@
                         @if ($n>=45)
                             @if($n==45)
                             
-                            <h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6>
-                            <div style="width: 250px; align-content: center; float: left;"></div><br><div style="font-size: 75%; text-align: justify; width: 95%"><h2>Yellowstone National Park</h2>
-                            <h4>Yellowstone National Park, located in Idaho, Montana, and Wyoming, was established as the first national park in the United States. The park is a popular destination for visitors who enjoy ecological tourism as it offers forests, mountains, and abundant ecosystems to explore. Some of Yellowstone’s most well-known landmarks are its geothermal hot springs and geysers, the most famous of which is named Old Faithful.
-Last fall, Lisa and her friends decided to take a camping trip to Yellowstone National Park. They arranged to stay at one of the park’s many convenient campsites. For their camping trip, they brought their backpacks, sleeping bags, and a cooler of food and drinks. They pitched their tents immediately upon arriving to their campsite.
-During their trip, Lisa and her friends hiked the many trails of the park, exploring its natural surroundings. In the forest, they saw a lot of local wildlife. Lisa was surprised to see a family of grizzly bears, some gray wolves, and even bald eagles flying overhead. Outside of the woods, they admired the beauty of some of Yellowstone’s natural cascades.
-Since Yellowstone contains many hot springs and the world’s largest area of active geysers, Lisa and her friends visited many different geyser sites. They even spent an afternoon swimming in Yellowstone’s Boiling River. Of all of the sites, Lisa and her friends agreed that Old Faithful was the most impressive. Lisa and her friends waited patiently for the geyser to erupt. After about 40 minutes, a stream of boiling water over 100 feet tall sprayed from the ground and up into the air. Fortunately, no one got wet!
-</h4></div><br><br>
+                            <center><h6>Lee el siguiente texto y responde las preguntas correspondientes: </h6>
+                            <br><h2>Yellowstone National Park</h2><div style="font-size: 75%; text-align: justify; width: 95%">
+                                <h4>Yellowstone National Park, located in Idaho, Montana, and Wyoming, was established as the first national park in the United States. The park is a popular destination for visitors who enjoy ecological tourism as it offers forests, mountains, and abundant ecosystems to explore. Some of Yellowstone’s most well-known landmarks are its geothermal hot springs and geysers, the most famous of which is named Old Faithful.
+                                Last fall, Lisa and her friends decided to take a camping trip to Yellowstone National Park. They arranged to stay at one of the park’s many convenient campsites. For their camping trip, they brought their backpacks, sleeping bags, and a cooler of food and drinks. They pitched their tents immediately upon arriving to their campsite.
+                                During their trip, Lisa and her friends hiked the many trails of the park, exploring its natural surroundings. In the forest, they saw a lot of local wildlife. Lisa was surprised to see a family of grizzly bears, some gray wolves, and even bald eagles flying overhead. Outside of the woods, they admired the beauty of some of Yellowstone’s natural cascades.
+                                Since Yellowstone contains many hot springs and the world’s largest area of active geysers, Lisa and her friends visited many different geyser sites. They even spent an afternoon swimming in Yellowstone’s Boiling River. Of all of the sites, Lisa and her friends agreed that Old Faithful was the most impressive. Lisa and her friends waited patiently for the geyser to erupt. After about 40 minutes, a stream of boiling water over 100 feet tall sprayed from the ground and up into the air. Fortunately, no one got wet!
+                                </h4>
+                            </div>
+                            </center><br><br>
                             @endif
                             <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $pregunta->preguntas }} </span></label><br><br>
 

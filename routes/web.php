@@ -25,6 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/crear', function(){
 	return view('auth.empleado.create');
 });
+Route::get('/alumnosAceptados', [App\Http\Controllers\EstatusAlumno::class, 'alumnosAceptados'])->name('alumnosAceptados');
 // Route::resource('LSB', UsuariosController::class);
 Route::post('/subir', [App\Http\Controllers\MasterController::class, 'subirArchivo'])->name('subir');
 

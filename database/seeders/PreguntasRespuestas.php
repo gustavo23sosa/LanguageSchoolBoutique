@@ -891,5 +891,64 @@ class PreguntasRespuestas extends Seeder
             'fk_respuestas' => 125,
             'activo' => 1,
         ]);
+
+
+
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   126 , 'fk_examenes' => 3, 'fk_preguntas' =>     41  , 'fk_respuestas' =>    126 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   127 , 'fk_examenes' => 3, 'fk_preguntas' =>     41  , 'fk_respuestas' =>    127 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   128 , 'fk_examenes' => 3, 'fk_preguntas' =>     41  , 'fk_respuestas' =>    128 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   129 , 'fk_examenes' => 3, 'fk_preguntas' =>     41  , 'fk_respuestas' =>    129 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   130 , 'fk_examenes' => 3, 'fk_preguntas' =>     42  , 'fk_respuestas' =>    130 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   131 , 'fk_examenes' => 3, 'fk_preguntas' =>     42  , 'fk_respuestas' =>    131 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   132 , 'fk_examenes' => 3, 'fk_preguntas' =>     42  , 'fk_respuestas' =>    132 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   133 , 'fk_examenes' => 3, 'fk_preguntas' =>     43  , 'fk_respuestas' =>    133 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   134 , 'fk_examenes' => 3, 'fk_preguntas' =>     43  , 'fk_respuestas' =>    134 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   135 , 'fk_examenes' => 3, 'fk_preguntas' =>     43  , 'fk_respuestas' =>    135 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   136 , 'fk_examenes' => 3, 'fk_preguntas' =>     44  , 'fk_respuestas' =>    136 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   137 , 'fk_examenes' => 3, 'fk_preguntas' =>     44  , 'fk_respuestas' =>    137 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   138 , 'fk_examenes' => 3, 'fk_preguntas' =>     44  , 'fk_respuestas' =>    138 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   139 , 'fk_examenes' => 3, 'fk_preguntas' =>     45  , 'fk_respuestas' =>    139 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   140 , 'fk_examenes' => 3, 'fk_preguntas' =>     45  , 'fk_respuestas' =>    140 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   141 , 'fk_examenes' => 3, 'fk_preguntas' =>     45  , 'fk_respuestas' =>    141 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   142 , 'fk_examenes' => 3, 'fk_preguntas' =>     46  , 'fk_respuestas' =>    142 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   143 , 'fk_examenes' => 3, 'fk_preguntas' =>     46  , 'fk_respuestas' =>    143 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   144 , 'fk_examenes' => 3, 'fk_preguntas' =>     46  , 'fk_respuestas' =>    144 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   145 , 'fk_examenes' => 3, 'fk_preguntas' =>     47  , 'fk_respuestas' =>    145 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   146 , 'fk_examenes' => 3, 'fk_preguntas' =>     47  , 'fk_respuestas' =>    146 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   147 , 'fk_examenes' => 3, 'fk_preguntas' =>     47  , 'fk_respuestas' =>    147 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   148 , 'fk_examenes' => 3, 'fk_preguntas' =>     48  , 'fk_respuestas' =>    148 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   149 , 'fk_examenes' => 3, 'fk_preguntas' =>     48  , 'fk_respuestas' =>    149 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   150 , 'fk_examenes' => 3, 'fk_preguntas' =>     48  , 'fk_respuestas' =>    150 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   151 , 'fk_examenes' => 3, 'fk_preguntas' =>     49  , 'fk_respuestas' =>    151 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   152 , 'fk_examenes' => 3, 'fk_preguntas' =>     49  , 'fk_respuestas' =>    152 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   153 , 'fk_examenes' => 3, 'fk_preguntas' =>     49  , 'fk_respuestas' =>    153 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   154 , 'fk_examenes' => 3, 'fk_preguntas' =>     50  , 'fk_respuestas' =>    154 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   155 , 'fk_examenes' => 3, 'fk_preguntas' =>     50  , 'fk_respuestas' =>    155 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   156 , 'fk_examenes' => 3, 'fk_preguntas' =>     50  , 'fk_respuestas' =>    156 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   157 , 'fk_examenes' => 3, 'fk_preguntas' =>     51  , 'fk_respuestas' =>    157 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   158 , 'fk_examenes' => 3, 'fk_preguntas' =>     51  , 'fk_respuestas' =>    158 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   159 , 'fk_examenes' => 3, 'fk_preguntas' =>     51  , 'fk_respuestas' =>    159 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   160 , 'fk_examenes' => 3, 'fk_preguntas' =>     52  , 'fk_respuestas' =>    160 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   161 , 'fk_examenes' => 3, 'fk_preguntas' =>     52  , 'fk_respuestas' =>    161 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   162 , 'fk_examenes' => 3, 'fk_preguntas' =>     52  , 'fk_respuestas' =>    162 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   163 , 'fk_examenes' => 3, 'fk_preguntas' =>     53  , 'fk_respuestas' =>    163 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   164 , 'fk_examenes' => 3, 'fk_preguntas' =>     54  , 'fk_respuestas' =>    164 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   165 , 'fk_examenes' => 3, 'fk_preguntas' =>     55  , 'fk_respuestas' =>    165 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   166 , 'fk_examenes' => 3, 'fk_preguntas' =>     56  , 'fk_respuestas' =>    166 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   167 , 'fk_examenes' => 3, 'fk_preguntas' =>     56  , 'fk_respuestas' =>    167 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   168 , 'fk_examenes' => 3, 'fk_preguntas' =>     56  , 'fk_respuestas' =>    168 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   169 , 'fk_examenes' => 3, 'fk_preguntas' =>     57  , 'fk_respuestas' =>    169 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   170 , 'fk_examenes' => 3, 'fk_preguntas' =>     57  , 'fk_respuestas' =>    170 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   171 , 'fk_examenes' => 3, 'fk_preguntas' =>     57  , 'fk_respuestas' =>    171 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   172 , 'fk_examenes' => 3, 'fk_preguntas' =>     58  , 'fk_respuestas' =>    172 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   173 , 'fk_examenes' => 3, 'fk_preguntas' =>     58  , 'fk_respuestas' =>    173 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   174 , 'fk_examenes' => 3, 'fk_preguntas' =>     58  , 'fk_respuestas' =>    174 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   175 , 'fk_examenes' => 3, 'fk_preguntas' =>     59  , 'fk_respuestas' =>    175 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   176 , 'fk_examenes' => 3, 'fk_preguntas' =>     59  , 'fk_respuestas' =>    176 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   177 , 'fk_examenes' => 3, 'fk_preguntas' =>     59  , 'fk_respuestas' =>    177 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   178 , 'fk_examenes' => 3, 'fk_preguntas' =>     60  , 'fk_respuestas' =>    178 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   179 , 'fk_examenes' => 3, 'fk_preguntas' =>     60  , 'fk_respuestas' =>    179 , 'activo' => 1, ]);
+        DB::table('PreguntasRespuestas')->insert([ 'ID'=>   180 , 'fk_examenes' => 3, 'fk_preguntas' =>     60  , 'fk_respuestas' =>    180 , 'activo' => 1, ]);
+
     }
 }

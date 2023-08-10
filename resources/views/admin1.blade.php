@@ -207,7 +207,7 @@
                                                     <td>
                                                         <form method="POST" name="Detalle" action="{{ url('/detalleAlumno') }}">
                                                         @csrf
-                                                            <input type="hidden" name="id_user" value="{{ $registrados->id }}">
+                                                        <input type="hidden" name="id_user" value="{{ $registrados->id }}">
                                                             <input type="submit"  name="Detalles" class="btn btn-warning"value="Detalles">
                                                         </form>
                                                     </td>

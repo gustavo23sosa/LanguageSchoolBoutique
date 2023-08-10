@@ -645,5 +645,74 @@ class respuestas extends Seeder
         ]);//20
 
 
+        DB::table('Respuestas')->insert([ 
+            'ID'=>126, 
+            'respuestas'=> "a) They're going to the store.", 
+            'activo' => 1, 
+        ]);
+        DB::table('Respuestas')->insert([ 
+            'ID'=>127, 
+            'respuestas'=> "b) Their going to the store.", 
+            'activo' => 1, 
+        ]);
+        DB::table('Respuestas')->insert([ 
+            'ID'=>128, 
+            'respuestas'=> "c) There going to the store.", 
+            'activo' => 1, 
+        ]);
+        DB::table('Respuestas')->insert([ 'ID'=>129, 'respuestas'=> "d) Theres going to the store.", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>130, 'respuestas'=> "a) I love listening to music.", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>131, 'respuestas'=> "b) Running is my favorite form of exercise.", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>132, 'respuestas'=> "c) After finishing his homework, he went to bed.", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>133, 'respuestas'=> "a) at", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>134, 'respuestas'=> "b) to", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>135, 'respuestas'=> "c) for", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>136, 'respuestas'=> "a) Active", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>137, 'respuestas'=> "b) Still", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>138, 'respuestas'=> "c) Calm", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>139, 'respuestas'=> "a) Look out", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>140, 'respuestas'=> "b) Look up", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>141, 'respuestas'=> "c) Look through", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>142, 'respuestas'=> "a) Give up", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>143, 'respuestas'=> "b) Take up", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>144, 'respuestas'=> "c) Carry on", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>145, 'respuestas'=> "a) Admiration", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>146, 'respuestas'=> "b) Revulsion", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>147, 'respuestas'=> "c) Repulsion", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>148, 'respuestas'=> "a) Resent", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>149, 'respuestas'=> "b) Loathe", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>150, 'respuestas'=> "c) Savor", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>151, 'respuestas'=> "a) Himself", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>152, 'respuestas'=> "b) Herself", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>153, 'respuestas'=> "c) All of the above", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>154, 'respuestas'=> "a) Which", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>155, 'respuestas'=> "b) These", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>156, 'respuestas'=> "c) Those", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>157, 'respuestas'=> "a) using too many exclamation points", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>158, 'respuestas'=> "b) using run-on sentences", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>159, 'respuestas'=> "c) using too many semicolons", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>160, 'respuestas'=> "a) using 'effect' instead of 'affect'", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>161, 'respuestas'=> "b) using 'your' instead of ' you're '", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>162, 'respuestas'=> "c) using 'imply' instead of 'infer'", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>163, 'respuestas'=> "My bike has been stolen!", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>164, 'respuestas'=> "The newspaper is received everyday.", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>165, 'respuestas'=> "The cookies have been eaten by the children.", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>166, 'respuestas'=> "a) Questions about the effects of environmental problems", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>167, 'respuestas'=> "b) Two opinions about environmental problems", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>168, 'respuestas'=> "c) All of the factors that damage the environment", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>169, 'respuestas'=> "a) Air pollution", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>170, 'respuestas'=> "b) Climate change", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>171, 'respuestas'=> "c) Deforestation", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>172, 'respuestas'=> "a) Excessive carbon dioxide emissions", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>173, 'respuestas'=> "b) Uncontrollable forest fires", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>174, 'respuestas'=> "c) Smog formation in valleys", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>175, 'respuestas'=> "a) Deforestation", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>176, 'respuestas'=> "b)Droughts", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>177, 'respuestas'=> "c) Flooding", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>178, 'respuestas'=> "a) Top Environmental Concerns", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>179, 'respuestas'=> "b) Protecting Endangered Species", 'activo' => 1, ]);
+        DB::table('Respuestas')->insert([ 'ID'=>180, 'respuestas'=> "c) Water Conservation Strategies", 'activo' => 1, ]);
+
+
     }
 }

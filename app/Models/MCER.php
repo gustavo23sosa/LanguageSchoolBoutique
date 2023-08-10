@@ -12,6 +12,7 @@ class MCER extends Model
     protected $primaryKey = 'ID';
     protected $fillable = [
         'rango',
+        'nivel',
         'activo',
     ];
 }

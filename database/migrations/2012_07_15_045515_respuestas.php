@@ -15,7 +15,7 @@ class Respuestas extends Migration
     {
         //
         Schema::create('Respuestas', function (Blueprint $table) {
-            $table->tinyInteger('ID')->primary();
+            $table->smallInteger('ID')->primary();
             $table->string('respuestas');
             $table->boolean('activo')->default(1);
         });

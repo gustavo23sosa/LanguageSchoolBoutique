@@ -167,7 +167,7 @@
                                                                     <font color="#721c24">{{ $message }}</font>
                                                                     </div>
                                                                     @endif
-                                          <h2>Modulo de administrador.</h2>
+                                          <h2>Modulo de administrador.</h2><div><a href="{{url('/alumnosAceptados')}}"><button type="submit"  name="alumnosCalificados" class="btn btn-warning"value="Ver alumnos calificados">Ver alumnos calificados</button></a></div>
                                           
                                           
                                           <br>
