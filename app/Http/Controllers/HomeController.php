@@ -108,6 +108,20 @@ class HomeController extends Controller
 
                         if ($resultado[0]->porcentaje >=1 && $resultado[0]->porcentaje <= 25) {
 
+                        $estatus = User::where('id','=',$id)->update(['fk_rango' => 1]);
+                        $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                        ->get();
+                        $nivel = User::where('users.id','=',$id)->select('Ran.nivel')
+                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                        ->get();
+                        // return response()->json($Mensaje);
+                        return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('nivel',$nivel)->with('Mensaje',$Mensaje);
+
+                        
+                        }
+                        if ($resultado[0]->porcentaje >25 && $resultado[0]->porcentaje <= 50) {
+
                         $estatus = User::where('id','=',$id)->update(['fk_rango' => 2]);
                         $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
                         ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
@@ -120,21 +134,20 @@ class HomeController extends Controller
 
                         
                         }
-                        if ($resultado[0]->porcentaje >=26 && $resultado[0]->porcentaje <= 60) {
-
-                        $estatus = User::where('id','=',$id)->update(['fk_rango' => 3]);
-                        $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
-                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
-                        ->get();
-                        $nivel = User::where('users.id','=',$id)->select('Ran.nivel')
-                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
-                        ->get();
-                        // return response()->json($Mensaje);
-                        return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('nivel',$nivel)->with('Mensaje',$Mensaje);
-
-                        
-                        }
-                        if ($resultado[0]->porcentaje >60 && $resultado[0]->porcentaje <= 100) {
+                        if ($resultado[0]->porcentaje >50 && $resultado[0]->porcentaje <= 75) {
+                            
+                           $estatus = User::where('id','=',$id)->update(['fk_rango' => 3]);
+                           $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                            ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                            ->get();
+                            $nivel = User::where('users.id','=',$id)->select('Ran.nivel')
+                            ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                            ->get();
+                           // return response()->json($Mensaje[0]->rango);
+                           return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('nivel',$nivel)->with('Mensaje',$Mensaje);     
+                            
+                        } 
+                        if ($resultado[0]->porcentaje >75 && $resultado[0]->porcentaje <= 100) {
                             
                            $estatus = User::where('id','=',$id)->update(['fk_rango' => 4]);
                            $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
@@ -151,7 +164,61 @@ class HomeController extends Controller
                     }
                     else if ($nivel[0]->fk_nivel == 6 || $nivel[0]->fk_nivel == 7){
 
-                        if ($resultado[0]->porcentaje >=1 && $resultado[0]->porcentaje <= 50) {
+                        if ($resultado[0]->porcentaje >=1 && $resultado[0]->porcentaje <= 16) {
+
+                        $estatus = User::where('id','=',$id)->update(['fk_rango' => 1]);
+                        $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                        ->get();
+                        $nivel = User::where('users.id','=',$id)->select('Ran.nivel')
+                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                        ->get();
+                        // return response()->json($Mensaje);
+                        return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('nivel',$nivel)->with('Mensaje',$Mensaje);
+
+                        
+                        }
+                        if ($resultado[0]->porcentaje >16 && $resultado[0]->porcentaje <= 32) {
+                            
+                           $estatus = User::where('id','=',$id)->update(['fk_rango' => 2]);
+                           $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                            ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                            ->get();
+                            $nivel = User::where('users.id','=',$id)->select('Ran.nivel')
+                            ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                            ->get();
+                           // return response()->json($Mensaje[0]->rango);
+                           return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('nivel',$nivel)->with('Mensaje',$Mensaje);     
+                            
+                        }
+                        if ($resultado[0]->porcentaje >32 && $resultado[0]->porcentaje <= 48) {
+
+                        $estatus = User::where('id','=',$id)->update(['fk_rango' => 3]);
+                        $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                        ->get();
+                        $nivel = User::where('users.id','=',$id)->select('Ran.nivel')
+                        ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                        ->get();
+                        // return response()->json($Mensaje);
+                        return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('nivel',$nivel)->with('Mensaje',$Mensaje);
+
+                        
+                        }
+                        if ($resultado[0]->porcentaje >48 && $resultado[0]->porcentaje <= 64) {
+                            
+                           $estatus = User::where('id','=',$id)->update(['fk_rango' => 4]);
+                           $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
+                            ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                            ->get();
+                            $nivel = User::where('users.id','=',$id)->select('Ran.nivel')
+                            ->join('MCER AS Ran','users.fk_rango','=','Ran.ID')
+                            ->get();
+                           // return response()->json($Mensaje[0]->rango);
+                           return view('home2')->with('niveles', $nivel)->with('activo',$activo)->with('nivel',$nivel)->with('Mensaje',$Mensaje);     
+                            
+                        } 
+                        if ($resultado[0]->porcentaje >64 && $resultado[0]->porcentaje <= 80) {
 
                         $estatus = User::where('id','=',$id)->update(['fk_rango' => 5]);
                         $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
@@ -165,7 +232,7 @@ class HomeController extends Controller
 
                         
                         }
-                        if ($resultado[0]->porcentaje >50 && $resultado[0]->porcentaje <= 100) {
+                        if ($resultado[0]->porcentaje >80 && $resultado[0]->porcentaje <= 100) {
                             
                            $estatus = User::where('id','=',$id)->update(['fk_rango' => 6]);
                            $Mensaje = User::where('users.id','=',$id)->select('Ran.rango')
