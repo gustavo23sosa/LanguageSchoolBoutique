@@ -1,7 +1,9 @@
 @extends('layouts.main', [
     'class' => 'register-page',
 ])
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 @section('content')
 <script>
 function validar(obj){
@@ -125,25 +127,31 @@ function validar(obj){
                                             <i class="nc-icon nc-key-25"></i>
                                         </span>
                                     </div>
-                                    <input name="password" type="password" class="form-control" placeholder="Contraseña" required autocomplete="password">
+                                    <input name="password" id="password" type="password" class="form-control" placeholder="Contraseña" required autocomplete="password"><div class="input-group-append">
+                                        <button id="passwords" class="btn btn-primary" type="button"onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+                                  </div>
                                     @if ($errors->has('password'))
                                         <span class="invalid-feedback" style="display: block;" role="alert">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                     @endif
+                                    
                                 </div>
-                                <div class="input-group">
+                                <div class="input-group" >
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="nc-icon nc-key-25"></i>
                                         </span>
                                     </div>
-                                    <input name="password_confirmation" type="password" class="form-control" placeholder="Confirma Contraseña" required autocomplete="password_confirmation">
+                                    <input name="password_confirmation" id="password_confirmation" type="password" class="form-control" placeholder="Confirma Contraseña" required autocomplete="password_confirmation">
                                     @if ($errors->has('password_confirmation'))
                                         <span class="invalid-feedback" style="display: block;" role="alert">
                                             <strong>{{ $errors->first('password_confirmation') }}</strong>
                                         </span>
                                     @endif
+                                    <div class="input-group-prepend">
+                                        <button id="password_confirmations" class="btn btn-primary" type="button" onclick="mostrarPasswordConfirmation()"> <span class="fa fa-eye-slash iconi"></span> </button>
+                                  </div>
                                 </div>
                                 <div class="form-check text-left">
                                     <label class="form-check-label">
@@ -172,5 +180,43 @@ function validar(obj){
         $(document).ready(function() {
             demo.checkFullPageBackgroundImage();
         });
+    </script>
+    <script type="text/javascript">
+    function mostrarPassword(){
+            var cambio = document.getElementById("password");
+            if(cambio.type == "password"){
+                cambio.type = "text";
+                $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+            }else{
+                cambio.type = "password";
+                $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+            }
+        } 
+        
+        $(document).ready(function () {
+        //CheckBox mostrar contraseña
+        $('#Passwords').click(function () {
+            $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+        });
+    });
+    </script>
+    <script type="text/javascript">
+    function mostrarPasswordConfirmation(){
+            var cambio = document.getElementById("password_confirmation");
+            if(cambio.type == "password"){
+                cambio.type = "text";
+                $('.iconi').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+            }else{
+                cambio.type = "password";
+                $('.iconi').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+            }
+        } 
+        
+        $(document).ready(function () {
+        //CheckBox mostrar contraseña
+        $('#PasswordConfirmations').click(function () {
+            $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+        });
+    });
     </script>
 @endpush

@@ -60,6 +60,7 @@
     @stack('scripts')
 
     @include('layouts.navbars.fixed-plugin-js')
+    
 </body>
 
 </html>

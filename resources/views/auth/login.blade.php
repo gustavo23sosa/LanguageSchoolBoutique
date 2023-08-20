@@ -47,13 +47,16 @@ function validar(obj){
                                         <i class="nc-icon nc-key-25"></i>
                                     </span>
                                 </div>
-                                <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Password') }}" type="password" required autocomplete="password">
+                                <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="password" placeholder="{{ __('Password') }}" type="password" required autocomplete="password">
                                 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" style="display: block;" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
+                                <div class="input-group-append">
+                                        <button id="show_password" class="btn btn-primary" type="button"onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+                                </div>
                             </div>
 
                             <div class="form-group">
@@ -79,17 +82,36 @@ function validar(obj){
                     {{ ('Registrate') }}
                 </a>
                 <a href="{{ route('password.request') }}" class="btn btn-link">
-                    {{ ('¿Olvidaste tu Contraseña?') }}
+                    {{ ('Manual de Usuario') }}
                 </a>
             </div>
         </div>
     </div>
 @endsection
 
-<!-- @push('scripts')
+@push('scripts')
     <script>
         $(document).ready(function() {
             demo.checkFullPageBackgroundImage();
         });
     </script>
-@endpush -->
+    <script type="text/javascript">
+    function mostrarPassword(){
+            var cambio = document.getElementById("password");
+            if(cambio.type == "password"){
+                cambio.type = "text";
+                $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+            }else{
+                cambio.type = "password";
+                $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+            }
+        } 
+        
+        $(document).ready(function () {
+        //CheckBox mostrar contraseña
+        $('#ShowPassword').click(function () {
+            $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+        });
+    });
+    </script>
+@endpush
