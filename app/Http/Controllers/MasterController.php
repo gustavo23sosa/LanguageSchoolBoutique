@@ -123,6 +123,22 @@ class MasterController extends Controller
             if ($respuestas['pregunta20'] == 63) {
                 $contador++;
             }
+
+            //-----Calificacion
+
+            $resultado = ($contador * 100)/20;
+            $estatus = User::where('id', $id)->update(['activo' => '1','fk_estatus'=>'2' , 'porcentaje' => $resultado]);
+
+            //------------------
+
+            if ($resultado >=1 && $resultado <= 50) {
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 1]);
+            }
+            if ($resultado >50 && $resultado <= 100) {
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 2]);                
+            }
+
+
         }else if($nivel[0]->fk_nivel == 4 || $nivel[0]->fk_nivel == 5){
             
             $contador = 0;
@@ -186,6 +202,27 @@ class MasterController extends Controller
             if ($respuestas['pregunta20'] == 123) {
                 $contador++;
             }
+
+            //-----Calificacion
+
+            $resultado = ($contador * 100)/20;
+            $estatus = User::where('id', $id)->update(['activo' => '1','fk_estatus'=>'2' , 'porcentaje' => $resultado]);
+
+            //------------------
+
+            if ($resultado >=1 && $resultado <= 25) {
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 1]);
+            }
+            if ($resultado >25 && $resultado <= 50) {
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 2]);
+            }
+            if ($resultado >50 && $resultado <= 75) {
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 3]);
+            } 
+            if ($resultado >75 && $resultado <= 100) {
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 4]); 
+            } 
+
         }else if($nivel[0]->fk_nivel == 6 || $nivel[0]->fk_nivel == 7){
             
 
@@ -254,14 +291,33 @@ class MasterController extends Controller
             if ($respuestas['pregunta20'] == 178) {
                 $contador++;
             }
+            //-----Calificacion
+
+            $resultado = ($contador * 100)/20;
+            $estatus = User::where('id', $id)->update(['activo' => '1','fk_estatus'=>'2' , 'porcentaje' => $resultado]);
+
+            //------------------
+
+            if ($resultado >=1 && $resultado <= 16) {
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 1]);
+            }
+            if ($resultado >16 && $resultado <= 32) {    
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 2]);
+            }
+            if ($resultado >32 && $resultado <= 48) {
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 3]);
+            }
+            if ($resultado >48 && $resultado <= 64) {
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 4]);
+            }
+            if ($resultado >64 && $resultado <= 80) {
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 5]);
+            }
+            if ($resultado[0]->porcentaje >80 && $resultado[0]->porcentaje <= 100) {
+                $estatus = User::where('id','=',$id)->update(['fk_rango' => 6]);
+            } 
+
         }
-
-        
-
-        $resultado = ($contador * 100)/20;
-        // return response()->json($resultado);
-        $estatus = User::where('id', $id)->update(['activo' => '1','fk_estatus'=>'2' , 'porcentaje' => $resultado]);
-        
         return redirect()->route('home')->with('success','Se ha calificado con exito');
 
         // $estatus = User::where('id', $user)->update(['activo' => '1','fk_estatus'=>'2']);

@@ -147,7 +147,7 @@
                                           <br>
 
                                           <h2>Detalles.</h2>
-                                          
+                                          <hr>
                                           <!-- <input class="form-control" id="myInput" type="text" placeholder="Search.."> -->
                                           <br>
                                           <table class="table table-bordered table-striped">
@@ -155,6 +155,7 @@
                                               <th>Campos</th><th>Detalles
                                               </th>
                                             </thead>
+
                                             <tbody id="myTable">
                                             @foreach($usuariodetalle as $usuario)
                                                 
@@ -199,7 +200,7 @@
 
                                           </table>
                                           <br><br>
-                                            <form method="post" name="EnviarExamen" action="{{ url('ModificaUsuario') }}"> <textarea class="form-control" placeholder="Observaciones" name="Observaciones" rows="5" style="width : 600px; height: 70px;"></textarea>
+                                            <form method="post" name="EnviarExamen" action="{{ url('ModificaUsuario') }}"> <textarea class="form-control" placeholder="Observaciones" name="Observaciones" rows="5" style="width : 650px; height: 80px;"></textarea>
                                           <table>
                                             <tr><td>
                                                         @csrf
@@ -217,7 +218,7 @@
                                                             <input type="submit"  name="Baja" value="Dar de baja" onclick="return confirm('¿Estas seguro de dar de baja a este usuario?')" class="btn btn-danger">
                                                         </form>
                                                 </td></tr></table>
-                                          <br><br><br>  
+                                          <br><br><br><hr>  
                                         </div>
                                         </div>
                                         </div>

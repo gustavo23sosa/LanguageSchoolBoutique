@@ -40,7 +40,7 @@ class UsersRoles extends Seeder
 
         DB::table('UsersRoles')->insert([
             'fk_users'=>6,
-            'fk_roles'=>2,
+            'fk_roles'=>1,
         ]);
     }
 }

@@ -79,8 +79,8 @@ class users extends Seeder
             'telefono' => '5513634943',
             'password'=> Hash::make('123456789'),
             'fk_estado' => '15',
-            'fk_estatus' => '1',
-            'activo'=>0
+            'fk_estatus' => '2',
+            'activo'=>1
         ]);
     }
 }
