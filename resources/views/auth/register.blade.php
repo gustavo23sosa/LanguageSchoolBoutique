@@ -23,7 +23,7 @@ function validar(obj){
                 <div class="col-lg-5 col-md-6 ml-auto mr-auto">
                     <div class="card card-signup text-center">
                         <div class="card-header ">
-                            <h4 class="card-title">{{ ('¡Registrate!') }}</h4>
+                            <h4 class="card-title">{{ ('¡Registrate Ahora!') }}</h4>
 
                         </div>
                         <div class="social">
