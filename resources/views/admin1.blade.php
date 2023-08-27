@@ -43,7 +43,7 @@
 </head>
 
 <body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7">
-<div class="wrapper wrapper-full-page " style="background-image: url('img/bg/fabio-mangione.jpg');">
+<div class="wrapper wrapper-full-page " style="background-image: url('img/bg/fabio-mangione.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:#FFFFFF;">
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
             <div class="dlr-header-inner">

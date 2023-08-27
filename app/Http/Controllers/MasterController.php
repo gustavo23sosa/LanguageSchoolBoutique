@@ -56,71 +56,71 @@ class MasterController extends Controller
     	$id = Auth::user()->id;
     	// $respuestas = request()->all();
     	$respuestas = request()->except('_token');
-
+        // return response()->json($respuestas);
         
         $nivel = User::where('id','=',$id)->select('fk_nivel')->get();
 
         if($nivel[0]->fk_nivel == 2 || $nivel[0]->fk_nivel == 3){
 
             $contador = 0;
-            if ($respuestas['pregunta1'] == 3) {
+            if ($respuestas['datos1'] == 3) {
                 $contador++;
             }
-            if ($respuestas['pregunta2'] == 6) {
+            if ($respuestas['datos2'] == 6) {
                 $contador++;
             }
-            if ($respuestas['pregunta3'] == 7) {
+            if ($respuestas['datos3'] == 7) {
                 $contador++;
             }
-            if ($respuestas['pregunta4'] == 11) {
+            if ($respuestas['datos4'] == 11) {
                 $contador++;
             }
-            if ($respuestas['pregunta5'] == 14) {
+            if ($respuestas['datos5'] == 14) {
                 $contador++;
             }
-            if ($respuestas['pregunta6'] == 17) {
+            if ($respuestas['datos6'] == 17) {
                 $contador++;
             }
-            if ($respuestas['pregunta7'] == 20) {
+            if ($respuestas['datos7'] == 20) {
                 $contador++;
             }
-            if ($respuestas['pregunta8'] == 24) {
+            if ($respuestas['datos8'] == 24) {
                 $contador++;
             }
-            if ($respuestas['pregunta9'] == 25) {
+            if ($respuestas['datos9'] == 25) {
                 $contador++;
             }
-            if ($respuestas['pregunta10'] == 30) {
+            if ($respuestas['datos10'] == 30) {
                 $contador++;
             }
-            if ($respuestas['pregunta11'] == 31) {
+            if ($respuestas['datos11'] == 31) {
                 $contador++;
             }
-            if ($respuestas['pregunta12'] == 34) {
+            if ($respuestas['datos12'] == 34) {
                 $contador++;
             }
-            if ($respuestas['pregunta13'] == 37) {
+            if ($respuestas['datos13'] == 37) {
                 $contador++;
             }
-            if ($respuestas['pregunta14'] == 41) {
+            if ($respuestas['datos14'] == 41) {
                 $contador++;
             }
-            if ($respuestas['pregunta15'] == 43) {
+            if ($respuestas['datos15'] == 43) {
                 $contador++;
             }
-            if ($respuestas['pregunta16'] == 49) {
+            if ($respuestas['datos16'] == 49) {
                 $contador++;
             }
-            if ($respuestas['pregunta17'] == 51) {
+            if ($respuestas['datos17'] == 51) {
                 $contador++;
             }
-            if ($respuestas['pregunta18'] == 56) {
+            if ($respuestas['datos18'] == 56) {
                 $contador++;
             }
-            if ($respuestas['pregunta19'] == 58) {
+            if ($respuestas['datos19'] == 58) {
                 $contador++;
             }
-            if ($respuestas['pregunta20'] == 63) {
+            if ($respuestas['datos20'] == 63) {
                 $contador++;
             }
 
@@ -142,64 +142,64 @@ class MasterController extends Controller
         }else if($nivel[0]->fk_nivel == 4 || $nivel[0]->fk_nivel == 5){
             
             $contador = 0;
-            if ($respuestas['pregunta1'] == 68) {
+            if ($respuestas['datos1'] == 68) {
                 $contador++;
             }
-            if ($respuestas['pregunta2'] == 69) {
+            if ($respuestas['datos2'] == 69) {
                 $contador++;
             }
-            if ($respuestas['pregunta3'] == 72) {
+            if ($respuestas['datos3'] == 72) {
                 $contador++;
             }
-            if ($respuestas['pregunta4'] == 76) {
+            if ($respuestas['datos4'] == 76) {
                 $contador++;
             }
-            if ($respuestas['pregunta5'] == 79) {
+            if ($respuestas['datos5'] == 79) {
                 $contador++;
             }
-            if ($respuestas['pregunta6'] == 81) {
+            if ($respuestas['datos6'] == 81) {
                 $contador++;
             }
-            if ($respuestas['pregunta7'] == 86) {
+            if ($respuestas['datos7'] == 86) {
                 $contador++;
             }
-            if ($respuestas['pregunta8'] == 88) {
+            if ($respuestas['datos8'] == 88) {
                 $contador++;
             }
-            if ($respuestas['pregunta9'] == 90) {
+            if ($respuestas['datos9'] == 90) {
                 $contador++;
             }
-            if ($respuestas['pregunta10'] == 93) {
+            if ($respuestas['datos10'] == 93) {
                 $contador++;
             }
-            if ($respuestas['pregunta11'] == 96) {
+            if ($respuestas['datos11'] == 96) {
                 $contador++;
             }
-            if ($respuestas['pregunta12'] == 99) {
+            if ($respuestas['datos12'] == 99) {
                 $contador++;
             }
-            if ($respuestas['pregunta13'] == 102) {
+            if ($respuestas['datos13'] == 102) {
                 $contador++;
             }
-            if ($respuestas['pregunta14'] == 105) {
+            if ($respuestas['datos14'] == 105) {
                 $contador++;
             }
-            if ($respuestas['pregunta15'] == 108) {
+            if ($respuestas['datos15'] == 108) {
                 $contador++;
             }
-            if ($respuestas['pregunta16'] == 113) {
+            if ($respuestas['datos16'] == 113) {
                 $contador++;
             }
-            if ($respuestas['pregunta17'] == 115) {
+            if ($respuestas['datos17'] == 115) {
                 $contador++;
             }
-            if ($respuestas['pregunta18'] == 117) {
+            if ($respuestas['datos18'] == 117) {
                 $contador++;
             }
-            if ($respuestas['pregunta19'] == 121) {
+            if ($respuestas['datos19'] == 121) {
                 $contador++;
             }
-            if ($respuestas['pregunta20'] == 123) {
+            if ($respuestas['datos20'] == 123) {
                 $contador++;
             }
 
@@ -228,67 +228,67 @@ class MasterController extends Controller
 
             $contador = 0;
 
-            if ($respuestas['pregunta1'] == 126) {
+            if ($respuestas['datos1'] == 126) {
                 $contador++;
             }
-            if ($respuestas['pregunta2'] == 131) {
+            if ($respuestas['datos2'] == 131) {
                 $contador++;
             }
-            if ($respuestas['pregunta3'] == 134) {
+            if ($respuestas['datos3'] == 134) {
                 $contador++;
             }
-            if ($respuestas['pregunta4'] == 136) {
+            if ($respuestas['datos4'] == 136) {
                 $contador++;
             }
-            if ($respuestas['pregunta5'] == 141) {
+            if ($respuestas['datos5'] == 141) {
                 $contador++;
             }
-            if ($respuestas['pregunta6'] == 142) {
+            if ($respuestas['datos6'] == 142) {
                 $contador++;
             }
-            if ($respuestas['pregunta7'] == 145) {
+            if ($respuestas['datos7'] == 145) {
                 $contador++;
             }
-            if ($respuestas['pregunta8'] == 150) {
+            if ($respuestas['datos8'] == 150) {
                 $contador++;
             }
-            if ($respuestas['pregunta9'] == 153) {
+            if ($respuestas['datos9'] == 153) {
                 $contador++;
             }
-            if ($respuestas['pregunta10'] == 154) {
+            if ($respuestas['datos10'] == 154) {
                 $contador++;
             }
-            if ($respuestas['pregunta11'] == 158) {
+            if ($respuestas['datos11'] == 158) {
                 $contador++;
             }
-            if ($respuestas['pregunta12'] == 162) {
+            if ($respuestas['datos12'] == 162) {
                 $contador++;
             }
-            if ($respuestas['pregunta13'] == "My bike has been stolen!" || $respuestas['pregunta13'] == "my bike has been stolen" || $respuestas['pregunta13'] == "My bike has been stolen") {
-                $contador++;
-                
-            }
-            if ($respuestas['pregunta14'] == "The newspaper is received everyday." || $respuestas['pregunta14'] == "The newspaper is received everyday" || $respuestas['pregunta14'] == "the newspaper is received everyday") {
+            if ($respuestas['datos13'] == "My bike has been stolen!" || $respuestas['datos13'] == "my bike has been stolen" || $respuestas['datos13'] == "My bike has been stolen") {
                 $contador++;
                 
             }
-            if ($respuestas['pregunta15'] == "The cookies have been eaten by the children." || $respuestas['pregunta15'] == "The cookies have been eaten by the children" || $respuestas['pregunta15'] == "the cookies have been eaten by the children") {
+            if ($respuestas['datos14'] == "The newspaper is received everyday." || $respuestas['datos14'] == "The newspaper is received everyday" || $respuestas['datos14'] == "the newspaper is received everyday") {
                 $contador++;
                 
             }
-            if ($respuestas['pregunta16'] == 167) {
+            if ($respuestas['datos15'] == "The cookies have been eaten by the children." || $respuestas['datos15'] == "The cookies have been eaten by the children" || $respuestas['datos15'] == "the cookies have been eaten by the children") {
+                $contador++;
+                
+            }
+            if ($respuestas['datos16'] == 167) {
                 $contador++;
             }
-            if ($respuestas['pregunta17'] == 170) {
+            if ($respuestas['datos17'] == 170) {
                 $contador++;
             }
-            if ($respuestas['pregunta18'] == 172) {
+            if ($respuestas['datos18'] == 172) {
                 $contador++;
             }
-            if ($respuestas['pregunta19'] == 176) {
+            if ($respuestas['datos19'] == 176) {
                 $contador++;
             }
-            if ($respuestas['pregunta20'] == 178) {
+            if ($respuestas['datos20'] == 178) {
                 $contador++;
             }
             //-----Calificacion
@@ -313,7 +313,7 @@ class MasterController extends Controller
             if ($resultado >64 && $resultado <= 80) {
                 $estatus = User::where('id','=',$id)->update(['fk_rango' => 5]);
             }
-            if ($resultado[0]->porcentaje >80 && $resultado[0]->porcentaje <= 100) {
+            if ($resultado >80 && $resultado <= 100) {
                 $estatus = User::where('id','=',$id)->update(['fk_rango' => 6]);
             } 
 
@@ -322,7 +322,7 @@ class MasterController extends Controller
 
         // $estatus = User::where('id', $user)->update(['activo' => '1','fk_estatus'=>'2']);
 
-    	// return response()->json($respuestas);
+    	
         
     }
     public function subirArchivo(Request $request)

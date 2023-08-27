@@ -44,7 +44,7 @@
 
 </head>
 
-<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/examenes.jpg');" translate="no">
+<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/header.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:#FFFFFF;" translate="no" onload="nobackbutton()">
 <div class="wrapper wrapper-full-page " >
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
@@ -144,7 +144,7 @@
 
                             @while($o<=4)
                             
-                            <input type="radio" name="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
+                            <input type="radio" id="pregunta{{$i}}" name="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
                             <label style=" font-size: 100%;"><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
                             <!-- {{$n++}}
                             {{$o++}} -->
@@ -155,7 +155,7 @@
                             <label for="pregunta{{$i}}" style="color: black; font-size: 100%"><span> {{ $pregunta->preguntas }} </span></label><br><br>
                             @while($o<=3)
                             
-                                <input type="radio" name="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
+                                <input type="radio" id="pregunta{{$i}}" name="pregunta{{$i}}" value="{{ $exprepuestas1[$n]->ID }}" required>
                                 <label style="font-size: 100%;"><span>{{ $exprepuestas1[$n]->respuestas }}</span></label><br>
                                 <!-- {{$n++}}
                                 {{$o++}} -->
@@ -166,7 +166,7 @@
                     @else
                         <br>
                     @endif
-
+                    <input type="hidden" id="datos{{$i}}" name="datos{{$i}}" value="0">
                     <!-- {{$i++}} -->
                     @endforeach
                     

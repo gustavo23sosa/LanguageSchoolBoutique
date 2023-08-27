@@ -42,7 +42,7 @@
 
 </head>
 
-<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/user.png');">
+<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url('img/bg/user.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:#FFFFFF;" onload="nobackbutton()">
 <div class="wrapper wrapper-full-page ">
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
@@ -208,6 +208,13 @@
 $(document).ready(function () {
     $('#example').DataTable();
 });
+</script>
+<script type="text/javascript">
+    function nobackbutton(){
+      window.location.hash="no-back-button";
+      window.location.hash="Again-No-back-button";//esta linea es necesaria para chrome
+      window.onhashchange=function(){window.location.hash="no-back-button";} 
+    }
 </script>
     <script src='administrador/red/js/jquery/jquery.js'></script>
     <script src='administrador/red/js/jquery/jquery-migrate.min.js'></script>

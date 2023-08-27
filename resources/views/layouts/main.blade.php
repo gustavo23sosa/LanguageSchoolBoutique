@@ -32,7 +32,7 @@
 
 </head>
 
-<body class="{{$class}}" background="img/bg/prueba.jpg">
+<body class="{{$class}}" background="img/bg/prueba.jpg" style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:#FFFFFF;">
     
     @auth()
         @include('layouts.page_templates.auth')
