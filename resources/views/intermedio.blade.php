@@ -175,7 +175,7 @@
                     @endforeach
                     </div>
                     
-                    <button type="submit" class="btn btn-warning" onclick="return confirm('Todas las preguntas seran calificadas y no habra mas intentos, ¿Estas seguro?')">Calificar Examen</button>
+                    <button type="submit" name="Enviar" class="btn btn-warning" onclick="return confirm('Todas las preguntas seran calificadas y no habra mas intentos, ¿Estas seguro?')">Calificar Examen</button>
                 </form>
 
                 
@@ -215,15 +215,7 @@ $(document).ready(function () {
         </div>
     </footer>
     
-   <script>
-        window.addEventListener("beforeunload", (evento) => {
-            if (true) {
-                evento.preventDefault();
-                evento.returnValue = "";
-                return "";
-            }
-        });
-    </script>
+   
     <script src='administrador/red/js/jquery/jquery.js'></script>
     <script src='administrador/red/js/jquery/jquery-migrate.min.js'></script>
     <script src='administrador/red/plugins/superfish/js/superfish.js'></script>

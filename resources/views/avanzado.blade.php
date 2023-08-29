@@ -220,6 +220,7 @@ $(document).ready(function () {
     $('#example').DataTable();
 });
 </script>
+
     <script src='administrador/red/js/jquery/jquery.js'></script>
     <script src='administrador/red/js/jquery/jquery-migrate.min.js'></script>
     <script src='administrador/red/plugins/superfish/js/superfish.js'></script>
