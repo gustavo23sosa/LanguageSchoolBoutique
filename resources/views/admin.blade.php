@@ -180,7 +180,7 @@
                                                 <th>Apellido Materno</th>
                                                 <th>Correo</th>
                                                 <th>Telefono</th>
-                                                <th></th>
+                                                <th>Accion</th>
                                                 <!-- <th><a href="{{url('detalleAlumno/create')}}">
                                                         @csrf
                                                             
@@ -255,19 +255,19 @@ $(document).ready(function () {
     $('#example').DataTable();
 });
 </script>
-    <script src='administrador/red/js/jquery/jquery.js'></script>
-    <script src='administrador/red/js/jquery/jquery-migrate.min.js'></script>
-    <script src='administrador/red/plugins/superfish/js/superfish.js'></script>
-    <script src='administrador/red/js/hoverIntent.min.js'></script>
-    <script src='administrador/red/plugins/dl-menu/modernizr.custom.js'></script>
-    <script src='administrador/red/plugins/dl-menu/jquery.dlmenu.js'></script>
-    <script src='administrador/red/plugins/jquery.easing.js'></script>
-    <script src='administrador/red/plugins/fancybox/jquery.fancybox.pack.js'></script>
-    <script src='administrador/red/plugins/fancybox/helpers/jquery.fancybox-media.js'></script>
-    <script src='administrador/red/plugins/fancybox/helpers/jquery.fancybox-thumbs.js'></script>
-    <script src='administrador/red/plugins/flexslider/jquery.flexslider.js'></script>
-    <script src='administrador/red/plugins/jquery.isotope.min.js'></script>
-    <script src='administrador/red/js/plugins.min.js'></script>
+    <script src="{{ asset('administrador/red/js/jquery/jquery.js')}}"></script>
+    <script src="{{ asset('administrador/red/js/jquery/jquery-migrate.min.js')}}"></script>
+    <script src="{{ asset('administrador/red/plugins/superfish/js/superfish.js')}}"></script>
+    <script src="{{ asset('administrador/red/js/hoverIntent.min.js')}}"></script>
+    <script src="{{ asset('administrador/red/plugins/dl-menu/modernizr.custom.js')}}"></script>
+    <script src="{{ asset('administrador/red/plugins/dl-menu/jquery.dlmenu.js')}}"></script>
+    <script src="{{ asset('administrador/red/plugins/jquery.easing.js')}}"></script>
+    <script src="{{ asset('administrador/red/plugins/fancybox/jquery.fancybox.pack.js')}}"></script>
+    <script src="{{ asset('administrador/red/plugins/fancybox/helpers/jquery.fancybox-media.js')}}"></script>
+    <script src="{{ asset('administrador/red/plugins/fancybox/helpers/jquery.fancybox-thumbs.js')}}"></script>
+    <script src="{{ asset('administrador/red/plugins/flexslider/jquery.flexslider.js')}}"></script>
+    <script src="{{ asset('administrador/red/plugins/jquery.isotope.min.js')}}"></script>
+    <script src="{{ asset('administrador/red/js/plugins.min.js')}}"></script>
 
 </body>
 </html>
