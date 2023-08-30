@@ -81,7 +81,7 @@ function validar(obj){
                 <a href="{{ route('register') }}" class="btn btn-link float-right">
                     {{ ('Registrate') }}
                 </a>
-                <a href="archivos/manual.pdf" class="btn btn-link" download="Manual-de-Usuario">
+                <a href="{{ asset('archivos/manual.pdf')}}" class="btn btn-link" download="Manual-de-Usuario">
                     {{ ('Manual de Usuario') }}
                 </a>
             </div>
