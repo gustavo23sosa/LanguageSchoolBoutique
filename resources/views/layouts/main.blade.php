@@ -32,7 +32,7 @@
 
 </head>
 
-<body class="{{$class}}" background="img/bg/prueba.jpg" style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:#FFFFFF;">
+<body class="{{$class}}" background="{{ asset('img/bg/prueba.jpg')}}" style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:#FFFFFF;">
     
     @auth()
         @include('layouts.page_templates.auth')
@@ -44,18 +44,18 @@
     @endguest
 
     <!--   Core JS Files   -->
-    <script src="js/core/jquery.min.js"></script>
-    <script src="js/core/popper.min.js"></script>
-    <script src="js/core/bootstrap.min.js"></script>
-    <script src="js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="{{ asset('js/core/jquery.min.js')}}"></script>
+    <script src="{{ asset('js/core/popper.min.js')}}"></script>
+    <script src="{{ asset('js/core/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
     <!--  Google Maps Plugin    -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <!-- Chart JS -->
-    <script src="js/plugins/chartjs.min.js"></script>
+    <script src="{{ asset('js/plugins/chartjs.min.js')}}"></script>
     <!--  Notifications Plugin    -->
-    <script src="js/plugins/bootstrap-notify.js"></script>
+    <script src="{{ asset('js/plugins/bootstrap-notify.js')}}"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="js/paper-dashboard.min.js" type="text/javascript"></script>
+    <script src="{{ asset('js/paper-dashboard.min.js')}}" type="text/javascript"></script>
     
     @stack('scripts')
 
