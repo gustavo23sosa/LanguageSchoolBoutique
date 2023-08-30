@@ -7,47 +7,49 @@
 <head>
     <meta charset=UTF-8>
     <meta name=viewport content="initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/icono.png">
+
+    <link rel="apple-touch-icon" sizes="76x76" href=" {{ asset('img/apple-icono.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('img/icono.png')}}">
     <title>Detalles - Language School Boutique</title>
 
-    <link rel="stylesheet" href="administrador/red/css/style.css" type="text/css" media="all">
-    <link rel="stylesheet" href="administrador/red/plugins/superfish/css/superfish.css" type="text/css" media="all">
-    <link rel="stylesheet" href="administrador/red/plugins/dl-menu/component.css" type="text/css" media="all">
-    <link rel="stylesheet" href="administrador/red/plugins/font-awesome-new/css/font-awesome.min.css" type="text/css" media="all">
-    <link rel="stylesheet" href="administrador/red/plugins/fancybox/jquery.fancybox.css" type="text/css" media="all">
-    <link rel="stylesheet" href="administrador/red/plugins/flexslider/flexslider.css" type="text/css" media="all">
-    <link rel="stylesheet" href="administrador/red/css/style-responsive.css" type="text/css" media="all">
-    <link rel="stylesheet" href="administrador/red/css/style-custom.css" type="text/css" media="all">
-    <link rel="stylesheet" href="administrador/red/plugins/masterslider/public/assets/css/masterslider.main.css" type="text/css" media="all">
-    <link rel="stylesheet" href="administrador/red/css/master-custom.css" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset(administrador/red/css/style.css)}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/superfish/css/superfish.css)}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/dl-menu/component.css)}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/font-awesome-new/css/font-awesome.min.css)}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/fancybox/jquery.fancybox.css)}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/flexslider/flexslider.css)}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset(administrador/red/css/style-responsive.css)}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset(administrador/red/css/style-custom.css')}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/masterslider/public/assets/css/masterslider.main.css)}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('administrador/red/css/master-custom.css')}}" type="text/css" media="all">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" type="text/css" href="css/iofrm-style.css">
-    <link rel="stylesheet" type="text/css" href="css/iofrm-theme2.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/iofrm-style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/iofrm-theme2.css')}}">
     <link href="css/app.css" rel="stylesheet">
-    <script src="js/app.js" defer></script>
+    <script src="{{ asset('js/app.js')}}" defer></script>
 
   
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900&amp;subset=latin&amp;ver=5e348039466ee2df77d142cdeeca1221' type=text/css media=all>
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Montserrat%3Aregular%2C700&amp;subset=latin&amp;ver=5e348039466ee2df77d142cdeeca1221' type=text/css media=all>
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Droid+Serif%3Aregular%2Citalic%2C700%2C700italic&amp;subset=latin&amp;ver=5e348039466ee2df77d142cdeeca1221' type=text/css media=all>
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+    <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{ asset('css/paper-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 
 <body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7">
-<div class="wrapper wrapper-full-page " style="background-image: url('img/jan.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:#FFFFFF;">
+<div class="wrapper wrapper-full-page " style="background-image: url({{ asset('img/jan.jpg')}}); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:#FFFFFF;">
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
             <div class="dlr-header-inner">
                 <div class="gdlr-header-container container">
                     <div class="gdlr-logo">
-                        <img src="img/logo.png" alt="" width="50%">
+                        <img src="{{ asset('img/logo.png')}}" alt="" width="50%">
 
                         <!-- <div class="gdlr-responsive-navigation dl-menuwrapper" id="gdlr-responsive-navigation">
                             
@@ -255,19 +257,20 @@ $(document).ready(function(){
   });
 });
 </script>
-    <script src='administrador/red/js/jquery/jquery.js'></script>
-    <script src='administrador/red/js/jquery/jquery-migrate.min.js'></script>
-    <script src='administrador/red/plugins/superfish/js/superfish.js'></script>
-    <script src='administrador/red/js/hoverIntent.min.js'></script>
-    <script src='administrador/red/plugins/dl-menu/modernizr.custom.js'></script>
-    <script src='administrador/red/plugins/dl-menu/jquery.dlmenu.js'></script>
-    <script src='administrador/red/plugins/jquery.easing.js'></script>
-    <script src='administrador/red/plugins/fancybox/jquery.fancybox.pack.js'></script>
-    <script src='administrador/red/plugins/fancybox/helpers/jquery.fancybox-media.js'></script>
-    <script src='administrador/red/plugins/fancybox/helpers/jquery.fancybox-thumbs.js'></script>
-    <script src='administrador/red/plugins/flexslider/jquery.flexslider.js'></script>
-    <script src='administrador/red/plugins/jquery.isotope.min.js'></script>
-    <script src='administrador/red/js/plugins.min.js'></script>
+<script src="{{ asset('administrador/red/js/jquery/jquery.js')}}"></script>
+<script src="{{ asset('administrador/red/js/jquery/jquery-migrate.min.js')}}"></script>
+<script src="{{ asset('administrador/red/plugins/superfish/js/superfish.js')}}"></script>
+<script src="{{ asset('administrador/red/js/hoverIntent.min.js')}}"></script>
+<script src="{{ asset('administrador/red/plugins/dl-menu/modernizr.custom.js')}}"></script>
+<script src="{{ asset('administrador/red/plugins/dl-menu/jquery.dlmenu.js')}}"></script>
+<script src="{{ asset('administrador/red/plugins/jquery.easing.js')}}"></script>
+<script src="{{ asset('administrador/red/plugins/fancybox/jquery.fancybox.pack.js')}}"></script>
+<script src="{{ asset('administrador/red/plugins/fancybox/helpers/jquery.fancybox-media.js')}}"></script>
+<script src="{{ asset('administrador/red/plugins/fancybox/helpers/jquery.fancybox-thumbs.js')}}"></script>
+<script src="{{ asset('administrador/red/plugins/flexslider/jquery.flexslider.js')}}"></script>
+<script src="{{ asset('administrador/red/plugins/jquery.isotope.min.js')}}"></script>
+<script src="{{ asset('administrador/red/js/plugins.min.js')}}"></script>
+
 
 </body>
 </html>
