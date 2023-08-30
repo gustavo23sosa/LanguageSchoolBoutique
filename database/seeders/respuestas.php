@@ -17,327 +17,327 @@ class respuestas extends Seeder
         //
         DB::table('Respuestas')->insert([
             'ID'=>1,
-            'respuestas'=> "Were you at the park?.",
+            'respuestas'=> "a) Were you at the park?.",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>2,
-            'respuestas'=> "Is you at the park?.",
+            'respuestas'=> "b) Is you at the park?.",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>3,
-            'respuestas'=> "Are you at the park?.",
+            'respuestas'=> "c) Are you at the park?.",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>4,
-            'respuestas'=> "Her",
+            'respuestas'=> "a) Her",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>5,
-            'respuestas'=> "He",
+            'respuestas'=> "b) He",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>6,
-            'respuestas' => "She",
+            'respuestas' => "c) She",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>7,
-            'respuestas'=> "It",
+            'respuestas'=> "a) It",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>8,
-            'respuestas'=> "Its",
+            'respuestas'=> "b) Its",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>9,
-            'respuestas'=> "He",
+            'respuestas'=> "c) He",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>10,
-            'respuestas'=> "the",
+            'respuestas'=> "a) the",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>11,
-            'respuestas'=> "—-",
+            'respuestas'=> "b) —-",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>12,
-            'respuestas'=> "an",
+            'respuestas'=> "c) an",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>13,
-            'respuestas'=> "the, An",
+            'respuestas'=> "a) the, An",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>14,
-            'respuestas'=> "a, The",
+            'respuestas'=> "b) a, The",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>15,
-            'respuestas'=> "an, The",
+            'respuestas'=> "c) an, The",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>16,
-            'respuestas'=> "go",
+            'respuestas'=> "a) go",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>17,
-            'respuestas'=> "goes",
+            'respuestas'=> "b) goes",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>18,
-            'respuestas'=> "going",
+            'respuestas'=> "c) going",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>19,
-            'respuestas'=> "Him",
+            'respuestas'=> "a) Him",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>20,
-            'respuestas'=> "He",
+            'respuestas'=> "b) He",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>21,
-            'respuestas'=> "His",
+            'respuestas'=> "c) His",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>22,
-            'respuestas'=> "at",
+            'respuestas'=> "a) at",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>23,
-            'respuestas'=> "in",
+            'respuestas'=> "b) in",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>24,
-            'respuestas'=> "to",
+            'respuestas'=> "c) to",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>25,
-            'respuestas'=> "go",
+            'respuestas'=> "a) go",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>26,
-            'respuestas'=> "goes",
+            'respuestas'=> "b) goes",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>27,
-            'respuestas'=> "going",
+            'respuestas'=> "c) going",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>28,
-            'respuestas'=> "I eat breakfast every morning.",
+            'respuestas'=> "a) I eat breakfast every morning.",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>29,
-            'respuestas'=> "She will watch the movie later.",
+            'respuestas'=> "b) She will watch the movie later.",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>30,
-            'respuestas'=> "They are studying for the test.",
+            'respuestas'=> "c) They are studying for the test.",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>31,
-            'respuestas'=> "dog's",
+            'respuestas'=> "a) dog's",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>32,
-            'respuestas'=> "dogs'",
+            'respuestas'=> "b) dogs'",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>33,
-            'respuestas'=> "dogs",
+            'respuestas'=> "c) dogs",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>34,
-            'respuestas'=> "A",
+            'respuestas'=> "a) A",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>35,
-            'respuestas'=> "An",
+            'respuestas'=> "b) An",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>36,
-            'respuestas' => "The",
+            'respuestas' => "c) The",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>37,
-            'respuestas'=> "Eats",
+            'respuestas'=> "a) Eats",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>38,
-            'respuestas'=> "Eat",
+            'respuestas'=> "b) Eat",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>39,
-            'respuestas'=> "Eating",
+            'respuestas'=> "c) Eating",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>40,
-            'respuestas'=> "She",
+            'respuestas'=> "a) She",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>41,
-            'respuestas'=> "He",
+            'respuestas'=> "b) He",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>42,
-            'respuestas'=> "They",
+            'respuestas'=> "c) They",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>43,
-            'respuestas'=> "To be",
+            'respuestas'=> "a) To be",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>44,
-            'respuestas'=> "To do",
+            'respuestas'=> "b) To do",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>45,
-            'respuestas'=> "To have",
+            'respuestas'=> "c) To have",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>46,
-            'respuestas'=> "One daughter",
+            'respuestas'=> "a) One daughter",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>47,
-            'respuestas'=> "No children",
+            'respuestas'=> "b) No children",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>48,
-            'respuestas'=> "One son",
+            'respuestas'=> "c) One son",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>49,
-            'respuestas'=> "One son and one daughter",
+            'respuestas'=> "d) One son and one daughter",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>50,
-            'respuestas'=> "Sarah",
+            'respuestas'=> "a) Sarah",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>51,
-            'respuestas'=> "Father",
+            'respuestas'=> "b) Father",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>52,
-            'respuestas'=> "Mother",
+            'respuestas'=> "c) Mother",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>53,
-            'respuestas'=> "John",
+            'respuestas'=> "d) John",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>54,
-            'respuestas'=> "Kitchen",
+            'respuestas'=> "a) Kitchen",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>55,
-            'respuestas'=> "Living room",
+            'respuestas'=> "b) Living room",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>56,
-            'respuestas'=> "Dining room",
+            'respuestas'=> "c) Dining room",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>57,
-            'respuestas'=> "Bedroom",
+            'respuestas'=> "d) Bedroom",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>58,
-            'respuestas'=> "Two",
+            'respuestas'=> "a) Two",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>59,
-            'respuestas'=> "One",
+            'respuestas'=> "b) One",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>60,
-            'respuestas'=> "Three",
+            'respuestas'=> "c) Three",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>61,
-            'respuestas'=> "Four",
+            'respuestas'=> "d) Four",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>62,
-            'respuestas'=> "Brush their teeth",
+            'respuestas'=> "a) Brush their teeth",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>63,
-            'respuestas'=> "Play",
+            'respuestas'=> "b) Play",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>64,
-            'respuestas'=> "Cook",
+            'respuestas'=> "c) Cook",
             'activo' => 1,
         ]);
         DB::table('Respuestas')->insert([
             'ID'=>65,
-            'respuestas'=> "Sleep",
+            'respuestas'=> "d) Sleep",
             'activo' => 1,
         ]);
 
