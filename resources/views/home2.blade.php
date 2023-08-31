@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome-all.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/iofrm-style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/iofrm-theme2.css')}}">
-    <link href="css/app.css" rel="stylesheet">
+    
     <script src="{{ asset('js/app.js')}}" defer></script>
     <script src="{{ asset('js/prueba.js')}}" defer></script>
     <script src="{{ asset('js/prueba2.js')}}" defer></script>

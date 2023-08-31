@@ -196,7 +196,19 @@
                                                 <tr>
                                                     <td>Observaciones</td><td>{{ $usuario->Observaciones }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 </tr>
-                                                
+                                                <tr>
+                                                    <td>Video</td>
+                                                    @if(is_null($usuario->archivo) )
+
+                                                    <td>No hay video</td>
+
+                                                    @endif
+                                                    @if(!is_null($usuario->archivo) )
+                                                    <td>
+                                                        <video src="{{asset('storage').'/'.$usuario->archivo}}" controls="" style="width: 70%;"></video>
+                                                    </td>
+                                                    @endif
+                                                </tr>
 
                                             @endforeach 
 

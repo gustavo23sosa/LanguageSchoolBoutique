@@ -24,6 +24,7 @@ class User extends Authenticatable
         'email',
         'telefono',
         'password',
+        'archivo',
         'porcentaje',
         'fk_rango',
         'fk_nivel',

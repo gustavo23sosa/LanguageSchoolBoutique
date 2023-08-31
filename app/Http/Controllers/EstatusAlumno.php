@@ -28,7 +28,7 @@ class EstatusAlumno extends Controller
 	public function detalleAlumno(Request $request){
 		$id = Auth::User()->id;
 		$user = $request['id_user'];
-        $usuariodetalle = User::select('users.name','users.aPaterno','users.aMaterno','users.email','users.telefono','users.Observaciones','users.porcentaje AS Por','clas.tipo', 'Ni.nivel','EU.estatus','EF.entidad', 'users.id','Ran.nivel AS rank')
+        $usuariodetalle = User::select('users.name','users.aPaterno','users.aMaterno','users.email','users.telefono','users.archivo','users.Observaciones','users.porcentaje AS Por','clas.tipo', 'Ni.nivel','EU.estatus','EF.entidad', 'users.id','Ran.nivel AS rank')
             ->join('UsersRoles AS UR','UR.fk_users','=','users.id')
             ->join('Roles AS R','R.ID','=','UR.fk_roles')
             ->join('Nivel AS Ni','Ni.ID','=','users.fk_nivel')

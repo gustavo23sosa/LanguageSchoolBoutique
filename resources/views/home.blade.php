@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome-all.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/iofrm-style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/iofrm-theme2.css')}}">
-    <link href="css/app.css" rel="stylesheet">
+
     <script src="{{ asset('js/app.js')}}" defer></script>
     <script src="{{ asset('js/prueba.js')}}" defer></script>
     <script src="{{ asset('js/prueba2.js')}}" defer></script>
@@ -118,9 +118,9 @@
                                                     <h2>¡Bienvenido!</h2>
                                                     <hr>
                                                     
-                                                    <form method="POST" action="{{route('subir')}}">
-                                                        @csrf
-
+                                                    <form method="POST" action="{{route('subir')}}" accept-charset="UTF-8" enctype="multipart/form-data">
+                                                        {{ csrf_field() }}
+                                                        
                                                         <b><label style="color: black; font-size: 20px">Escoge como te gustar&iacute;a tomar las clases</label></b><br>
                                                         <select type="text" class="custom-select" required name="clases" style="width: 30%; text-transform: uppercase;">
                                                         <option value="">Seleccione una opci&oacute;n:</option>
@@ -137,18 +137,23 @@
                                                         @endforeach
                                                         </select>
 
-                                                        <br><br><br>
+                                                        <br>
+                                                        <h4>Sube tu video</h4>
+                                                        <input type="file" name="archivo" required>
+                                                        <br><label>No debe durar m&aacute;s de 30 segundos.</label><br><label>Debe pesar m&aacute;ximo 10 MB</label>
+                                                        <br><br>
                                                         
                                                         <input class="btn btn-success" type="submit" value="Enviar" >
+                                                        <br><br>
                                                     </form>
                                                     <br>
                                                     <!-- <p>Para subir archivos, <a href="{{ url('crear')}}" >¡Haz click aqui!</a></p> -->
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <br>
                                     </section>
-
+                                    <div class="clear"></div>
                                     
                                 <div>
                             </div>
