@@ -56,7 +56,7 @@ class MasterController extends Controller
     	$id = Auth::user()->id;
     	// $respuestas = request()->all();
     	$respuestas = request()->except('_token');
-        return response()->json($respuestas);
+        // return response()->json($respuestas);
         
         $nivel = User::where('id','=',$id)->select('fk_nivel')->get();
 

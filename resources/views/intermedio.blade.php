@@ -124,7 +124,7 @@
                 <h2>¡Ex&aacute;men de colocaci&oacute;n!</h2>
                 <br><div style="font-size: 125%"><span id="reloj"></span></div><br>
                 <hr>
-                <form name="intermedio" method="POST" action="{{route('evaluarb')}}">
+                <form id="intermedio" name="intermedio" method="POST" action="{{route('evaluarb')}}">
                     @csrf   
                     <!-- {{$n=0}} -->
                     <!-- {{$i=1}} -->
@@ -219,7 +219,14 @@ $(document).ready(function () {
         </div>
     </footer>
     
-   
+   <script type="text/javascript">
+        function nobackbutton()
+        {
+          window.location.hash="no-back-button";
+          window.location.hash="Again-No-back-button";//esta linea es necesaria para chrome
+          window.onhashchange=function(){window.location.hash="no-back-button";} 
+        }
+   </script>
     <script src='administrador/red/js/jquery/jquery.js'></script>
     <script src='administrador/red/js/jquery/jquery-migrate.min.js'></script>
     <script src='administrador/red/plugins/superfish/js/superfish.js'></script>

@@ -224,7 +224,14 @@ $(document).ready(function () {
     $('#example').DataTable();
 });
 </script>
-
+<script type="text/javascript">
+    function nobackbutton()
+    {
+      window.location.hash="no-back-button";
+      window.location.hash="Again-No-back-button";//esta linea es necesaria para chrome
+      window.onhashchange=function(){window.location.hash="no-back-button";} 
+    }
+</script>
     <script src='administrador/red/js/jquery/jquery.js'></script>
     <script src='administrador/red/js/jquery/jquery-migrate.min.js'></script>
     <script src='administrador/red/plugins/superfish/js/superfish.js'></script>

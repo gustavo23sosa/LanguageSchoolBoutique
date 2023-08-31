@@ -1,13 +1,8 @@
-function nobackbutton()
-{
-  window.location.hash="no-back-button";
-  window.location.hash="Again-No-back-button";//esta linea es necesaria para chrome
-  window.onhashchange=function(){window.location.hash="no-back-button";} 
-}
 
 
-  number=30;
-  minutos=0;
+
+  number=0;
+  minutos=30;
   let radioButtons = document.querySelectorAll('input[type="radio"]');
   let caja1 = document.getElementById(pregunta13);
   let caja2 = document.getElementById(pregunta14);
@@ -246,7 +241,8 @@ function nobackbutton()
       pregunta13.disabled = true;
       pregunta14.disabled = true;
       pregunta15.disabled = true;
-      document.querySelector('form').submit();
+      alert('Se acabo el tiempo');
+      document.getElementById('intermedio').submit();
       // for (var i = 1; i <= 60; i++) {
       //   var radios = document.getElementsByName('pregunta'+i);
       // }
