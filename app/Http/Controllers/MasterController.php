@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\PreguntasRespuestas;
 use App\Models\preguntas;
 use App\Models\Respuestas;
+use Illuminate\Http\Request;
 
 class MasterController extends Controller
 {
