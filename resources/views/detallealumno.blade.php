@@ -12,15 +12,15 @@
     <link rel="icon" type="image/png" href="{{ asset('img/icono.png')}}">
     <title>Detalles - Language School Boutique</title>
 
-    <link rel="stylesheet" href="{{ asset(administrador/red/css/style.css)}}" type="text/css" media="all">
-    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/superfish/css/superfish.css)}}" type="text/css" media="all">
-    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/dl-menu/component.css)}}" type="text/css" media="all">
-    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/font-awesome-new/css/font-awesome.min.css)}}" type="text/css" media="all">
-    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/fancybox/jquery.fancybox.css)}}" type="text/css" media="all">
-    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/flexslider/flexslider.css)}}" type="text/css" media="all">
-    <link rel="stylesheet" href="{{ asset(administrador/red/css/style-responsive.css)}}" type="text/css" media="all">
-    <link rel="stylesheet" href="{{ asset(administrador/red/css/style-custom.css')}}" type="text/css" media="all">
-    <link rel="stylesheet" href="{{ asset(administrador/red/plugins/masterslider/public/assets/css/masterslider.main.css)}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('administrador/red/css/style.css')}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('administrador/red/plugins/superfish/css/superfish.css')}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('administrador/red/plugins/dl-menu/component.css')}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('administrador/red/plugins/font-awesome-new/css/font-awesome.min.css')}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('administrador/red/plugins/fancybox/jquery.fancybox.css')}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('administrador/red/plugins/flexslider/flexslider.css')}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('administrador/red/css/style-responsive.css')}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('administrador/red/css/style-custom.css')}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('administrador/red/plugins/masterslider/public/assets/css/masterslider.main.css')}}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('administrador/red/css/master-custom.css')}}" type="text/css" media="all">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -28,8 +28,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome-all.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/iofrm-style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/iofrm-theme2.css')}}">
-    <link href="css/app.css" rel="stylesheet">
+    
     <script src="{{ asset('js/app.js')}}" defer></script>
+    <script src="{{ asset('js/prueba.js')}}" defer></script>
+    <script src="{{ asset('js/prueba2.js')}}" defer></script>
 
   
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900&amp;subset=latin&amp;ver=5e348039466ee2df77d142cdeeca1221' type=text/css media=all>
