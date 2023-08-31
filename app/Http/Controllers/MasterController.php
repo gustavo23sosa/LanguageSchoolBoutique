@@ -9,7 +9,6 @@ use App\Models\User;
 use App\Models\PreguntasRespuestas;
 use App\Models\preguntas;
 use App\Models\Respuestas;
-use Illuminate\Http\Request;
 
 class MasterController extends Controller
 {
@@ -331,15 +330,20 @@ class MasterController extends Controller
 	        //Recibimos el archivo y lo guardamos en la carpeta storage/app/public
 			$id = Auth::User()->id;
 		    // $user = $request['id_user'];
-		$respuestas = request()->except('_token');
-                return response()->json($respuestas);
 
-		    $estatus = User::where('id','=', $id)->update([
+            // $campos = [
+            //     'archivo' => 'required |max:10000|mimes:mp4,mov,wmv,avi,avchd,fly,f4v,swf,mkv,webm',
+            // ];
+            // $mensaje=[
+            //     'required' => 'El :attribute es requerido',
+            //     'archivo.required' => 'El archivo es requerido',
+            // ];
+
+		    $estatus = User::where('id', $id)->update([
 		    	'archivo' => $request->file('archivo')->store('uploads', 'public'), 
 		    	'fk_nivel' => $request->input('nivel'), 
 		    	'fk_clases' => $request->input('clases')
 		    ]);
-		return response()->json($estatus);
 	        return redirect()->route('home')->with('success','Se guardó la información');
 	}
 }
