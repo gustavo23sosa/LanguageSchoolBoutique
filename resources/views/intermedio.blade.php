@@ -78,30 +78,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="gdlr-navigation-wrapper">
-                        <nav class="gdlr-navigation" id="gdlr-main-navigation role=navigation">
-                            <ul id="menu-main-menu-1" class="sf-menu gdlr-main-menu">
-                                <li class="menu-item menu-item-home">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name}} {{ Auth::user()->aPaterno }} {{ Auth::user()->aMaterno }}
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end menu-item menu-item-home" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{route('home')}}" aria-current="page">Inicio</a>
-                                    
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="clear"></div>
-                    </div>
+                    
                     <div class="clear"></div>
                 </div>
             </div>
