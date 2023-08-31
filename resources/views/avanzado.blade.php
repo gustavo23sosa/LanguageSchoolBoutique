@@ -47,7 +47,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url({{ asset('img/header.jpg')}}); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:#FFFFFF;" translate="no">
+<body data-rsssl=1 class="home page-template-default page page-id-3304 _masterslider _msp_version_3.2.7" style="background-image: url({{ asset('img/header.jpg')}}); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:#FFFFFF;" translate="no" onload="nobackbutton()">
 <div class="wrapper wrapper-full-page ">
     <div class="full-page section-image" filter-color="black">
         <header class="gdlr-header-wrapper" >
