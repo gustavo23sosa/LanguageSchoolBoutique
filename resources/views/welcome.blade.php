@@ -21,7 +21,7 @@
 
 <body>
 
-    <header class="hero" style="background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url({{ asset('img/computer.jpg')}});">
+    <header class="hero">
         <nav class="nav container">
             <div class="nav__logo">
                 <h2 class="nav__title">Curso CSS.</h2>
@@ -59,6 +59,20 @@
             <a href="#" class="cta">Comienza ahora</a>
         </section>
     </header>
+    <style type="text/css">
+            .hero::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url("public/img/computer.jpg");
+                clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+                z-index: -1;
+            }
+        </style>
 
     <main>
         <section class="container about">
