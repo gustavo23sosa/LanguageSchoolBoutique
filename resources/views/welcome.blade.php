@@ -14,24 +14,24 @@
 
     <meta name="theme-color" content="#2091F9">
 
-    <meta name="title" content="Examen de colocación - Language School Boutique">
+    <meta name="title" content="Language School Boutique - Examen de colocación" />
     <meta name="description"
-    content="Te damos la bienvenida a este exámen de colocación, podrás registrarte en cualquier momento, estamos disponibles las 24 hrs">
+    content="Te damos la bienvenida a este exámen de colocación, podrás registrarte en cualquier momento, estamos disponibles las 24 hrs" />
 
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.languageschoolboutique.com/">
-    <meta property="og:title" content="Examen de colocación - Language School Boutique">
+    <meta property="og:url" content="https://www.languageschoolboutique.com/" />
+    <meta property="og:title" content="Language School Boutique - Examen de colocación" />
     <meta property="og:description"
-        content="Te damos la bienvenida a este exámen de colocación, podrás registrarte en cualquier momento, estamos disponibles las 24 hrs">
+    content="Examen de colocación con el cual podrás registrarte y realizarlo a la brevedad contestando unas breves preguntas que garantiza resultados certeros" />
     
 
     <meta property="twitter:card" content="website">
-    <meta property="twitter:url" content="https://www.languageschoolboutique.com/">
-    <meta property="twitter:title" content="Examen de colocación - Language School Boutique">
+    <meta property="twitter:url" content="https://www.languageschoolboutique.com/" />
+    <meta property="twitter:title" content="Language School Boutique - Examen de colocación" />
     <meta property="twitter:description"
-        content="Te damos la bienvenida a este exámen de colocación, podrás registrarte en cualquier momento, estamos disponibles las 24 hrs">
-    <meta property="twitter:image" content="https://www.languageschoolboutique.com/">
+    content="Te damos la bienvenida a este exámen de colocación, podrás registrarte en cualquier momento, estamos disponibles las 24 hrs" />
+    <meta property="twitter:image" content="https://www.languageschoolboutique.com/" />
 </head>
 
 <body>
@@ -54,7 +54,7 @@
                     <a href="{{ route('register') }}" class="nav__links">Registrate</a>
                 </li>
                 <li class="nav__items">
-                    <a href="#" class="nav__links">Blog</a>
+                    <a href="https://languageschoolboutique.com/" class="nav__links">Blog</a>
                 </li>
 
                 <img src="{{ asset('img/close.svg')}}" class="nav__close">
@@ -69,7 +69,7 @@
             <h1 class="hero__title">Aprende CSS3 desde CERO hasta dominarlo.</h1>
             <p class="hero__paragraph">Elige aprender CSS de una vez por todas, una vez que termines este curso serás
                 capaz de crear cualquier layout con CSS y crear tus propias animaciones.</p>
-            <a href="#" class="cta">Comienza ahora</a>
+            <a href="" class="cta">Comienza ahora</a>
         </section>
     </header>
     <style type="text/css">
@@ -332,7 +332,7 @@
                         <a href="{{ route('register') }}" class="nav__links">Registrate</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#" class="nav__links">Blog</a>
+                        <a href="https://languageschoolboutique.com/" class="nav__links">Blog</a>
                     </li>
                 </ul>
             </nav>
