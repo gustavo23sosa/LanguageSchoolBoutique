@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome - Language School Boutique</title>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('img/icono.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/normalize.css')}}">
     <link rel="stylesheet" href="{{ asset('css/estilos.css')}}">
 
@@ -16,7 +16,22 @@
 
     <meta name="title" content="Examen de colocación - Language School Boutique">
     <meta name="description"
+    content="Te damos la bienvenida a este exámen de colocación, podrás registrarte en cualquier momento, estamos disponibles las 24 hrs">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.languageschoolboutique.com/">
+    <meta property="og:title" content="Examen de colocación - Language School Boutique">
+    <meta property="og:description"
         content="Te damos la bienvenida a este exámen de colocación, podrás registrarte en cualquier momento, estamos disponibles las 24 hrs">
+    
+
+    <meta property="twitter:card" content="website">
+    <meta property="twitter:url" content="https://www.languageschoolboutique.com/">
+    <meta property="twitter:title" content="Examen de colocación - Language School Boutique">
+    <meta property="twitter:description"
+        content="Te damos la bienvenida a este exámen de colocación, podrás registrarte en cualquier momento, estamos disponibles las 24 hrs">
+    <meta property="twitter:image" content="https://www.languageschoolboutique.com/">
 </head>
 
 <body>
