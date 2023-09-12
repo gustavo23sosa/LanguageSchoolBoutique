@@ -228,7 +228,7 @@
                 </section>
 
 
-                <img src="img/rightarrow.svg" class="testimony__arrow" id="next">
+                <img src="{{ asset('img/rightarrow.svg')}}" class="testimony__arrow" id="next">
             </div>
         </section>
 
@@ -337,7 +337,7 @@
                 <a href="#" class="footer__icons"><img src="{{ asset('img/youtube.svg')}}" class="footer__img"></a>
             </div>
 
-            <h3 class="footer__copyright">Derechos reservados &copy; Jordan Alexander</h3>
+            <h3 class="footer__copyright">Derechos reservados &copy; Gustavo Valencia Sosa - Language School Boutique</h3>
         </section>
     </footer>
 
