@@ -14,9 +14,9 @@
 
     <meta name="theme-color" content="#2091F9">
 
-    <meta name="title" content="Aprende CSS desde cero">
+    <meta name="title" content="Examen de colocación - Language School Boutique">
     <meta name="description"
-        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+        content="Te damos la bienvenida a este exámen de colocación, podrás registrarte en cualquier momento, estamos disponibles las 24 hrs">
 </head>
 
 <body>
@@ -28,9 +28,7 @@
             </div>
 
             <ul class="nav__link nav__link--menu">
-                <li class="nav__items">
-                    <a href="#" class="nav__links">Inicio</a>
-                </li>
+                
                 <li class="nav__items">
                     <a href="#" class="nav__links">Acerca de</a>
                 </li>
@@ -313,7 +311,10 @@
                         <a href="#" class="nav__links">Acerca de</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#" class="nav__links">Contacto</a>
+                        <a href="{{ route('login') }}" class="nav__links">Inicia sesion</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="{{ route('register') }}" class="nav__links">Registrate</a>
                     </li>
                     <li class="nav__items">
                         <a href="#" class="nav__links">Blog</a>
@@ -341,9 +342,9 @@
         </section>
     </footer>
 
-    <script src="./{{ asset('js/slider.js')}}"></script>
-    <script src="./{{ asset('js/questions.js')}}"></script>
-    <script src="./{{ asset('js/menu.js')}}"></script>
+    <script src="{{ asset('js/slider.js')}}"></script>
+    <script src="{{ asset('js/questions.js')}}"></script>
+    <script src="{{ asset('js/menu.js')}}"></script>
 </body>
 
 </html>
