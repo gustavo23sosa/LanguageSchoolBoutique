@@ -21,8 +21,7 @@
 
 <body>
 
-    <header class="hero" style="background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), 
-    url({{ asset('img/computer.jpg')}});">
+    <header class="hero">
         <nav class="nav container">
             <div class="nav__logo">
                 <h2 class="nav__title">Curso CSS.</h2>
@@ -36,7 +35,10 @@
                     <a href="#" class="nav__links">Acerca de</a>
                 </li>
                 <li class="nav__items">
-                    <a href="#" class="nav__links">Contacto</a>
+                    <a href="{{ route('login') }}" class="nav__links">Inicia Sesion</a>
+                </li>
+                <li class="nav__items">
+                    <a href="{{ route('register') }}" class="nav__links">Registrate</a>
                 </li>
                 <li class="nav__items">
                     <a href="#" class="nav__links">Blog</a>
