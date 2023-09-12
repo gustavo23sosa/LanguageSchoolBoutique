@@ -21,7 +21,8 @@
 
 <body>
 
-    <header class="hero">
+    <header class="hero" style="background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), 
+    url({{ asset('img/computer.jpg')}});">
         <nav class="nav container">
             <div class="nav__logo">
                 <h2 class="nav__title">Curso CSS.</h2>
