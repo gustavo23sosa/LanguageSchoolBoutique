@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
     <div class="container">
-        <img src="{{ asset('img/logo.png')}}" alt="" width="20%">
+        <a href="{{ url('/') }}"><img src="{{ asset('img/logo.png')}}" alt="" width="20%"></a>
         <div class="navbar-wrapper">
 
             <div class="navbar-toggle">

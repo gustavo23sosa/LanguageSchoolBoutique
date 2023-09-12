@@ -21,7 +21,7 @@
 
 <body>
 
-    <header class="hero">
+    <header class="hero" style="background-image: url({{('public/img/computer.jpg')}});">
         <nav class="nav container">
             <div class="nav__logo">
                 <h2 class="nav__title">Curso CSS.</h2>
