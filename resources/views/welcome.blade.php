@@ -123,7 +123,7 @@
                     <h3 class="price__price">SEICONN</h3>
 
                     <div class="price__items">
-                        <img src="{{ asset('img/seiconn.jpg')}}" alt="">
+                        <img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%">
                         <!-- <p class="price__features">Flexbox</p>
                         <p class="price__features">Layouts</p>
                         <p class="price__features">Responsive</p> -->
