@@ -120,23 +120,25 @@
             <div class="price__table">
                 
                 <div class="price__element">
-                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a>
+                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
 
-                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a>
+                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
 
-                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a>
+                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
                 </div>
 
                 <div class="price__element price__element--best">
 
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a>
 
-                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a>
-
-                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a>
-                    
                 </div>
+                <div class="price__element">
+                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
 
+                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
+
+                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
+                </div>
 
             </div>
         </section>

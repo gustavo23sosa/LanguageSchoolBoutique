@@ -209,7 +209,7 @@ body {
 }
 
 .price__element{
-    background-color: #e5e5f7;
+    
     text-align: center;
     border-radius: 10px;
     width: 330px;
@@ -224,7 +224,7 @@ body {
 .price__element--best{
     width: 370px;
     padding: 60px 40px;
-    background-color: #FF7143;
+    
     --color-plan: rgb(255 255 255 / 75%);
     --color-price: #fff;
     --bg-cta: #9F3919;
