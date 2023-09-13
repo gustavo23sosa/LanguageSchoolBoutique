@@ -117,7 +117,7 @@
         <section class="price container">
             <h2 class="subtitle">Ellos ya conf&iacute;an en nosotros, ¡solo faltas t&uacute;!</h2>
 
-            <div class="price__table">
+            <div class="prince__table">
                 
                 <div class="price__element">
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
@@ -127,12 +127,12 @@
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
                 </div>
 
-                <div class="price__element price__element--best">
+                <div class="prince__element prince__element--best">
 
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a>
 
                 </div>
-                <div class="price__element">
+                <div class="prince__element">
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
 
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
@@ -275,7 +275,7 @@
     <footer class="footer">
         <section class="footer__container container">
             <nav class="nav nav--footer">
-                <img src="{{ asset('img/logo.png')}}" alt="" width="50%">
+                <img src="{{ asset('img/logo.png')}}" alt="" width="25%">
 
                 <ul class="nav__link nav__link--footer">
                     <li class="nav__items">
