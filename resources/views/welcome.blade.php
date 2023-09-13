@@ -26,7 +26,7 @@
     <header class="hero">
         <nav class="nav container">
             <div class="nav__logo">
-                <img src="{{ asset('img/logo.png')}}" alt="" width="50%">
+                <img src="{{ asset('img/logo.png')}}" alt="" width="30%">
             </div>
 
             <ul class="nav__link nav__link--menu">
