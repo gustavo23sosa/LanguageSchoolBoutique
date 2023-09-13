@@ -135,6 +135,7 @@ body {
 
 .about__paragraph {
     line-height: 1.7;
+    text-align: justify;
 }
 
 .about__main {
