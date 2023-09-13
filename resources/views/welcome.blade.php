@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Language School Boutique</title>
+    <title>Language School Boutique - Inicio</title>
     <link rel="shortcut icon" href="{{ asset('img/icono.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/normalize.css')}}">
     <link rel="stylesheet" href="{{ asset('css/estilos.css')}}">
@@ -16,22 +16,9 @@
 
     <meta name="title" content="Language School Boutique - Examen de colocación" />
     <meta name="description"
-    content="Te damos la bienvenida a este exámen de colocación, podrás registrarte en cualquier momento, estamos disponibles las 24 hrs" />
-
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.languageschoolboutique.com/" />
-    <meta property="og:title" content="Language School Boutique - Examen de colocación" />
-    <meta property="og:description"
-    content="Examen de colocación con el cual podrás registrarte y realizarlo a la brevedad contestando unas breves preguntas que garantiza resultados certeros" />
+    content="Exámen de colocación con el cual podrás registrarte y realizarlo a la brevedad contestando unas breves preguntas que garantíza resultados certeros" />
     
 
-    <meta property="twitter:card" content="website">
-    <meta property="twitter:url" content="https://www.languageschoolboutique.com/" />
-    <meta property="twitter:title" content="Language School Boutique - Examen de colocación" />
-    <meta property="twitter:description"
-    content="Te damos la bienvenida a este exámen de colocación, podrás registrarte en cualquier momento, estamos disponibles las 24 hrs" />
-    <meta property="twitter:image" content="https://www.languageschoolboutique.com/" />
 </head>
 
 <body>
@@ -39,7 +26,7 @@
     <header class="hero">
         <nav class="nav container">
             <div class="nav__logo">
-                <h2 class="nav__title">Curso CSS.</h2>
+                <img src="{{ asset('img/logo.png')}}" alt="" width="50%">
             </div>
 
             <ul class="nav__link nav__link--menu">
@@ -66,9 +53,9 @@
         </nav>
 
         <section class="hero__container container">
-            <h1 class="hero__title">Aprende CSS3 desde CERO hasta dominarlo.</h1>
-            <p class="hero__paragraph">Elige aprender CSS de una vez por todas, una vez que termines este curso serás
-                capaz de crear cualquier layout con CSS y crear tus propias animaciones.</p>
+            
+            <h1 class="hero__title">Juntos aprendemos un idioma y alcanzaremos tus metas.</h1>
+            <p class="hero__paragraph">Nuestra metodología, está especializada en clases hechas a la medida para las necesidades de cada alumno o grupo.</p>
             <a href="" class="cta">Comienza ahora</a>
         </section>
     </header>
@@ -89,30 +76,26 @@
 
     <main>
         <section class="container about">
-            <h2 class="subtitle">¿Qué aprenderás en este curso?</h2>
-            <p class="about__paragraph">Todo lo necesario y obligatorio de CSS, (Flexbox, Grid, Custom properties,
-                Position, Animaciones, Box Model y más)</p>
+            <h2 class="subtitle">Aprender un idioma es conocer un nuevo mundo.</h2>
+            <p class="about__paragraph">Nuestros casos de &eacute;xito nos respaldan, aprende en un m&eacute;todo enfocado en ti y con los horarios m&aacute;s flexibles.</p>
 
             <div class="about__main">
                 <article class="about__icons">
                     <img src="{{ asset('img/shapes.svg')}}" class="about__icon">
-                    <h3 class="about__title">CSS Layouts</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
+                    <h3 class="about__title">Clases Individuales</h3>
+                    <p class="about__paragrah">Clases en el horario m&aacute;s adecuado, se desarrollan con base en objetivos muy espec&iacute;ficos y de acuerdo con sus necesidades en el corto o mediano plazo.</p>
                 </article>
 
                 <article class="about__icons">
                     <img src="{{ asset('img/paint.svg')}}" class="about__icon">
-                    <h3 class="about__title">Animaciones</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
+                    <h3 class="about__title">Clases Grupales</h3>
+                    <p class="about__paragrah">Potenciamos el conocimiento y aptitudes de cada uno de los miembros del equipo, por medio de din&aacute;micas, juegos y mucho trabajo en equipo. Capitalizamos las oportunidades de los miembros sumado al conocimiento de los profesores para facilitar el aprendizaje grupal.</p>
                 </article>
 
                 <article class="about__icons">
                     <img src="{{ asset('img/code.svg')}}" class="about__icon">
-                    <h3 class="about__title">Sass</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
+                    <h3 class="about__title">Int&eacute;rpretes y Peritos Traductores</h3>
+                    <p class="about__paragrah">Contamos con int&eacute;rpretes y peritos certificados en todos los idiomas, tanto para traducciones simult&aacute;neas, escritas y sello de perito para documentos oficiales.</p>
                 </article>
             </div>
         </section>
@@ -120,10 +103,8 @@
         <section class="knowledge">
             <div class="knowledge__container container">
                 <div class="knowledege__texts">
-                    <h2 class="subtitle">Curso completo de CSS3. ¡Domina CSS de una vez por todas!</h2>
-                    <p class="knowledge__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi,
-                        aliquam nemo in facere suscipit at delectus unde labore ad officia iste accusantium eaque
-                        aperiam laborum est voluptate totam? Modi, obcaecati?</p>
+                    <h2 class="subtitle">¡Queremos empoderarte!</h2>
+                    <p class="knowledge__paragraph">para que adquieras habilidades lingü&iacute;sticas s&oacute;lidas y confianza en ti mismo, lo que te permitir&aacute; alcanzar tus objetivos personales.</p>
                     <a href="#" class="cta">Entra al curso</a>
                 </div>
 
@@ -134,20 +115,21 @@
         </section>
 
         <section class="price container">
-            <h2 class="subtitle">Obten el plan perfecto para aprender</h2>
+            <h2 class="subtitle">Ellos ya conf&iacute;an en nosotros, ¡solo faltas t&uacute;!</h2>
 
             <div class="price__table">
                 <div class="price__element">
-                    <p class="price__name">Flexbox</p>
-                    <h3 class="price__price">Free</h3>
+                    
+                    <h3 class="price__price">SEICONN</h3>
 
                     <div class="price__items">
-                        <p class="price__features">Flexbox</p>
+                        <img src="{{ asset('img/seiconn.jpg')}}" alt="" width="50%">
+                        <!-- <p class="price__features">Flexbox</p>
                         <p class="price__features">Layouts</p>
-                        <p class="price__features">Responsive</p>
+                        <p class="price__features">Responsive</p> -->
                     </div>
 
-                    <a href="#" class="price__cta">Empieza ahora</a>
+                    <!-- <a href="#" class="price__cta">Empieza ahora</a> -->
                 </div>
 
 
@@ -304,10 +286,8 @@
             </section>
 
             <section class="questions__offer">
-                <h2 class="subtitle">¿Estas listo para aprender CSS?</h2>
-                <p class="questions__copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet ratione
-                    architecto magnam, officiis ex porro vero est voluptates quaerat quibusdam illo veniam reprehenderit
-                    eius atque tempora iure ab non autem.</p>
+                <h2 class="subtitle">¿Est&aacute;s listo para aprender un nuevo idioma?</h2>
+                <p class="questions__copy">Sabemos que hoy los idiomas ya no son un lujo, son una necesidad, por eso en LSB te ayudamos a prepararte para dominar un nuevo idioma, desde nuestro m&eacute;todo y la reducci&oacute;n del acento, para lograr sonar como nativo.</p>
                 <a href="#" class="cta">Aprende ahora</a>
             </section>
         </section>
@@ -316,7 +296,7 @@
     <footer class="footer">
         <section class="footer__container container">
             <nav class="nav nav--footer">
-                <h2 class="footer__title">Curso CSS.</h2>
+                <img src="{{ asset('img/logo.png')}}" alt="" width="50%">
 
                 <ul class="nav__link nav__link--footer">
                     <li class="nav__items">
@@ -347,7 +327,7 @@
                 <a href="#" class="footer__icons"><img src="{{ asset('img/youtube.svg')}}" class="footer__img"></a>
             </div>
 
-            <h3 class="footer__copyright">Derechos reservados &copy; Gustavo Valencia Sosa - Language School Boutique</h3>
+            <h3 class="footer__copyright">Derechos reservados &copy; Gvs - Language School Boutique</h3>
         </section>
     </footer>
 
