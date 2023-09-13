@@ -127,12 +127,12 @@
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
                 </div>
 
-                <div class="prince__element prince__element--best">
+                <div class="price__element prince__element--best">
 
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a>
 
                 </div>
-                <div class="prince__element">
+                <div class="price__element">
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
 
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
