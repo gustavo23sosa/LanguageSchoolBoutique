@@ -115,6 +115,7 @@
         </section>
 
         <section class="price container">
+            
             <h2 class="subtitle">Ellos ya conf&iacute;an en nosotros, ¡solo faltas t&uacute;!</h2>
 
             <div class="unatable">
