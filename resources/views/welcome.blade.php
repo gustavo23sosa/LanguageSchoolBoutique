@@ -122,7 +122,7 @@
                 <div class="price__element">
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
 
-                    <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
+                    <a href="https://www.swy.lat/"><img src="{{ asset('img/sweetway.jpg')}}" alt="" width="75%"></a><br><br>
 
                     <a href="https://www.seiconn.com.mx/"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
                 </div>
