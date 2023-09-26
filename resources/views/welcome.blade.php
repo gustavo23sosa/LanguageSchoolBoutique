@@ -131,9 +131,9 @@
                     .imagen1{
                         background-image: url("public/img/seiconn.jpg");
                         background-size: cover;
-                        border-radius: 10px;
+                        
                         width: auto; height: auto;
-                        padding: 40px;
+                        
                     }
                     .imagen2{
                         background-image: url("public/img/sweetway.jpg");
