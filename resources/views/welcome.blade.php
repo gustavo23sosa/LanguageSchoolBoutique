@@ -120,8 +120,8 @@
 
             <div class="unatable">
                 
-                <a href="https://www.seiconn.com.mx/" target="_blank"><div class="imagen1"><br><br><br><br><br><br><br><br><br><br></div></a>
-                <div class="imagen2"><br></div>
+                <a href="https://www.seiconn.com.mx/" target="_blank"><div class="imagen1"></div></a>
+                <div class="imagen2"></div>
                 <div class="imagen3"></div>
                 <div class="imagen4"></div>
                 <div class="imagen5"></div>
@@ -132,7 +132,7 @@
                         background-image: url("public/img/seiconn.jpg");
                         background-repeat: no-repeat; background-attachment: fixed; background-size: cover;
                         border-radius: 10px;
-                        width: 330px;
+                        width: 100%; height: 100vh;
                         padding: 40px;
                     }
                     .imagen2{
