@@ -120,7 +120,7 @@
 
             <div class="unatable">
                 
-                <a href="https://www.seiconn.com.mx/" target="_blank"><div class="imagen1"><br><br><br></div></a>
+                <a href="https://www.seiconn.com.mx/" target="_blank"><div class="imagen1"><br><br><br><br><br><br><br><br><br><br></div></a>
                 <div class="imagen2"><br></div>
                 <div class="imagen3"></div>
                 <div class="imagen4"></div>
@@ -131,24 +131,51 @@
                     .imagen1{
                         background-image: url("public/img/seiconn.jpg");
                         background-repeat: no-repeat; background-attachment: fixed; background-size: cover;
+                        border-radius: 10px;
+                        width: 330px;
+                        padding: 40px;
                     }
                     .imagen2{
                         background-image: url("public/img/sweetway.jpg");
+                        background-repeat: no-repeat; background-attachment: fixed; background-size: cover;
+                        border-radius: 10px;
+                        width: 330px;
+                        padding: 40px;
                     }
                     .imagen3{
                         background-image: url("public/img/naat.jpg");
+                        background-repeat: no-repeat; background-attachment: fixed; background-size: cover;
+                        border-radius: 10px;
+                        width: 330px;
+                        padding: 40px;
                     }
                     .imagen4{
                         background-image: url("public/img/ift.png");
+                        background-repeat: no-repeat; background-attachment: fixed; background-size: cover;
+                        border-radius: 10px;
+                        width: 330px;
+                        padding: 40px;
                     }
                     .imagen5{
                         background-image: url("public/img/demar1.jpg");
+                        background-repeat: no-repeat; background-attachment: fixed; background-size: cover;
+                        border-radius: 10px;
+                        width: 330px;
+                        padding: 40px;
                     }
                     .imagen6{
                         background-image: url("public/img/gimenez.jpg");
+                        background-repeat: no-repeat; background-attachment: fixed; background-size: cover;
+                        border-radius: 10px;
+                        width: 330px;
+                        padding: 40px;
                     }
                     .imagen7{
                         background-image: url("public/img/firstmovers.png");
+                        background-repeat: no-repeat; background-attachment: fixed; background-size: cover;
+                        border-radius: 10px;
+                        width: 330px;
+                        padding: 40px;
                     }
 
                 </style>
