@@ -120,7 +120,7 @@
 
             <div class="unatable">
                 
-                <a href="https://www.seiconn.com.mx/" target="_blank"><div class="imagen1"></div></a>
+                <a href="https://www.seiconn.com.mx/" target="_blank"><div class="imagen1"><br></div></a>
                 <div class="imagen2"></div>
                 <div class="imagen3"></div>
                 <div class="imagen4"></div>
@@ -133,7 +133,7 @@
                         background-size: cover;
                         
                         width: auto; height: auto;
-                        padding: auto;
+                        padding: 40px;
                     }
                     .imagen2{
                         background-image: url("public/img/sweetway.jpg");
