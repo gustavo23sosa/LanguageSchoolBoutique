@@ -120,8 +120,8 @@
 
             <div class="unatable">
                 
-                <div class="price__element">
-                    <a href="https://www.seiconn.com.mx/" target="_blank"><img src="{{ asset('img/seiconn.jpg')}}" alt="" ></a><br><br>
+                <div class="price__element" style="background-image: url({{ asset('img/seiconn.jpg')}});">
+                    <a href="https://www.seiconn.com.mx/" target="_blank"></a><br><br>
                 </div><div class="price__element">
                     <a href="https://www.swy.lat/" target="_blank"><img src="{{ asset('img/sweetway.jpg')}}" alt="" ></a><br><br>
                 </div><div class="price__element">
