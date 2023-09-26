@@ -122,17 +122,7 @@
                 
                 <a href="https://www.seiconn.com.mx/" target="_blank"><div class="price__element" style="background-image: url({{ asset('img/seiconn.jpg')}});"></div></a>
                 <a href="https://www.swy.lat/" target="_blank"><div class="price__element" style="background-image: url({{ asset('img/sweetway.jpg')}});"></div></a>
-                <div class="price__element">
-                    <a href="https://na-at.com/es" target="_blank"><img src="{{ asset('img/naat.jpg')}}" alt="" ></a><br><br>
-                </div><div class="price__element">
-                    <a href="https://www.lftgroup.lat/" target="_blank"><img src="{{ asset('img/ift.png')}}" alt="" ></a>
-                </div><div class="price__element">
-                    <a href="https://www.demar.com.mx/" target="_blank"><img src="{{ asset('img/demar1.jpg')}}" alt="" ></a><br><br>
-                </div><div class="price__element">
-                    <a href="https://gaa.com.mx/" target="_blank"><img src="{{ asset('img/gimenez.jpg')}}" alt="" ></a><br><br>
-                </div><div class="price__element">
-                    <a href="https://www.firstmovers.lat/" target="_blank"><img src="{{ asset('img/firstmovers.png')}}" alt="" ></a><br><br>
-                </div>
+                
 
             </div>
         </section>
