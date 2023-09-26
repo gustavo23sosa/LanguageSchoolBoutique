@@ -131,7 +131,7 @@
                     .imagen1{
                         background-image: url("public/img/seiconn.jpg");
                         background-size: cover;
-                        
+                        border-radius: 10px;
                         width: auto; height: auto;
                         
                     }
