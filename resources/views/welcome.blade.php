@@ -133,7 +133,7 @@
                         background-size: cover;
                         
                         width: auto; height: auto;
-                        padding: 40px;
+                        padding: auto;
                     }
                     .imagen2{
                         background-image: url("public/img/sweetway.jpg");
