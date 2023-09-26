@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="{{ asset('img/icono.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/normalize.css')}}" media="only screen and (max-width: 768px)">
     <link rel="stylesheet" href="{{ asset('css/estilos.css')}}" media="only screen and (max-width: 768px)">
+    <link rel="stylesheet" href="{{ asset('css/normalize.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/estilos.css')}}" >
 
     <meta name="theme-color" content="#2091F9">
 
