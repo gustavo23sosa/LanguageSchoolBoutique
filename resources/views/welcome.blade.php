@@ -115,25 +115,25 @@
         </section>
 
         <section class="price container">
-            
+
             <h2 class="subtitle">Ellos ya conf&iacute;an en nosotros, ¡solo faltas t&uacute;!</h2>
 
             <div class="unatable">
                 
                 <div class="price__element">
-                    <a href="https://www.seiconn.com.mx/" target="_blank"><img src="{{ asset('img/seiconn.jpg')}}" alt="" width="75%"></a><br><br>
+                    <a href="https://www.seiconn.com.mx/" target="_blank"><img src="{{ asset('img/seiconn.jpg')}}" alt="" ></a><br><br>
                 </div><div class="price__element">
-                    <a href="https://www.swy.lat/" target="_blank"><img src="{{ asset('img/sweetway.jpg')}}" alt="" width="100%"></a><br><br>
+                    <a href="https://www.swy.lat/" target="_blank"><img src="{{ asset('img/sweetway.jpg')}}" alt="" ></a><br><br>
                 </div><div class="price__element">
-                    <a href="https://na-at.com/es" target="_blank"><img src="{{ asset('img/naat.jpg')}}" alt="" width="75%"></a><br><br>
+                    <a href="https://na-at.com/es" target="_blank"><img src="{{ asset('img/naat.jpg')}}" alt="" ></a><br><br>
                 </div><div class="price__element">
-                    <a href="https://www.lftgroup.lat/" target="_blank"><img src="{{ asset('img/ift.png')}}" alt="" width="125%"></a>
+                    <a href="https://www.lftgroup.lat/" target="_blank"><img src="{{ asset('img/ift.png')}}" alt="" ></a>
                 </div><div class="price__element">
-                    <a href="https://www.demar.com.mx/" target="_blank"><img src="{{ asset('img/demar1.jpg')}}" alt="" width="75%"></a><br><br>
+                    <a href="https://www.demar.com.mx/" target="_blank"><img src="{{ asset('img/demar1.jpg')}}" alt="" ></a><br><br>
                 </div><div class="price__element">
-                    <a href="https://gaa.com.mx/" target="_blank"><img src="{{ asset('img/gimenez.jpg')}}" alt="" width="75%"></a><br><br>
+                    <a href="https://gaa.com.mx/" target="_blank"><img src="{{ asset('img/gimenez.jpg')}}" alt="" ></a><br><br>
                 </div><div class="price__element">
-                    <a href="https://www.firstmovers.lat/" target="_blank"><img src="{{ asset('img/firstmovers.png')}}" alt="" width="75%"></a><br><br>
+                    <a href="https://www.firstmovers.lat/" target="_blank"><img src="{{ asset('img/firstmovers.png')}}" alt="" ></a><br><br>
                 </div>
 
             </div>
