@@ -129,7 +129,7 @@
                 <div class="imagen7"></div>
                 <style type="text/css">
                     .imagen1{
-                        background-image: url("public/img/seiconn.jpg");
+                        background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url("public/img/seiconn.jpg");
                     }
                     .imagen2{
                         background-image: url("public/img/sweetway.jpg");
