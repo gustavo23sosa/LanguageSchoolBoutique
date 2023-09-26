@@ -132,7 +132,7 @@
                         background-image: url("public/img/seiconn.jpg");
                         background-repeat: no-repeat; background-attachment: fixed; background-size: cover;
                         border-radius: 10px;
-                        width: 100%; height: 100%;
+                        width: auto; height: auto;
                         padding: 40px;
                     }
                     .imagen2{
