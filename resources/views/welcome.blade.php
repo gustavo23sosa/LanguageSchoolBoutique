@@ -6,13 +6,14 @@
     <link rel="icon" type="image/png" href="{{ asset('img/icono.png')}}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
     <title>Language School Boutique - Inicio</title>
     <link rel="shortcut icon" href="{{ asset('img/icono.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/normalize.css')}}" media="only screen and (max-width: 768px)">
     <link rel="stylesheet" href="{{ asset('css/estilos.css')}}" media="only screen and (max-width: 768px)">
-    <link rel="stylesheet" href="{{ asset('css/normalize.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/estilos.css')}}" >
+    <link href="{{ asset('css/normalize.css')}}" rel="stylesheet" />
+    <link href="{{ asset('css/estilos.css')}}" rel="stylesheet" />
 
     <meta name="theme-color" content="#2091F9">
 
