@@ -120,7 +120,7 @@
 
             <div class="unatable">
                 
-                <div class="imagen1"></div>
+                <a href="https://www.seiconn.com.mx/" target="_blank"><div class="imagen1"></div></a>
                 <div class="imagen2"></div>
                 <div class="imagen3"></div>
                 <div class="imagen4"></div>
