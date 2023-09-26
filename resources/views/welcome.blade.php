@@ -120,8 +120,37 @@
 
             <div class="unatable">
                 
-                <div class="price__element" style="background-image: url({{ asset('img/seiconn.jpg')}});"></div>
-                <a href="https://www.swy.lat/" target="_blank"><div class="price__element" style="background-image: url({{ asset('img/sweetway.jpg')}});"></div></a>
+                <div class="imagen1"></div>
+                <div class="imagen2"></div>
+                <div class="imagen3"></div>
+                <div class="imagen4"></div>
+                <div class="imagen5"></div>
+                <div class="imagen6"></div>
+                <div class="imagen7"></div>
+                <style type="text/css">
+                    .imagen1{
+                        background-image: url("public/img/seiconn.jpg");
+                    }
+                    .imagen2{
+                        background-image: url("public/img/sweetway.jpg");
+                    }
+                    .imagen3{
+                        background-image: url("public/img/naat.jpg");
+                    }
+                    .imagen4{
+                        background-image: url("public/img/ift.png");
+                    }
+                    .imagen5{
+                        background-image: url("public/img/demar1.jpg");
+                    }
+                    .imagen6{
+                        background-image: url("public/img/gimenez.jpg");
+                    }
+                    .imagen7{
+                        background-image: url("public/img/firstmovers.png");
+                    }
+
+                </style>
                 
 
             </div>
