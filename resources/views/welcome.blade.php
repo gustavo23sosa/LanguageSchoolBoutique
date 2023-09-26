@@ -120,11 +120,9 @@
 
             <div class="unatable">
                 
-                <div class="price__element" style="background-image: url({{ asset('img/seiconn.jpg')}});">
-                    <a href="https://www.seiconn.com.mx/" target="_blank"></a><br><br>
-                </div><div class="price__element">
-                    <a href="https://www.swy.lat/" target="_blank"><img src="{{ asset('img/sweetway.jpg')}}" alt="" ></a><br><br>
-                </div><div class="price__element">
+                <a href="https://www.seiconn.com.mx/" target="_blank"><div class="price__element" style="background-image: url({{ asset('img/seiconn.jpg')}});"></div></a>
+                <a href="https://www.swy.lat/" target="_blank"><div class="price__element" style="background-image: url({{ asset('img/sweetway.jpg')}});"></div></a>
+                <div class="price__element">
                     <a href="https://na-at.com/es" target="_blank"><img src="{{ asset('img/naat.jpg')}}" alt="" ></a><br><br>
                 </div><div class="price__element">
                     <a href="https://www.lftgroup.lat/" target="_blank"><img src="{{ asset('img/ift.png')}}" alt="" ></a>
