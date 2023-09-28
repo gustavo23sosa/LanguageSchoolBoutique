@@ -133,7 +133,10 @@
                 <style type="text/css">
                     .imagen1{
                         background-image: url("public/img/seiconn.jpg");
-                        background-size: cover;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        objet-fit: cover;
                         border-color: red;
                         width: auto; height: auto;
                         padding: 40px;
@@ -143,7 +146,7 @@
                         background-size: cover;
                         border-color: red;
                         border-radius: 10px;
-                        width: 330px;
+                        width: auto; height: auto;
                         padding: 40px;
                     }
                     .imagen3{
@@ -151,15 +154,18 @@
                         background-size: cover;
                         border-color: red;
                         border-radius: 10px;
-                        width: 330px;
+                        width: auto; height: auto;
                         padding: 40px;
                     }
                     .imagen4{
                         background-image: url("public/img/ift.png");
-                        background-size: cover;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        objet-fit: cover;
                         border-color: red;
                         border-radius: 10px;
-                        width: 330px;
+                        width: auto; height: auto;
                         padding: 40px;
                     }
                     .imagen5{
@@ -167,7 +173,7 @@
                         background-size: cover;
                         border-color: red;
                         border-radius: 10px;
-                        width: 330px;
+                        width: auto; height: auto;
                         padding: 40px;
                     }
                     .imagen6{
@@ -175,7 +181,7 @@
                         background-size: cover;
                         border-color: red;
                         border-radius: 10px;
-                        width: 330px;
+                        width: auto; height: auto;
                         padding: 40px;
                     }
                     .imagen7{
@@ -183,7 +189,7 @@
                         background-size: cover;
                         border-color: red;
                         border-radius: 10px;
-                        width: 330px;
+                        width: auto; height: auto;
                         padding: 40px;
                     }
 
