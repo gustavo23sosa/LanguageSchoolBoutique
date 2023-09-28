@@ -123,24 +123,25 @@
 
             <div class="unatable">
                 
-                <a href="https://www.seiconn.com.mx/" target="_blank"><div class="imagen1"><br></div></a>
-                <div class="imagen2"></div>
-                <div class="imagen3"></div>
-                <div class="imagen4"></div>
-                <div class="imagen5"></div>
-                <div class="imagen6"></div>
-                <div class="imagen7"></div>
+                <a href="https://www.seiconn.com.mx/" target="_blank"><div class="imagen1"><br>1</div></a>
+                <div class="imagen2">2</div>
+                <div class="imagen3">3</div>
+                <div class="imagen4">4</div>
+                <div class="imagen5">5</div>
+                <div class="imagen6">6</div>
+                <div class="imagen7">7</div>
                 <style type="text/css">
                     .imagen1{
                         background-image: url("public/img/seiconn.jpg");
                         background-size: cover;
-                        
+                        border-color: red;
                         width: auto; height: auto;
                         padding: 40px;
                     }
                     .imagen2{
                         background-image: url("public/img/sweetway.jpg");
                         background-size: cover;
+                        border-color: red;
                         border-radius: 10px;
                         width: 330px;
                         padding: 40px;
@@ -148,6 +149,7 @@
                     .imagen3{
                         background-image: url("public/img/naat.jpg");
                         background-size: cover;
+                        border-color: red;
                         border-radius: 10px;
                         width: 330px;
                         padding: 40px;
@@ -155,6 +157,7 @@
                     .imagen4{
                         background-image: url("public/img/ift.png");
                         background-size: cover;
+                        border-color: red;
                         border-radius: 10px;
                         width: 330px;
                         padding: 40px;
@@ -162,6 +165,7 @@
                     .imagen5{
                         background-image: url("public/img/demar1.jpg");
                         background-size: cover;
+                        border-color: red;
                         border-radius: 10px;
                         width: 330px;
                         padding: 40px;
@@ -169,6 +173,7 @@
                     .imagen6{
                         background-image: url("public/img/gimenez.jpg");
                         background-size: cover;
+                        border-color: red;
                         border-radius: 10px;
                         width: 330px;
                         padding: 40px;
@@ -176,6 +181,7 @@
                     .imagen7{
                         background-image: url("public/img/firstmovers.png");
                         background-size: cover;
+                        border-color: red;
                         border-radius: 10px;
                         width: 330px;
                         padding: 40px;
